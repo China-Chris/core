@@ -185,8 +185,6 @@ func (svd LegacyEip712SigVerificationDecorator) AnteHandle(ctx sdk.Context,
 		return next(ctx, tx, simulate)
 	}
 
-	ctx.Logger().Info("@@@@@@@@@@@@@@@@@@@@@@@@@@@authSignTx", authSignTx)
-
 	if err := VerifySignature(pubKey, signerData, sig.Data, svd.signModeHandler, authSignTx); err != nil {
 		errMsg := fmt.Errorf("signature verification failed; please verify account number (%d) and chain-id (%s): %w", accNum, chainID, err)
 		return ctx, errorsmod.Wrap(errortypes.ErrUnauthorized, errMsg.Error())
@@ -214,8 +212,6 @@ func VerifySignature(
 		if len(data.Signature) != 0 {
 			return errorsmod.Wrap(errortypes.ErrTooManySignatures, "invalid signature value; EIP712 must have the cosmos transaction signature empty")
 		}
-
-		fmt.Println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@VerifySignature", tx)
 
 		// @contract: this code is reached only when Msg has Web3Tx extension (so this custom Ante handler flow),
 		// and the signature is SIGN_MODE_LEGACY_AMINO_JSON which is supported for EIP712 for now
@@ -246,8 +242,6 @@ func VerifySignature(
 		if !ok {
 			return errorsmod.Wrap(errortypes.ErrUnknownExtensionOptions, "tx doesnt contain any extensions")
 		}
-
-		fmt.Println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@extOpt", txWithExtensions)
 
 		opts := txWithExtensions.GetExtensionOptions()
 		if len(opts) != 1 {

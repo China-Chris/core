@@ -4,7 +4,7 @@ set -e
 
 # set key name
 keyname=admin
-CHAIN_ID=seichain_1-9001
+CHAIN_ID=seichain_9001-9001
 #docker stop jaeger
 #docker rm jaeger
 #docker run -d --name jaeger \
@@ -28,7 +28,7 @@ make install
 ~/go/bin/seid init demo --chain-id $CHAIN_ID
 ~/go/bin/seid keys add $keyname --keyring-backend test
 # add the key as a genesis account with massive balances of several different tokens
-~/go/bin/seid add-genesis-account $(~/go/bin/seid keys show $keyname -a --keyring-backend test) 100000000000000000000usei,100000000000000000000uusdc,100000000000000000000uatom
+~/go/bin/seid add-genesis-account $(~/go/bin/seid keys show $keyname -a --keyring-backend test) 1000000000000000000000000000usei,100000000000000000000uusdc,100000000000000000000uatom
 # gentx for account
 ~/go/bin/seid gentx $keyname 70000000000000000000usei --chain-id $CHAIN_ID --keyring-backend test
 # update config to run as a validator, add validator information to genesis file
