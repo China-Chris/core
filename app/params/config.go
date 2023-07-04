@@ -1,8 +1,9 @@
 package params
 
 import (
-	ethermint "github.com/fibonacci-chain/core/types"
 	"time"
+
+	ethermint "github.com/fibonacci-chain/core/types"
 
 	"github.com/cosmos/cosmos-sdk/types/address"
 	tmcfg "github.com/tendermint/tendermint/config"
@@ -13,13 +14,13 @@ import (
 )
 
 const (
-	HumanCoinUnit    = "sei"
+	HumanCoinUnit    = "fibo"
 	BaseCoinUnit     = DefaultBondDenom
 	UseiExponent     = chainTypes.BaseDenomUnit
 	DefaultBondDenom = chainTypes.AttoPhoton
 
 	// Bech32PrefixAccAddr defines the Bech32 prefix of an account's address.
-	Bech32PrefixAccAddr = "sei"
+	Bech32PrefixAccAddr = "fb"
 )
 
 // UnsafeBypassCommitTimeoutOverride commits block as soon as we reach consensus instead of waiting
