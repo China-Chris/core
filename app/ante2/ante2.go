@@ -12,13 +12,13 @@ import (
 	paramskeeper "github.com/cosmos/cosmos-sdk/x/params/keeper"
 	ibcante "github.com/cosmos/ibc-go/v3/modules/core/ante"
 	ibckeeper "github.com/cosmos/ibc-go/v3/modules/core/keeper"
-	"github.com/sei-protocol/sei-chain/app/antedecorators"
-	"github.com/sei-protocol/sei-chain/app/antedecorators/depdecorators"
-	"github.com/sei-protocol/sei-chain/x/dex"
-	dexcache "github.com/sei-protocol/sei-chain/x/dex/cache"
-	dexkeeper "github.com/sei-protocol/sei-chain/x/dex/keeper"
-	"github.com/sei-protocol/sei-chain/x/oracle"
-	oraclekeeper "github.com/sei-protocol/sei-chain/x/oracle/keeper"
+	"github.com/fibonacci-chain/core/app/antedecorators"
+	"github.com/fibonacci-chain/core/app/antedecorators/depdecorators"
+	"github.com/fibonacci-chain/core/x/dex"
+	dexcache "github.com/fibonacci-chain/core/x/dex/cache"
+	dexkeeper "github.com/fibonacci-chain/core/x/dex/keeper"
+	"github.com/fibonacci-chain/core/x/oracle"
+	oraclekeeper "github.com/fibonacci-chain/core/x/oracle/keeper"
 )
 
 // HandlerOptions extend the SDK's AnteHandler options by requiring the IBC

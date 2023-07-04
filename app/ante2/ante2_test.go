@@ -2,7 +2,7 @@ package ante2_test
 
 import (
 	"context"
-	"github.com/sei-protocol/sei-chain/app/ante2"
+	"github.com/fibonacci-chain/core/app/ante2"
 	"testing"
 
 	wasmtypes "github.com/CosmWasm/wasmd/x/wasm/types"
@@ -19,8 +19,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/utils/tracing"
 	"github.com/cosmos/cosmos-sdk/x/auth/ante"
 	xauthsigning "github.com/cosmos/cosmos-sdk/x/auth/signing"
-	aclutils "github.com/sei-protocol/sei-chain/aclmapping/utils"
-	"github.com/sei-protocol/sei-chain/app/apptesting"
+	aclutils "github.com/fibonacci-chain/core/aclmapping/utils"
+	"github.com/fibonacci-chain/core/app/apptesting"
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 	"go.opentelemetry.io/otel"

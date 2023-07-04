@@ -5,9 +5,9 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	"github.com/sei-protocol/sei-chain/rpc/backend/mocks"
-	ethrpc "github.com/sei-protocol/sei-chain/rpc/types"
-	evmtypes "github.com/sei-protocol/sei-chain/x/evm/types"
+	"github.com/fibonacci-chain/core/rpc/backend/mocks"
+	ethrpc "github.com/fibonacci-chain/core/rpc/types"
+	evmtypes "github.com/fibonacci-chain/core/x/evm/types"
 	tmtypes "github.com/tendermint/tendermint/types"
 )
 

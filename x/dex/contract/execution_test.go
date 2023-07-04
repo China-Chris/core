@@ -4,14 +4,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/sei-protocol/sei-chain/utils/datastructures"
-	dexutil "github.com/sei-protocol/sei-chain/x/dex/utils"
+	"github.com/fibonacci-chain/core/utils/datastructures"
+	dexutil "github.com/fibonacci-chain/core/x/dex/utils"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	keepertest "github.com/sei-protocol/sei-chain/testutil/keeper"
-	"github.com/sei-protocol/sei-chain/x/dex/contract"
-	keeperutil "github.com/sei-protocol/sei-chain/x/dex/keeper/utils"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
+	keepertest "github.com/fibonacci-chain/core/testutil/keeper"
+	"github.com/fibonacci-chain/core/x/dex/contract"
+	keeperutil "github.com/fibonacci-chain/core/x/dex/keeper/utils"
+	"github.com/fibonacci-chain/core/x/dex/types"
 	"github.com/stretchr/testify/require"
 )
 

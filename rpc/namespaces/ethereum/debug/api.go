@@ -29,7 +29,7 @@ import (
 
 	"github.com/davecgh/go-spew/spew"
 
-	evmtypes "github.com/sei-protocol/sei-chain/x/evm/types"
+	evmtypes "github.com/fibonacci-chain/core/x/evm/types"
 
 	stderrors "github.com/pkg/errors"
 
@@ -39,8 +39,8 @@ import (
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/consensus/ethash"
 	"github.com/ethereum/go-ethereum/rlp"
-	"github.com/sei-protocol/sei-chain/rpc/backend"
-	rpctypes "github.com/sei-protocol/sei-chain/rpc/types"
+	"github.com/fibonacci-chain/core/rpc/backend"
+	rpctypes "github.com/fibonacci-chain/core/rpc/types"
 	"github.com/tendermint/tendermint/libs/log"
 )
 

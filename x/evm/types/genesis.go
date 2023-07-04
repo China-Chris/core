@@ -18,7 +18,7 @@ package types
 import (
 	"fmt"
 
-	ethermint "github.com/sei-protocol/sei-chain/types"
+	ethermint "github.com/fibonacci-chain/core/types"
 )
 
 // Validate performs a basic validation of a GenesisAccount fields.

@@ -4,10 +4,10 @@ import (
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	fuzzutils "github.com/sei-protocol/sei-chain/testutil/fuzzing"
-	keepertest "github.com/sei-protocol/sei-chain/testutil/keeper"
-	"github.com/sei-protocol/sei-chain/x/dex/keeper/msgserver"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
+	fuzzutils "github.com/fibonacci-chain/core/testutil/fuzzing"
+	keepertest "github.com/fibonacci-chain/core/testutil/keeper"
+	"github.com/fibonacci-chain/core/x/dex/keeper/msgserver"
+	"github.com/fibonacci-chain/core/x/dex/types"
 	"github.com/stretchr/testify/require"
 )
 

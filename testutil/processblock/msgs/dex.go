@@ -2,8 +2,8 @@ package msgs
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/sei-protocol/sei-chain/utils"
-	dextypes "github.com/sei-protocol/sei-chain/x/dex/types"
+	"github.com/fibonacci-chain/core/utils"
+	dextypes "github.com/fibonacci-chain/core/x/dex/types"
 )
 
 type Market struct {

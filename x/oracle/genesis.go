@@ -5,8 +5,8 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/sei-protocol/sei-chain/x/oracle/keeper"
-	"github.com/sei-protocol/sei-chain/x/oracle/types"
+	"github.com/fibonacci-chain/core/x/oracle/keeper"
+	"github.com/fibonacci-chain/core/x/oracle/types"
 )
 
 // InitGenesis initialize default parameters

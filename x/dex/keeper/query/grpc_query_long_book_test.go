@@ -10,10 +10,10 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	keepertest "github.com/sei-protocol/sei-chain/testutil/keeper"
-	"github.com/sei-protocol/sei-chain/testutil/nullify"
-	keeperquery "github.com/sei-protocol/sei-chain/x/dex/keeper/query"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
+	keepertest "github.com/fibonacci-chain/core/testutil/keeper"
+	"github.com/fibonacci-chain/core/testutil/nullify"
+	keeperquery "github.com/fibonacci-chain/core/x/dex/keeper/query"
+	"github.com/fibonacci-chain/core/x/dex/types"
 )
 
 func TestLongBookQuerySingle(t *testing.T) {

@@ -5,8 +5,8 @@ package server
 import (
 	"context"
 	"fmt"
-	"github.com/sei-protocol/sei-chain/indexer"
-	ethermint "github.com/sei-protocol/sei-chain/types"
+	"github.com/fibonacci-chain/core/indexer"
+	ethermint "github.com/fibonacci-chain/core/types"
 	"net/http"
 	"os"
 	"runtime/pprof"
@@ -42,7 +42,7 @@ import (
 	storetypes "github.com/cosmos/cosmos-sdk/store/types"
 	"github.com/cosmos/cosmos-sdk/telemetry"
 	"github.com/cosmos/cosmos-sdk/utils/tracing"
-	serverCfg "github.com/sei-protocol/sei-chain/server/config"
+	serverCfg "github.com/fibonacci-chain/core/server/config"
 )
 
 const (

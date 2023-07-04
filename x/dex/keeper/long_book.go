@@ -4,8 +4,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/store/prefix"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/query"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
-	dexutils "github.com/sei-protocol/sei-chain/x/dex/utils"
+	"github.com/fibonacci-chain/core/x/dex/types"
+	dexutils "github.com/fibonacci-chain/core/x/dex/utils"
 )
 
 // SetLongBook set a specific longBook in the store

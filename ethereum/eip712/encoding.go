@@ -18,10 +18,10 @@ package eip712
 import (
 	"errors"
 	"fmt"
-	"github.com/sei-protocol/sei-chain/x/evm/types"
+	"github.com/fibonacci-chain/core/x/evm/types"
 
 	"github.com/cosmos/cosmos-sdk/x/auth/legacy/legacytx"
-	"github.com/sei-protocol/sei-chain/app/params"
+	"github.com/fibonacci-chain/core/app/params"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	txTypes "github.com/cosmos/cosmos-sdk/types/tx"

@@ -18,7 +18,7 @@ package flags
 import (
 	"github.com/cosmos/cosmos-sdk/client/flags"
 	"github.com/cosmos/cosmos-sdk/crypto/keyring"
-	"github.com/sei-protocol/sei-chain/server/config"
+	"github.com/fibonacci-chain/core/server/config"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )

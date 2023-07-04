@@ -25,12 +25,12 @@ import (
 	"github.com/cosmos/cosmos-sdk/client/input"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
-	chaincrypto "github.com/sei-protocol/sei-chain/client/crypto"
+	chaincrypto "github.com/fibonacci-chain/core/client/crypto"
 	"github.com/spf13/cobra"
 
 	"github.com/cosmos/cosmos-sdk/crypto/keyring"
-	"github.com/sei-protocol/sei-chain/crypto/ethsecp256k1"
-	"github.com/sei-protocol/sei-chain/crypto/hd"
+	"github.com/fibonacci-chain/core/crypto/ethsecp256k1"
+	"github.com/fibonacci-chain/core/crypto/hd"
 )
 
 // UnsafeExportEthKeyCommand exports a key with the given name as a private key in hex format.

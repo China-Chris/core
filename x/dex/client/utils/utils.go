@@ -6,7 +6,7 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	dextypes "github.com/sei-protocol/sei-chain/x/dex/types"
+	dextypes "github.com/fibonacci-chain/core/x/dex/types"
 )
 
 type (

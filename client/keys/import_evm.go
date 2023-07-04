@@ -23,10 +23,10 @@ import (
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/client/input"
 	"github.com/ethereum/go-ethereum/common"
-	chaincrypto "github.com/sei-protocol/sei-chain/client/crypto"
-	"github.com/sei-protocol/sei-chain/crypto/ethsecp256k1"
+	chaincrypto "github.com/fibonacci-chain/core/client/crypto"
+	"github.com/fibonacci-chain/core/crypto/ethsecp256k1"
 
-	"github.com/sei-protocol/sei-chain/crypto/hd"
+	"github.com/fibonacci-chain/core/crypto/hd"
 )
 
 // UnsafeImportKeyCommand imports private keys from a keyfile.

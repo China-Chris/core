@@ -4,8 +4,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/sei-protocol/sei-chain/utils"
-	"github.com/sei-protocol/sei-chain/utils/datastructures"
+	"github.com/fibonacci-chain/core/utils"
+	"github.com/fibonacci-chain/core/utils/datastructures"
 	"github.com/stretchr/testify/require"
 )
 

@@ -7,11 +7,11 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/sei-protocol/sei-chain/app"
-	"github.com/sei-protocol/sei-chain/encoding"
-	v5 "github.com/sei-protocol/sei-chain/x/evm/migrations/v5"
-	v5types "github.com/sei-protocol/sei-chain/x/evm/migrations/v5/types"
-	"github.com/sei-protocol/sei-chain/x/evm/types"
+	"github.com/fibonacci-chain/core/app"
+	"github.com/fibonacci-chain/core/encoding"
+	v5 "github.com/fibonacci-chain/core/x/evm/migrations/v5"
+	v5types "github.com/fibonacci-chain/core/x/evm/migrations/v5/types"
+	"github.com/fibonacci-chain/core/x/evm/types"
 )
 
 func TestMigrate(t *testing.T) {

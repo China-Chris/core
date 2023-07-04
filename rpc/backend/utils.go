@@ -37,8 +37,8 @@ import (
 	"github.com/tendermint/tendermint/libs/log"
 	tmrpctypes "github.com/tendermint/tendermint/rpc/coretypes"
 
-	"github.com/sei-protocol/sei-chain/rpc/types"
-	evmtypes "github.com/sei-protocol/sei-chain/x/evm/types"
+	"github.com/fibonacci-chain/core/rpc/types"
+	evmtypes "github.com/fibonacci-chain/core/x/evm/types"
 	"github.com/tendermint/tendermint/proto/tendermint/crypto"
 )
 

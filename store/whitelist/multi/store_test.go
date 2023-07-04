@@ -5,8 +5,8 @@ import (
 
 	storetypes "github.com/cosmos/cosmos-sdk/store/types"
 	"github.com/cosmos/cosmos-sdk/types"
-	"github.com/sei-protocol/sei-chain/store"
-	"github.com/sei-protocol/sei-chain/store/whitelist/multi"
+	"github.com/fibonacci-chain/core/store"
+	"github.com/fibonacci-chain/core/store/whitelist/multi"
 	"github.com/stretchr/testify/require"
 )
 

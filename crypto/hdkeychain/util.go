@@ -4,7 +4,7 @@ import (
 	"crypto/sha256"
 	"errors"
 	"github.com/btcsuite/btcd/chaincfg"
-	"github.com/sei-protocol/sei-chain/crypto/hdkeychain/base58"
+	"github.com/fibonacci-chain/core/crypto/hdkeychain/base58"
 	"golang.org/x/crypto/ripemd160"
 	"hash"
 )

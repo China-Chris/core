@@ -23,7 +23,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/sei-protocol/sei-chain/types/tmquery"
+	"github.com/fibonacci-chain/core/types/tmquery"
 	tmjson "github.com/tendermint/tendermint/libs/json"
 	"github.com/tendermint/tendermint/libs/log"
 	"github.com/tendermint/tendermint/rpc/coretypes"
@@ -37,8 +37,8 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/sei-protocol/sei-chain/rpc/ethereum/pubsub"
-	evmtypes "github.com/sei-protocol/sei-chain/x/evm/types"
+	"github.com/fibonacci-chain/core/rpc/ethereum/pubsub"
+	evmtypes "github.com/fibonacci-chain/core/x/evm/types"
 )
 
 var (

@@ -14,11 +14,11 @@ import (
 	"github.com/cosmos/cosmos-sdk/testutil/network"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	"github.com/sei-protocol/sei-chain/crypto/hd"
+	"github.com/fibonacci-chain/core/crypto/hd"
 	tmrand "github.com/tendermint/tendermint/libs/rand"
 	tmdb "github.com/tendermint/tm-db"
 
-	"github.com/sei-protocol/sei-chain/app"
+	"github.com/fibonacci-chain/core/app"
 )
 
 type (

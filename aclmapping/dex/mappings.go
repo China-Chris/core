@@ -10,8 +10,8 @@ import (
 	acltypes "github.com/cosmos/cosmos-sdk/x/accesscontrol/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
-	dexkeeper "github.com/sei-protocol/sei-chain/x/dex/keeper"
-	dextypes "github.com/sei-protocol/sei-chain/x/dex/types"
+	dexkeeper "github.com/fibonacci-chain/core/x/dex/keeper"
+	dextypes "github.com/fibonacci-chain/core/x/dex/types"
 )
 
 var ErrPlaceOrdersGenerator = fmt.Errorf("invalid message received for dex module")

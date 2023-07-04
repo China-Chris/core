@@ -7,7 +7,7 @@ import (
 	abci "github.com/tendermint/tendermint/abci/types"
 	tmtypes "github.com/tendermint/tendermint/types"
 
-	"github.com/sei-protocol/sei-chain/app"
+	"github.com/fibonacci-chain/core/app"
 )
 
 // Commit commits a block at a given time. Reminder: At the end of each

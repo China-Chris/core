@@ -12,9 +12,9 @@ import (
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	bankkeeper "github.com/cosmos/cosmos-sdk/x/bank/keeper"
 	paramtypes "github.com/cosmos/cosmos-sdk/x/params/types"
-	dexcache "github.com/sei-protocol/sei-chain/x/dex/cache"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
-	epochkeeper "github.com/sei-protocol/sei-chain/x/epoch/keeper"
+	dexcache "github.com/fibonacci-chain/core/x/dex/cache"
+	"github.com/fibonacci-chain/core/x/dex/types"
+	epochkeeper "github.com/fibonacci-chain/core/x/epoch/keeper"
 )
 
 type (

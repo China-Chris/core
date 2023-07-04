@@ -8,11 +8,11 @@ import (
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	goethcrypto "github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/signer/core/apitypes"
-	"github.com/sei-protocol/sei-chain/client/crypto"
-	"github.com/sei-protocol/sei-chain/crypto/ethsecp256k1"
-	"github.com/sei-protocol/sei-chain/rpc/backend/mocks"
-	"github.com/sei-protocol/sei-chain/tests"
-	evmtypes "github.com/sei-protocol/sei-chain/x/evm/types"
+	"github.com/fibonacci-chain/core/client/crypto"
+	"github.com/fibonacci-chain/core/crypto/ethsecp256k1"
+	"github.com/fibonacci-chain/core/rpc/backend/mocks"
+	"github.com/fibonacci-chain/core/tests"
+	evmtypes "github.com/fibonacci-chain/core/x/evm/types"
 	"google.golang.org/grpc/metadata"
 )
 

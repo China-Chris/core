@@ -134,7 +134,7 @@ run-local-node: kill-sei-node build-docker-node
 	docker run --rm \
 	--name sei-node \
 	--network host \
-	-v $(PROJECT_HOME):/sei-protocol/sei-chain:Z \
+	-v $(PROJECT_HOME):/fibonacci-chain/core:Z \
 	-v $(GO_PKG_PATH)/mod:/root/go/pkg/mod:Z \
 	--platform linux/x86_64 \
 	sei-chain/localnode
@@ -145,7 +145,7 @@ run-rpc-node: kill-rpc-node build-rpc-node
 	docker run --rm \
 	--name sei-rpc-node \
 	--network docker_localnet \
-	-v $(PROJECT_HOME):/sei-protocol/sei-chain:Z \
+	-v $(PROJECT_HOME):/fibonacci-chain/core:Z \
 	-v $(PROJECT_HOME)/../sei-tendermint:/sei-protocol/sei-tendermint:Z \
     -v $(PROJECT_HOME)/../sei-cosmos:/sei-protocol/sei-cosmos:Z \
 	-v $(GO_PKG_PATH)/mod:/root/go/pkg/mod:Z \

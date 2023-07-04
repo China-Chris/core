@@ -22,7 +22,7 @@ import (
 	"github.com/ethereum/go-ethereum/core/vm"
 	"github.com/ethereum/go-ethereum/params"
 
-	evm "github.com/sei-protocol/sei-chain/x/evm/vm"
+	evm "github.com/fibonacci-chain/core/x/evm/vm"
 )
 
 var (

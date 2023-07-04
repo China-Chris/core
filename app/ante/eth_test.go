@@ -6,12 +6,12 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/sei-protocol/sei-chain/app/ante"
-	"github.com/sei-protocol/sei-chain/server/config"
-	"github.com/sei-protocol/sei-chain/tests"
-	ethermint "github.com/sei-protocol/sei-chain/types"
-	"github.com/sei-protocol/sei-chain/x/evm/statedb"
-	evmtypes "github.com/sei-protocol/sei-chain/x/evm/types"
+	"github.com/fibonacci-chain/core/app/ante"
+	"github.com/fibonacci-chain/core/server/config"
+	"github.com/fibonacci-chain/core/tests"
+	ethermint "github.com/fibonacci-chain/core/types"
+	"github.com/fibonacci-chain/core/x/evm/statedb"
+	evmtypes "github.com/fibonacci-chain/core/x/evm/types"
 
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 )

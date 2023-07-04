@@ -1,8 +1,8 @@
 package msgserver
 
 import (
-	"github.com/sei-protocol/sei-chain/x/dex/keeper"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
+	"github.com/fibonacci-chain/core/x/dex/keeper"
+	"github.com/fibonacci-chain/core/x/dex/types"
 )
 
 type msgServer struct {

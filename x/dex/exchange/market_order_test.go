@@ -5,14 +5,14 @@ import (
 	"time"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	dex "github.com/sei-protocol/sei-chain/x/dex/cache"
-	"github.com/sei-protocol/sei-chain/x/dex/exchange"
-	keeperutil "github.com/sei-protocol/sei-chain/x/dex/keeper/utils"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
-	dexutils "github.com/sei-protocol/sei-chain/x/dex/utils"
+	dex "github.com/fibonacci-chain/core/x/dex/cache"
+	"github.com/fibonacci-chain/core/x/dex/exchange"
+	keeperutil "github.com/fibonacci-chain/core/x/dex/keeper/utils"
+	"github.com/fibonacci-chain/core/x/dex/types"
+	dexutils "github.com/fibonacci-chain/core/x/dex/utils"
 	"github.com/stretchr/testify/assert"
 
-	keepertest "github.com/sei-protocol/sei-chain/testutil/keeper"
+	keepertest "github.com/fibonacci-chain/core/testutil/keeper"
 )
 
 const (

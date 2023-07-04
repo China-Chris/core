@@ -5,7 +5,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/sei-protocol/sei-chain/oracle/price-feeder/config"
+	"github.com/fibonacci-chain/core/oracle/price-feeder/config"
 
 	"github.com/stretchr/testify/require"
 )

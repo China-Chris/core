@@ -2,7 +2,7 @@ package keeper
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	epochTypes "github.com/sei-protocol/sei-chain/x/epoch/types"
+	epochTypes "github.com/fibonacci-chain/core/x/epoch/types"
 )
 
 func (k Keeper) BeforeEpochStart(ctx sdk.Context, epoch epochTypes.Epoch) {}

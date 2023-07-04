@@ -3,9 +3,8 @@ package types
 import (
 	"fmt"
 
+	"github.com/fibonacci-chain/core/x/oracle/utils"
 	"gopkg.in/yaml.v2"
-
-	"github.com/sei-protocol/sei-chain/x/oracle/utils"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	paramstypes "github.com/cosmos/cosmos-sdk/x/params/types"

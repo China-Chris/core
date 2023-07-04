@@ -13,8 +13,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/client/flags"
 	"github.com/cosmos/cosmos-sdk/client/tx"
 	govclient "github.com/cosmos/cosmos-sdk/x/gov/client"
-	mintrest "github.com/sei-protocol/sei-chain/x/mint/client/rest"
-	"github.com/sei-protocol/sei-chain/x/mint/types"
+	mintrest "github.com/fibonacci-chain/core/x/mint/client/rest"
+	"github.com/fibonacci-chain/core/x/mint/types"
 )
 
 var UpdateMinterHandler = govclient.NewProposalHandler(MsgUpdateMinterProposalCmd, mintrest.UpdateResourceDependencyProposalRESTHandler)

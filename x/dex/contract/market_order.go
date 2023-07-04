@@ -4,10 +4,10 @@ import (
 	"context"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/sei-protocol/sei-chain/x/dex/keeper"
-	dexkeeperabci "github.com/sei-protocol/sei-chain/x/dex/keeper/abci"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
-	dexutils "github.com/sei-protocol/sei-chain/x/dex/utils"
+	"github.com/fibonacci-chain/core/x/dex/keeper"
+	dexkeeperabci "github.com/fibonacci-chain/core/x/dex/keeper/abci"
+	"github.com/fibonacci-chain/core/x/dex/types"
+	dexutils "github.com/fibonacci-chain/core/x/dex/utils"
 	"go.opentelemetry.io/otel/attribute"
 	otrace "go.opentelemetry.io/otel/trace"
 )

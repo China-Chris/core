@@ -4,17 +4,17 @@ import (
 	"encoding/json"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	dexwasm "github.com/sei-protocol/sei-chain/x/dex/client/wasm"
-	dexbindings "github.com/sei-protocol/sei-chain/x/dex/client/wasm/bindings"
-	dextypes "github.com/sei-protocol/sei-chain/x/dex/types"
-	epochwasm "github.com/sei-protocol/sei-chain/x/epoch/client/wasm"
-	epochbindings "github.com/sei-protocol/sei-chain/x/epoch/client/wasm/bindings"
-	epochtypes "github.com/sei-protocol/sei-chain/x/epoch/types"
-	oraclewasm "github.com/sei-protocol/sei-chain/x/oracle/client/wasm"
-	oraclebindings "github.com/sei-protocol/sei-chain/x/oracle/client/wasm/bindings"
-	oracletypes "github.com/sei-protocol/sei-chain/x/oracle/types"
-	tokenfactorywasm "github.com/sei-protocol/sei-chain/x/tokenfactory/client/wasm"
-	tokenfactorytypes "github.com/sei-protocol/sei-chain/x/tokenfactory/types"
+	dexwasm "github.com/fibonacci-chain/core/x/dex/client/wasm"
+	dexbindings "github.com/fibonacci-chain/core/x/dex/client/wasm/bindings"
+	dextypes "github.com/fibonacci-chain/core/x/dex/types"
+	epochwasm "github.com/fibonacci-chain/core/x/epoch/client/wasm"
+	epochbindings "github.com/fibonacci-chain/core/x/epoch/client/wasm/bindings"
+	epochtypes "github.com/fibonacci-chain/core/x/epoch/types"
+	oraclewasm "github.com/fibonacci-chain/core/x/oracle/client/wasm"
+	oraclebindings "github.com/fibonacci-chain/core/x/oracle/client/wasm/bindings"
+	oracletypes "github.com/fibonacci-chain/core/x/oracle/types"
+	tokenfactorywasm "github.com/fibonacci-chain/core/x/tokenfactory/client/wasm"
+	tokenfactorytypes "github.com/fibonacci-chain/core/x/tokenfactory/types"
 )
 
 type QueryPlugin struct {

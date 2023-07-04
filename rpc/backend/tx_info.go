@@ -25,10 +25,10 @@ import (
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/crypto"
+	rpctypes "github.com/fibonacci-chain/core/rpc/types"
+	ethermint "github.com/fibonacci-chain/core/types"
+	evmtypes "github.com/fibonacci-chain/core/x/evm/types"
 	"github.com/pkg/errors"
-	rpctypes "github.com/sei-protocol/sei-chain/rpc/types"
-	ethermint "github.com/sei-protocol/sei-chain/types"
-	evmtypes "github.com/sei-protocol/sei-chain/x/evm/types"
 	tmrpctypes "github.com/tendermint/tendermint/rpc/coretypes"
 )
 

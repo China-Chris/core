@@ -3,7 +3,7 @@ package keys
 import (
 	"bufio"
 	"github.com/cosmos/cosmos-sdk/client"
-	"github.com/sei-protocol/sei-chain/crypto/hd"
+	"github.com/fibonacci-chain/core/crypto/hd"
 	"github.com/spf13/cobra"
 	"github.com/tendermint/tendermint/libs/cli"
 

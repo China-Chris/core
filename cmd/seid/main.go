@@ -3,11 +3,11 @@ package main
 import (
 	"os"
 
-	"github.com/sei-protocol/sei-chain/app/params"
-	"github.com/sei-protocol/sei-chain/cmd/seid/cmd"
+	"github.com/fibonacci-chain/core/app/params"
+	"github.com/fibonacci-chain/core/cmd/seid/cmd"
 
 	svrcmd "github.com/cosmos/cosmos-sdk/server/cmd"
-	"github.com/sei-protocol/sei-chain/app"
+	"github.com/fibonacci-chain/core/app"
 )
 
 func main() {

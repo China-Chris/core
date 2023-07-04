@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/sei-protocol/sei-chain/tests"
-	"github.com/sei-protocol/sei-chain/types"
+	"github.com/fibonacci-chain/core/tests"
+	"github.com/fibonacci-chain/core/types"
 	"github.com/stretchr/testify/require"
 )
 

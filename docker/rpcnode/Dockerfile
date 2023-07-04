@@ -4,7 +4,7 @@ RUN apt-get update && \
 
 VOLUME [ "/sei-protocol" ]
 VOLUME [ "/root/go/pkg/mod" ]
-WORKDIR /sei-protocol/sei-chain
+WORKDIR /fibonacci-chain/core
 
 EXPOSE 26656 26657 26658 9090 9091
 

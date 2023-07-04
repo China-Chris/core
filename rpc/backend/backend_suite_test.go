@@ -18,15 +18,15 @@ import (
 	"github.com/stretchr/testify/suite"
 	tmrpctypes "github.com/tendermint/tendermint/rpc/coretypes"
 
-	"github.com/sei-protocol/sei-chain/app"
-	"github.com/sei-protocol/sei-chain/crypto/ethsecp256k1"
-	"github.com/sei-protocol/sei-chain/crypto/hd"
-	"github.com/sei-protocol/sei-chain/encoding"
-	"github.com/sei-protocol/sei-chain/indexer"
-	"github.com/sei-protocol/sei-chain/rpc/backend/mocks"
-	rpctypes "github.com/sei-protocol/sei-chain/rpc/types"
-	"github.com/sei-protocol/sei-chain/tests"
-	evmtypes "github.com/sei-protocol/sei-chain/x/evm/types"
+	"github.com/fibonacci-chain/core/app"
+	"github.com/fibonacci-chain/core/crypto/ethsecp256k1"
+	"github.com/fibonacci-chain/core/crypto/hd"
+	"github.com/fibonacci-chain/core/encoding"
+	"github.com/fibonacci-chain/core/indexer"
+	"github.com/fibonacci-chain/core/rpc/backend/mocks"
+	rpctypes "github.com/fibonacci-chain/core/rpc/types"
+	"github.com/fibonacci-chain/core/tests"
+	evmtypes "github.com/fibonacci-chain/core/x/evm/types"
 )
 
 type BackendTestSuite struct {

@@ -12,7 +12,7 @@ import (
 	"time"
 
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
-	tokenfactorytypes "github.com/sei-protocol/sei-chain/x/tokenfactory/types"
+	tokenfactorytypes "github.com/fibonacci-chain/core/x/tokenfactory/types"
 
 	cryptotypes "github.com/cosmos/cosmos-sdk/crypto/types"
 	"github.com/cosmos/cosmos-sdk/std"
@@ -24,9 +24,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/auth/tx"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	distributiontypes "github.com/cosmos/cosmos-sdk/x/distribution/types"
-	"github.com/sei-protocol/sei-chain/app"
-	dextypes "github.com/sei-protocol/sei-chain/x/dex/types"
-	oracletypes "github.com/sei-protocol/sei-chain/x/oracle/types"
+	"github.com/fibonacci-chain/core/app"
+	dextypes "github.com/fibonacci-chain/core/x/dex/types"
+	oracletypes "github.com/fibonacci-chain/core/x/oracle/types"
 )
 
 var TestConfig EncodingConfig

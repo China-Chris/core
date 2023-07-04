@@ -26,10 +26,10 @@ import (
 	"github.com/ethereum/go-ethereum/core/vm"
 	"github.com/ethereum/go-ethereum/params"
 
-	"github.com/sei-protocol/sei-chain/x/evm/statedb"
-	evmtypes "github.com/sei-protocol/sei-chain/x/evm/types"
-	evm "github.com/sei-protocol/sei-chain/x/evm/vm"
-	feemarkettypes "github.com/sei-protocol/sei-chain/x/feemarket/types"
+	"github.com/fibonacci-chain/core/x/evm/statedb"
+	evmtypes "github.com/fibonacci-chain/core/x/evm/types"
+	evm "github.com/fibonacci-chain/core/x/evm/vm"
+	feemarkettypes "github.com/fibonacci-chain/core/x/feemarket/types"
 )
 
 // DynamicFeeEVMKeeper is a subset of EVMKeeper interface that supports dynamic fee checker

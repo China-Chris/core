@@ -11,10 +11,10 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/sei-protocol/sei-chain/oracle/price-feeder/config"
-	"github.com/sei-protocol/sei-chain/oracle/price-feeder/oracle/client"
-	"github.com/sei-protocol/sei-chain/oracle/price-feeder/oracle/provider"
-	"github.com/sei-protocol/sei-chain/oracle/price-feeder/oracle/types"
+	"github.com/fibonacci-chain/core/oracle/price-feeder/config"
+	"github.com/fibonacci-chain/core/oracle/price-feeder/oracle/client"
+	"github.com/fibonacci-chain/core/oracle/price-feeder/oracle/provider"
+	"github.com/fibonacci-chain/core/oracle/price-feeder/oracle/types"
 )
 
 type mockProvider struct {

@@ -8,7 +8,7 @@ import (
 	"fmt"
 
 	"github.com/btcsuite/btcd/chaincfg"
-	"github.com/sei-protocol/sei-chain/crypto/hdkeychain"
+	"github.com/fibonacci-chain/core/crypto/hdkeychain"
 )
 
 // This example demonstrates how to generate a cryptographically random seed

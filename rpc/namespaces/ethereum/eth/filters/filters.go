@@ -21,8 +21,8 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/sei-protocol/sei-chain/rpc/backend"
-	"github.com/sei-protocol/sei-chain/rpc/types"
+	"github.com/fibonacci-chain/core/rpc/backend"
+	"github.com/fibonacci-chain/core/rpc/types"
 
 	"github.com/pkg/errors"
 	"github.com/tendermint/tendermint/libs/log"

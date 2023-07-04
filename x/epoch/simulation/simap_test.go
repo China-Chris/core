@@ -5,7 +5,7 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
-	epochsimulation "github.com/sei-protocol/sei-chain/x/epoch/simulation"
+	epochsimulation "github.com/fibonacci-chain/core/x/epoch/simulation"
 
 	"github.com/stretchr/testify/require"
 )

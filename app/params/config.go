@@ -1,7 +1,7 @@
 package params
 
 import (
-	ethermint "github.com/sei-protocol/sei-chain/types"
+	ethermint "github.com/fibonacci-chain/core/types"
 	"time"
 
 	"github.com/cosmos/cosmos-sdk/types/address"
@@ -9,7 +9,7 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	chainTypes "github.com/sei-protocol/sei-chain/types"
+	chainTypes "github.com/fibonacci-chain/core/types"
 )
 
 const (

@@ -1,7 +1,7 @@
 package cli
 
 import (
-	"github.com/sei-protocol/sei-chain/types"
+	"github.com/fibonacci-chain/core/types"
 	"strings"
 	"testing"
 

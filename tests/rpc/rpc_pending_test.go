@@ -14,7 +14,7 @@ import (
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/stretchr/testify/require"
 
-	rpctypes "github.com/sei-protocol/sei-chain/rpc/types"
+	rpctypes "github.com/fibonacci-chain/core/rpc/types"
 )
 
 // func TestMain(m *testing.M) {

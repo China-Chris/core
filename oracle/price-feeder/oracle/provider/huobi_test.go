@@ -5,8 +5,8 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/sei-protocol/sei-chain/oracle/price-feeder/config"
-	"github.com/sei-protocol/sei-chain/oracle/price-feeder/oracle/types"
+	"github.com/fibonacci-chain/core/oracle/price-feeder/config"
+	"github.com/fibonacci-chain/core/oracle/price-feeder/oracle/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/rs/zerolog"

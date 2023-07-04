@@ -18,14 +18,14 @@ package personal
 import (
 	"context"
 	"fmt"
-	ethermint "github.com/sei-protocol/sei-chain/types"
+	ethermint "github.com/fibonacci-chain/core/types"
 	"os"
 	"time"
 
-	"github.com/sei-protocol/sei-chain/rpc/backend"
+	"github.com/fibonacci-chain/core/rpc/backend"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/sei-protocol/sei-chain/crypto/hd"
+	"github.com/fibonacci-chain/core/crypto/hd"
 
 	"github.com/tendermint/tendermint/libs/log"
 
@@ -36,7 +36,7 @@ import (
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/crypto"
 
-	evmtypes "github.com/sei-protocol/sei-chain/x/evm/types"
+	evmtypes "github.com/fibonacci-chain/core/x/evm/types"
 )
 
 // PrivateAccountAPI is the personal_ prefixed set of APIs in the Web3 JSON-RPC spec.

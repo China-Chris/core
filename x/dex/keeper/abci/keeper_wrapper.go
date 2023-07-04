@@ -1,7 +1,7 @@
 package abci
 
 import (
-	"github.com/sei-protocol/sei-chain/x/dex/keeper"
+	"github.com/fibonacci-chain/core/x/dex/keeper"
 )
 
 type KeeperWrapper struct {

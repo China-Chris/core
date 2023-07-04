@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/sei-protocol/sei-chain/x/evm/keeper"
+	"github.com/fibonacci-chain/core/x/evm/keeper"
 
 	"github.com/gogo/protobuf/proto"
 
@@ -30,13 +30,13 @@ import (
 	"github.com/cosmos/cosmos-sdk/crypto/keyring"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/sei-protocol/sei-chain/app"
-	"github.com/sei-protocol/sei-chain/crypto/ethsecp256k1"
-	"github.com/sei-protocol/sei-chain/tests"
-	ethermint "github.com/sei-protocol/sei-chain/types"
-	"github.com/sei-protocol/sei-chain/x/evm"
-	"github.com/sei-protocol/sei-chain/x/evm/statedb"
-	"github.com/sei-protocol/sei-chain/x/evm/types"
+	"github.com/fibonacci-chain/core/app"
+	"github.com/fibonacci-chain/core/crypto/ethsecp256k1"
+	"github.com/fibonacci-chain/core/tests"
+	ethermint "github.com/fibonacci-chain/core/types"
+	"github.com/fibonacci-chain/core/x/evm"
+	"github.com/fibonacci-chain/core/x/evm/statedb"
+	"github.com/fibonacci-chain/core/x/evm/types"
 
 	"github.com/tendermint/tendermint/crypto/tmhash"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"

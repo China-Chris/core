@@ -5,12 +5,12 @@ import (
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/sei-protocol/sei-chain/wasmbinding/bindings"
-	dexwasm "github.com/sei-protocol/sei-chain/x/dex/client/wasm"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
-	dextypes "github.com/sei-protocol/sei-chain/x/dex/types"
-	tokenfactorywasm "github.com/sei-protocol/sei-chain/x/tokenfactory/client/wasm"
-	tokenfactorytypes "github.com/sei-protocol/sei-chain/x/tokenfactory/types"
+	"github.com/fibonacci-chain/core/wasmbinding/bindings"
+	dexwasm "github.com/fibonacci-chain/core/x/dex/client/wasm"
+	"github.com/fibonacci-chain/core/x/dex/types"
+	dextypes "github.com/fibonacci-chain/core/x/dex/types"
+	tokenfactorywasm "github.com/fibonacci-chain/core/x/tokenfactory/client/wasm"
+	tokenfactorytypes "github.com/fibonacci-chain/core/x/tokenfactory/types"
 	"github.com/stretchr/testify/require"
 )
 

@@ -9,9 +9,9 @@ import (
 	"github.com/ethereum/go-ethereum/core"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 
-	"github.com/sei-protocol/sei-chain/x/evm/keeper"
-	"github.com/sei-protocol/sei-chain/x/evm/statedb"
-	"github.com/sei-protocol/sei-chain/x/evm/types"
+	"github.com/fibonacci-chain/core/x/evm/keeper"
+	"github.com/fibonacci-chain/core/x/evm/statedb"
+	"github.com/fibonacci-chain/core/x/evm/types"
 )
 
 // LogRecordHook records all the logs

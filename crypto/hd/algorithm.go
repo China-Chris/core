@@ -17,7 +17,7 @@ package hd
 
 import (
 	"github.com/btcsuite/btcd/chaincfg"
-	"github.com/sei-protocol/sei-chain/crypto/hdkeychain"
+	"github.com/fibonacci-chain/core/crypto/hdkeychain"
 	bip39 "github.com/tyler-smith/go-bip39"
 
 	"github.com/ethereum/go-ethereum/accounts"
@@ -27,7 +27,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/crypto/keyring"
 	cryptotypes "github.com/cosmos/cosmos-sdk/crypto/types"
 
-	"github.com/sei-protocol/sei-chain/crypto/ethsecp256k1"
+	"github.com/fibonacci-chain/core/crypto/ethsecp256k1"
 )
 
 const (

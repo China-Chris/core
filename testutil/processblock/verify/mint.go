@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"github.com/cosmos/cosmos-sdk/x/auth/signing"
-	"github.com/sei-protocol/sei-chain/testutil/processblock"
-	minttypes "github.com/sei-protocol/sei-chain/x/mint/types"
+	"github.com/fibonacci-chain/core/testutil/processblock"
+	minttypes "github.com/fibonacci-chain/core/x/mint/types"
 	"github.com/stretchr/testify/require"
 )
 

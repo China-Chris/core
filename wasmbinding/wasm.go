@@ -7,14 +7,14 @@ import (
 	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
 	aclkeeper "github.com/cosmos/cosmos-sdk/x/accesscontrol/keeper"
 	authkeeper "github.com/cosmos/cosmos-sdk/x/auth/keeper"
-	dexwasm "github.com/sei-protocol/sei-chain/x/dex/client/wasm"
-	dexkeeper "github.com/sei-protocol/sei-chain/x/dex/keeper"
-	epochwasm "github.com/sei-protocol/sei-chain/x/epoch/client/wasm"
-	epochkeeper "github.com/sei-protocol/sei-chain/x/epoch/keeper"
-	oraclewasm "github.com/sei-protocol/sei-chain/x/oracle/client/wasm"
-	oraclekeeper "github.com/sei-protocol/sei-chain/x/oracle/keeper"
-	tokenfactorywasm "github.com/sei-protocol/sei-chain/x/tokenfactory/client/wasm"
-	tokenfactorykeeper "github.com/sei-protocol/sei-chain/x/tokenfactory/keeper"
+	dexwasm "github.com/fibonacci-chain/core/x/dex/client/wasm"
+	dexkeeper "github.com/fibonacci-chain/core/x/dex/keeper"
+	epochwasm "github.com/fibonacci-chain/core/x/epoch/client/wasm"
+	epochkeeper "github.com/fibonacci-chain/core/x/epoch/keeper"
+	oraclewasm "github.com/fibonacci-chain/core/x/oracle/client/wasm"
+	oraclekeeper "github.com/fibonacci-chain/core/x/oracle/keeper"
+	tokenfactorywasm "github.com/fibonacci-chain/core/x/tokenfactory/client/wasm"
+	tokenfactorykeeper "github.com/fibonacci-chain/core/x/tokenfactory/keeper"
 )
 
 func RegisterCustomPlugins(

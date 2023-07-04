@@ -22,7 +22,7 @@ import (
 	"fmt"
 	"sort"
 
-	etherminthd "github.com/sei-protocol/sei-chain/crypto/hd"
+	etherminthd "github.com/fibonacci-chain/core/crypto/hd"
 
 	bip39 "github.com/cosmos/go-bip39"
 	"github.com/spf13/cobra"

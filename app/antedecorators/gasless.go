@@ -7,9 +7,9 @@ import (
 	sdkacltypes "github.com/cosmos/cosmos-sdk/types/accesscontrol"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
-	dextypes "github.com/sei-protocol/sei-chain/x/dex/types"
-	oraclekeeper "github.com/sei-protocol/sei-chain/x/oracle/keeper"
-	oracletypes "github.com/sei-protocol/sei-chain/x/oracle/types"
+	dextypes "github.com/fibonacci-chain/core/x/dex/types"
+	oraclekeeper "github.com/fibonacci-chain/core/x/oracle/keeper"
+	oracletypes "github.com/fibonacci-chain/core/x/oracle/types"
 )
 
 type GaslessDecorator struct {

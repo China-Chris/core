@@ -11,14 +11,14 @@ import (
 	"github.com/cosmos/cosmos-sdk/telemetry"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/sei-protocol/sei-chain/store/whitelist/multi"
-	"github.com/sei-protocol/sei-chain/utils/datastructures"
-	"github.com/sei-protocol/sei-chain/x/dex/exchange"
-	"github.com/sei-protocol/sei-chain/x/dex/keeper"
-	dexkeeperabci "github.com/sei-protocol/sei-chain/x/dex/keeper/abci"
-	dexkeeperutils "github.com/sei-protocol/sei-chain/x/dex/keeper/utils"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
-	dexutils "github.com/sei-protocol/sei-chain/x/dex/utils"
+	"github.com/fibonacci-chain/core/store/whitelist/multi"
+	"github.com/fibonacci-chain/core/utils/datastructures"
+	"github.com/fibonacci-chain/core/x/dex/exchange"
+	"github.com/fibonacci-chain/core/x/dex/keeper"
+	dexkeeperabci "github.com/fibonacci-chain/core/x/dex/keeper/abci"
+	dexkeeperutils "github.com/fibonacci-chain/core/x/dex/keeper/utils"
+	"github.com/fibonacci-chain/core/x/dex/types"
+	dexutils "github.com/fibonacci-chain/core/x/dex/utils"
 	"go.opentelemetry.io/otel/attribute"
 )
 
