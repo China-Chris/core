@@ -121,25 +121,25 @@ func TestPartitionPrioritizedTxs(t *testing.T) {
 		Creator: account,
 		Contract: &dextypes.ContractInfoV2{
 			CodeId:            1,
-			ContractAddr:      "sei1dc34p57spmhguak2ns88u3vxmt73gnu3c0j6phqv5ukfytklkqjsgepv26",
+			ContractAddr:      "fb1dc34p57spmhguak2ns88u3vxmt73gnu3c0j6phqv5ukfytklkqjsgepv26",
 			NeedOrderMatching: true,
 		},
 	}
 
 	contractUnregisterMsg := &dextypes.MsgUnregisterContract{
 		Creator:      account,
-		ContractAddr: "sei1dc34p57spmhguak2ns88u3vxmt73gnu3c0j6phqv5ukfytklkqjsgepv26",
+		ContractAddr: "fb1dc34p57spmhguak2ns88u3vxmt73gnu3c0j6phqv5ukfytklkqjsgepv26",
 	}
 
 	contractUnsuspendMsg := &dextypes.MsgUnsuspendContract{
 		Creator:      account,
-		ContractAddr: "sei1dc34p57spmhguak2ns88u3vxmt73gnu3c0j6phqv5ukfytklkqjsgepv26",
+		ContractAddr: "fb1dc34p57spmhguak2ns88u3vxmt73gnu3c0j6phqv5ukfytklkqjsgepv26",
 	}
 
 	otherMsg := &stakingtypes.MsgDelegate{
 		DelegatorAddress: account,
 		ValidatorAddress: validator,
-		Amount:           sdk.NewCoin("usei", sdk.NewInt(1)),
+		Amount:           sdk.NewCoin("ufibo", sdk.NewInt(1)),
 	}
 
 	txEncoder := app.MakeEncodingConfig().TxConfig.TxEncoder()
@@ -213,7 +213,7 @@ func TestProcessOracleAndOtherTxsSuccess(t *testing.T) {
 	otherMsg := &stakingtypes.MsgDelegate{
 		DelegatorAddress: account,
 		ValidatorAddress: validator,
-		Amount:           sdk.NewCoin("usei", sdk.NewInt(1)),
+		Amount:           sdk.NewCoin("ufibo", sdk.NewInt(1)),
 	}
 
 	oracleTxBuilder := app.MakeEncodingConfig().TxConfig.NewTxBuilder()

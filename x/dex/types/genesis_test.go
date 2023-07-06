@@ -63,7 +63,7 @@ func TestGenesisState_Validate(t *testing.T) {
 						},
 						ContractInfo: types.ContractInfoV2{
 							CodeId:       uint64(1),
-							ContractAddr: "sei14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sh9m79m",
+							ContractAddr: "fb14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sh9m79m",
 						},
 					},
 				},
@@ -115,7 +115,7 @@ func TestGenesisState_Validate(t *testing.T) {
 						},
 						ContractInfo: types.ContractInfoV2{
 							CodeId:       uint64(1),
-							ContractAddr: "sei14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sh9m79m",
+							ContractAddr: "fb14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sh9m79m",
 						},
 					},
 				},
@@ -149,7 +149,7 @@ func TestGenesisState_Validate(t *testing.T) {
 						},
 						ContractInfo: types.ContractInfoV2{
 							CodeId:       uint64(1),
-							ContractAddr: "sei14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sh9m79m",
+							ContractAddr: "fb14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sh9m79m",
 						},
 					},
 				},
@@ -182,7 +182,7 @@ func TestGenesisState_Validate(t *testing.T) {
 						},
 						ContractInfo: types.ContractInfoV2{
 							CodeId:       uint64(1),
-							ContractAddr: "sei14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sh9m79m",
+							ContractAddr: "fb14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sh9m79m",
 						},
 					},
 				},

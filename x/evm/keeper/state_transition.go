@@ -16,6 +16,7 @@
 package keeper
 
 import (
+	"fmt"
 	"math/big"
 
 	tmtypes "github.com/tendermint/tendermint/types"
@@ -152,7 +153,7 @@ func (k *Keeper) ApplyTransaction(ctx sdk.Context, msgEth *types.MsgEthereumTx) 
 		bloomReceipt ethtypes.Bloom
 	)
 
-	cfg, err := k.EVMConfig(ctx, sdk.ConsAddress(ctx.BlockHeader().ProposerAddress), k.eip155ChainID)
+	cfg, err := k.EVMConfig(ctx, ctx.BlockHeader().ProposerAddress, k.eip155ChainID)
 	if err != nil {
 		return nil, errorsmod.Wrap(err, "failed to load evm config")
 	}
@@ -375,7 +376,9 @@ func (k *Keeper) ApplyMessageWithConfig(ctx sdk.Context,
 		ret, _, leftoverGas, vmErr = evm.Create(sender, msg.Data(), leftoverGas, msg.Value())
 		stateDB.SetNonce(sender.Address(), msg.Nonce()+1)
 	} else {
+		fmt.Println("@@@@@@@@@@@@@@@@@@@@@@Call: ", *msg.To(), msg.Data(), leftoverGas, msg.Value())
 		ret, leftoverGas, vmErr = evm.Call(sender, *msg.To(), msg.Data(), leftoverGas, msg.Value())
+		fmt.Println("@@@@@@@@@@@@@@@@@@@@@@Ret: ", ret, leftoverGas, vmErr)
 	}
 
 	refundQuotient := params.RefundQuotient

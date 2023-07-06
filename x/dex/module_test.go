@@ -25,8 +25,8 @@ import (
 )
 
 const (
-	GOOD_CONTRACT_INSTANTIATE = `{"whitelist": ["sei1h9yjz89tl0dl6zu65dpxcqnxfhq60wxx8s5kag"],
-    "use_whitelist":false,"admin":"sei1h9yjz89tl0dl6zu65dpxcqnxfhq60wxx8s5kag",
+	GOOD_CONTRACT_INSTANTIATE = `{"whitelist": ["fb1h9yjz89tl0dl6zu65dpxcqnxfhq60wxx8s5kag"],
+    "use_whitelist":false,"admin":"fb1h9yjz89tl0dl6zu65dpxcqnxfhq60wxx8s5kag",
 	"limit_order_fee":{"decimal":"0.0001","negative":false},
 	"market_order_fee":{"decimal":"0.0001","negative":false},
 	"liquidation_order_fee":{"decimal":"0.0001","negative":false},
@@ -34,12 +34,12 @@ const (
 	"max_leverage":{"decimal":"4","negative":false},
 	"default_base":"USDC",
 	"native_token":"USDC","denoms": ["SEI","ATOM","USDC","SOL","ETH","OSMO","AVAX","BTC"],
-	"full_denom_mapping": [["usei","SEI","0.000001"],["uatom","ATOM","0.000001"],["uusdc","USDC","0.000001"]],
-	"funding_payment_lookback":3600,"spot_market_contract":"sei1h9yjz89tl0dl6zu65dpxcqnxfhq60wxx8s5kag",
+	"full_denom_mapping": [["ufibo","SEI","0.000001"],["uatom","ATOM","0.000001"],["uusdc","USDC","0.000001"]],
+	"funding_payment_lookback":3600,"spot_market_contract":"fb1h9yjz89tl0dl6zu65dpxcqnxfhq60wxx8s5kag",
 	"supported_collateral_denoms": ["USDC"],
 	"supported_multicollateral_denoms": ["ATOM"],
-	"oracle_denom_mapping": [["usei","SEI","1"],["uatom","ATOM","1"],["uusdc","USDC","1"],["ueth","ETH","1"]],
-	"multicollateral_whitelist": ["sei1h9yjz89tl0dl6zu65dpxcqnxfhq60wxx8s5kag"],
+	"oracle_denom_mapping": [["ufibo","SEI","1"],["uatom","ATOM","1"],["uusdc","USDC","1"],["ueth","ETH","1"]],
+	"multicollateral_whitelist": ["fb1h9yjz89tl0dl6zu65dpxcqnxfhq60wxx8s5kag"],
 	"multicollateral_whitelist_enable": true,
 	"funding_payment_pairs": [["USDC","ETH"]],
 	"default_margin_ratios":{
@@ -56,12 +56,12 @@ func TestEndBlockMarketOrder(t *testing.T) {
 	ctx = ctx.WithContext(context.WithValue(ctx.Context(), dexutils.DexMemStateContextKey, dexcache.NewMemState(dexkeeper.GetMemStoreKey())))
 	pair := types.Pair{PriceDenom: "SEI", AssetDenom: "ATOM"}
 
-	testAccount, _ := sdk.AccAddressFromBech32("sei1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
-	amounts := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(10000000)), sdk.NewCoin("uusdc", sdk.NewInt(10000000)))
+	testAccount, _ := sdk.AccAddressFromBech32("fb1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
+	amounts := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(10000000)), sdk.NewCoin("uusdc", sdk.NewInt(10000000)))
 	bankkeeper := testApp.BankKeeper
 	bankkeeper.MintCoins(ctx, minttypes.ModuleName, amounts)
 	bankkeeper.SendCoinsFromModuleToAccount(ctx, minttypes.ModuleName, testAccount, amounts)
-	dexAmounts := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(5000000)), sdk.NewCoin("uusdc", sdk.NewInt(10000000)))
+	dexAmounts := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(5000000)), sdk.NewCoin("uusdc", sdk.NewInt(10000000)))
 	bankkeeper.SendCoinsFromAccountToModule(ctx, testAccount, types.ModuleName, dexAmounts)
 	wasm, err := ioutil.ReadFile("./testdata/mars.wasm")
 	if err != nil {
@@ -75,7 +75,7 @@ func TestEndBlockMarketOrder(t *testing.T) {
 		panic(err)
 	}
 	contractAddr, _, err := contractKeeper.Instantiate(ctx, codeId, testAccount, testAccount, []byte(GOOD_CONTRACT_INSTANTIATE), "test",
-		sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000))))
+		sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000))))
 	if err != nil {
 		panic(err)
 	}
@@ -191,12 +191,12 @@ func TestEndBlockLimitOrder(t *testing.T) {
 	dexkeeper := testApp.DexKeeper
 	pair := types.Pair{PriceDenom: "SEI", AssetDenom: "ATOM"}
 
-	testAccount, _ := sdk.AccAddressFromBech32("sei1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
-	amounts := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(10000000)), sdk.NewCoin("uusdc", sdk.NewInt(10000000)))
+	testAccount, _ := sdk.AccAddressFromBech32("fb1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
+	amounts := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(10000000)), sdk.NewCoin("uusdc", sdk.NewInt(10000000)))
 	bankkeeper := testApp.BankKeeper
 	bankkeeper.MintCoins(ctx, minttypes.ModuleName, amounts)
 	bankkeeper.SendCoinsFromModuleToAccount(ctx, minttypes.ModuleName, testAccount, amounts)
-	dexAmounts := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(5000000)), sdk.NewCoin("uusdc", sdk.NewInt(10000000)))
+	dexAmounts := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(5000000)), sdk.NewCoin("uusdc", sdk.NewInt(10000000)))
 	bankkeeper.SendCoinsFromAccountToModule(ctx, testAccount, types.ModuleName, dexAmounts)
 	wasm, err := ioutil.ReadFile("./testdata/mars.wasm")
 	if err != nil {
@@ -210,7 +210,7 @@ func TestEndBlockLimitOrder(t *testing.T) {
 		panic(err)
 	}
 	contractAddr, _, err := contractKeeper.Instantiate(ctx, codeId, testAccount, testAccount, []byte(GOOD_CONTRACT_INSTANTIATE), "test",
-		sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000))))
+		sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000))))
 	if err != nil {
 		panic(err)
 	}
@@ -417,12 +417,12 @@ func TestEndBlockPartialRollback(t *testing.T) {
 	)
 	dexutils.GetMemState(ctx.Context()).SetDownstreamsToProcess(ctx, keepertest.TestContract, dexkeeper.GetContractWithoutGasCharge)
 	// GOOD CONTRACT
-	testAccount, _ := sdk.AccAddressFromBech32("sei1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
-	amounts := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(1000000)), sdk.NewCoin("uusdc", sdk.NewInt(1000000)))
+	testAccount, _ := sdk.AccAddressFromBech32("fb1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
+	amounts := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(1000000)), sdk.NewCoin("uusdc", sdk.NewInt(1000000)))
 	bankkeeper := testApp.BankKeeper
 	bankkeeper.MintCoins(ctx, minttypes.ModuleName, amounts)
 	bankkeeper.SendCoinsFromModuleToAccount(ctx, minttypes.ModuleName, testAccount, amounts)
-	dexAmounts := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(500000)), sdk.NewCoin("uusdc", sdk.NewInt(1000000)))
+	dexAmounts := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(500000)), sdk.NewCoin("uusdc", sdk.NewInt(1000000)))
 	bankkeeper.SendCoinsFromAccountToModule(ctx, testAccount, types.ModuleName, dexAmounts)
 	wasm, err := ioutil.ReadFile("./testdata/mars.wasm")
 	if err != nil {
@@ -436,7 +436,7 @@ func TestEndBlockPartialRollback(t *testing.T) {
 		panic(err)
 	}
 	contractAddr, _, err := contractKeeper.Instantiate(ctx, codeId, testAccount, testAccount, []byte(GOOD_CONTRACT_INSTANTIATE), "test",
-		sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000))))
+		sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000))))
 	if err != nil {
 		panic(err)
 	}
@@ -488,8 +488,8 @@ func TestBeginBlock(t *testing.T) {
 	ctx = ctx.WithContext(context.WithValue(ctx.Context(), dexutils.DexMemStateContextKey, dexcache.NewMemState(testApp.GetMemKey(types.MemStoreKey))))
 	dexkeeper := testApp.DexKeeper
 
-	testAccount, _ := sdk.AccAddressFromBech32("sei1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
-	amounts := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(10000000)))
+	testAccount, _ := sdk.AccAddressFromBech32("fb1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
+	amounts := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(10000000)))
 	bankkeeper := testApp.BankKeeper
 	bankkeeper.MintCoins(ctx, minttypes.ModuleName, amounts)
 	bankkeeper.SendCoinsFromModuleToAccount(ctx, minttypes.ModuleName, testAccount, amounts)
@@ -505,7 +505,7 @@ func TestBeginBlock(t *testing.T) {
 		panic(err)
 	}
 	contractAddr, _, err := contractKeeper.Instantiate(ctx, codeId, testAccount, testAccount, []byte(GOOD_CONTRACT_INSTANTIATE), "test",
-		sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000))))
+		sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000))))
 	if err != nil {
 		panic(err)
 	}
@@ -524,12 +524,12 @@ func TestEndBlockPanicHandling(t *testing.T) {
 	dexkeeper := testApp.DexKeeper
 	pair := types.Pair{PriceDenom: "SEI", AssetDenom: "ATOM"}
 
-	testAccount, _ := sdk.AccAddressFromBech32("sei1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
-	amounts := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(10000000)))
+	testAccount, _ := sdk.AccAddressFromBech32("fb1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
+	amounts := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(10000000)))
 	bankkeeper := testApp.BankKeeper
 	bankkeeper.MintCoins(ctx, minttypes.ModuleName, amounts)
 	bankkeeper.SendCoinsFromModuleToAccount(ctx, minttypes.ModuleName, testAccount, amounts)
-	dexAmounts := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(5000000)))
+	dexAmounts := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(5000000)))
 	bankkeeper.SendCoinsFromAccountToModule(ctx, testAccount, types.ModuleName, dexAmounts)
 	wasm, err := ioutil.ReadFile("./testdata/mars.wasm")
 	if err != nil {
@@ -543,7 +543,7 @@ func TestEndBlockPanicHandling(t *testing.T) {
 		panic(err)
 	}
 	contractAddr, _, err := contractKeeper.Instantiate(ctx, codeId, testAccount, testAccount, []byte(GOOD_CONTRACT_INSTANTIATE), "test",
-		sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000))))
+		sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000))))
 	if err != nil {
 		panic(err)
 	}
@@ -566,7 +566,7 @@ func TestEndBlockPanicHandling(t *testing.T) {
 	dexutils.GetMemState(ctx.Context()).GetDepositInfo(ctx, types.ContractAddress(contractAddr.String())).Add(
 		&types.DepositInfoEntry{
 			Creator: testAccount.String(),
-			Denom:   "usei",
+			Denom:   "ufibo",
 			Amount:  sdk.MustNewDecFromStr("2000000"),
 		},
 	)
@@ -583,12 +583,12 @@ func TestEndBlockRollbackWithRentCharge(t *testing.T) {
 	dexkeeper := testApp.DexKeeper
 	pair := TEST_PAIR()
 	// GOOD CONTRACT
-	testAccount, _ := sdk.AccAddressFromBech32("sei1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
-	amounts := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(1000000)), sdk.NewCoin("uusdc", sdk.NewInt(1000000)))
+	testAccount, _ := sdk.AccAddressFromBech32("fb1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
+	amounts := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(1000000)), sdk.NewCoin("uusdc", sdk.NewInt(1000000)))
 	bankkeeper := testApp.BankKeeper
 	bankkeeper.MintCoins(ctx, minttypes.ModuleName, amounts)
 	bankkeeper.SendCoinsFromModuleToAccount(ctx, minttypes.ModuleName, testAccount, amounts)
-	dexAmounts := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(500000)), sdk.NewCoin("uusdc", sdk.NewInt(1000000)))
+	dexAmounts := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(500000)), sdk.NewCoin("uusdc", sdk.NewInt(1000000)))
 	bankkeeper.SendCoinsFromAccountToModule(ctx, testAccount, types.ModuleName, dexAmounts)
 	wasm, err := ioutil.ReadFile("./testdata/mars.wasm")
 	if err != nil {
@@ -602,7 +602,7 @@ func TestEndBlockRollbackWithRentCharge(t *testing.T) {
 		panic(err)
 	}
 	contractAddr, _, err := contractKeeper.Instantiate(ctx, codeId, testAccount, testAccount, []byte(GOOD_CONTRACT_INSTANTIATE), "test",
-		sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000))))
+		sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000))))
 	if err != nil {
 		panic(err)
 	}
@@ -637,7 +637,7 @@ func TestEndBlockRollbackWithRentCharge(t *testing.T) {
 	dexkeeper.SetParams(ctx, params)
 
 	ctx = ctx.WithBlockHeight(1)
-	creatorBalanceBefore := bankkeeper.GetBalance(ctx, testAccount, "usei")
+	creatorBalanceBefore := bankkeeper.GetBalance(ctx, testAccount, "ufibo")
 	testApp.EndBlocker(ctx, abci.RequestEndBlock{})
 	// no state change should've been persisted for good contract because it should've run out of gas
 	matchResult, _ := dexkeeper.GetMatchResultState(ctx, contractAddr.String())
@@ -650,9 +650,9 @@ func TestEndBlockRollbackWithRentCharge(t *testing.T) {
 	require.Equal(t, int64(1), dexkeeper.BankKeeper.GetBalance(
 		ctx,
 		dexkeeper.AccountKeeper.GetModuleAddress(authtypes.FeeCollectorName),
-		"usei",
+		"ufibo",
 	).Amount.Int64()) // bad contract rent should be sent to fee collector
-	creatorBalanceAfter := bankkeeper.GetBalance(ctx, testAccount, "usei")
+	creatorBalanceAfter := bankkeeper.GetBalance(ctx, testAccount, "ufibo")
 	require.Equal(t, creatorBalanceBefore, creatorBalanceAfter)
 }
 
@@ -662,12 +662,12 @@ func TestEndBlockContractWithoutPair(t *testing.T) {
 	ctx = ctx.WithContext(context.WithValue(ctx.Context(), dexutils.DexMemStateContextKey, dexcache.NewMemState(testApp.GetMemKey(types.MemStoreKey))))
 	dexkeeper := testApp.DexKeeper
 
-	testAccount, _ := sdk.AccAddressFromBech32("sei1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
-	amounts := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(10000000)), sdk.NewCoin("uusdc", sdk.NewInt(10000000)))
+	testAccount, _ := sdk.AccAddressFromBech32("fb1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
+	amounts := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(10000000)), sdk.NewCoin("uusdc", sdk.NewInt(10000000)))
 	bankkeeper := testApp.BankKeeper
 	bankkeeper.MintCoins(ctx, minttypes.ModuleName, amounts)
 	bankkeeper.SendCoinsFromModuleToAccount(ctx, minttypes.ModuleName, testAccount, amounts)
-	dexAmounts := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(5000000)), sdk.NewCoin("uusdc", sdk.NewInt(10000000)))
+	dexAmounts := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(5000000)), sdk.NewCoin("uusdc", sdk.NewInt(10000000)))
 	bankkeeper.SendCoinsFromAccountToModule(ctx, testAccount, types.ModuleName, dexAmounts)
 	wasm, err := ioutil.ReadFile("./testdata/mars.wasm")
 	if err != nil {
@@ -681,7 +681,7 @@ func TestEndBlockContractWithoutPair(t *testing.T) {
 		panic(err)
 	}
 	contractAddr, _, err := contractKeeper.Instantiate(ctx, codeId, testAccount, testAccount, []byte(GOOD_CONTRACT_INSTANTIATE), "test",
-		sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000))))
+		sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000))))
 	if err != nil {
 		panic(err)
 	}
@@ -711,12 +711,12 @@ func TestOrderCountUpdate(t *testing.T) {
 	dexkeeper := testApp.DexKeeper
 	pair := types.Pair{PriceDenom: "SEI", AssetDenom: "ATOM"}
 
-	testAccount, _ := sdk.AccAddressFromBech32("sei1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
-	amounts := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(10000000)), sdk.NewCoin("uusdc", sdk.NewInt(10000000)))
+	testAccount, _ := sdk.AccAddressFromBech32("fb1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
+	amounts := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(10000000)), sdk.NewCoin("uusdc", sdk.NewInt(10000000)))
 	bankkeeper := testApp.BankKeeper
 	bankkeeper.MintCoins(ctx, minttypes.ModuleName, amounts)
 	bankkeeper.SendCoinsFromModuleToAccount(ctx, minttypes.ModuleName, testAccount, amounts)
-	dexAmounts := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(5000000)), sdk.NewCoin("uusdc", sdk.NewInt(10000000)))
+	dexAmounts := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(5000000)), sdk.NewCoin("uusdc", sdk.NewInt(10000000)))
 	bankkeeper.SendCoinsFromAccountToModule(ctx, testAccount, types.ModuleName, dexAmounts)
 	wasm, err := ioutil.ReadFile("./testdata/mars.wasm")
 	if err != nil {
@@ -730,7 +730,7 @@ func TestOrderCountUpdate(t *testing.T) {
 		panic(err)
 	}
 	contractAddr, _, err := contractKeeper.Instantiate(ctx, codeId, testAccount, testAccount, []byte(GOOD_CONTRACT_INSTANTIATE), "test",
-		sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000))))
+		sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000))))
 	if err != nil {
 		panic(err)
 	}

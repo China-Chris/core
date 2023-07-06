@@ -27,8 +27,8 @@ func TestUnregisterContractSetSiblings(t *testing.T) {
 	wctx := sdk.WrapSDKContext(ctx)
 	keeper := testApp.DexKeeper
 
-	testAccount, _ := sdk.AccAddressFromBech32("sei1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
-	amounts := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000000)), sdk.NewCoin("uusdc", sdk.NewInt(100000000)))
+	testAccount, _ := sdk.AccAddressFromBech32("fb1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
+	amounts := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000000)), sdk.NewCoin("uusdc", sdk.NewInt(100000000)))
 	bankkeeper := testApp.BankKeeper
 	bankkeeper.MintCoins(ctx, minttypes.ModuleName, amounts)
 	bankkeeper.SendCoinsFromModuleToAccount(ctx, minttypes.ModuleName, testAccount, amounts)
@@ -44,7 +44,7 @@ func TestUnregisterContractSetSiblings(t *testing.T) {
 		panic(err)
 	}
 	contractAddr, _, err := contractKeeper.Instantiate(ctx, codeId, testAccount, testAccount, []byte(GOOD_CONTRACT_INSTANTIATE), "test",
-		sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000))))
+		sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000))))
 	if err != nil {
 		panic(err)
 	}
@@ -63,7 +63,7 @@ func TestUnregisterContractSetSiblings(t *testing.T) {
 	require.NoError(t, err)
 	_, err = keeper.GetContract(ctx, contractAddr.String())
 	require.NoError(t, err)
-	balance := keeper.BankKeeper.GetBalance(ctx, testAccount, "usei")
+	balance := keeper.BankKeeper.GetBalance(ctx, testAccount, "ufibo")
 	require.Equal(t, int64(89900000), balance.Amount.Int64())
 
 	handler := dex.NewHandler(keeper)
@@ -75,7 +75,7 @@ func TestUnregisterContractSetSiblings(t *testing.T) {
 				ContractAddr: contractAddr.String(),
 				Pairs: []*types.Pair{
 					{
-						PriceDenom:       "usei",
+						PriceDenom:       "ufibo",
 						AssetDenom:       "uatom",
 						PriceTicksize:    &tickSize,
 						QuantityTicksize: &tickSize,
@@ -93,7 +93,7 @@ func TestUnregisterContractSetSiblings(t *testing.T) {
 	require.NoError(t, err)
 	_, err = keeper.GetContract(ctx, contractAddr.String())
 	require.Error(t, err)
-	balance = keeper.BankKeeper.GetBalance(ctx, testAccount, "usei")
+	balance = keeper.BankKeeper.GetBalance(ctx, testAccount, "ufibo")
 	require.Equal(t, int64(99900000), balance.Amount.Int64())
 	pairs := keeper.GetAllRegisteredPairs(ctx, contractAddr.String())
 	require.Empty(t, pairs)

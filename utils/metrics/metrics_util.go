@@ -33,15 +33,15 @@ func IncrementSudoFailCount(msgType string) {
 	)
 }
 
-// Gauge metric with seid version and git commit as labels
+// Gauge metric with fbchaind version and git commit as labels
 // Metric Name:
 //
-//	seid_version_and_commit
+//	fbchaind_version_and_commit
 func GaugeSeidVersionAndCommit(version string, commit string) {
 	telemetry.SetGaugeWithLabels(
-		[]string{"seid_version_and_commit"},
+		[]string{"fbchaind_version_and_commit"},
 		1,
-		[]metrics.Label{telemetry.NewLabel("seid_version", version), telemetry.NewLabel("commit", commit)},
+		[]metrics.Label{telemetry.NewLabel("fbchaind_version", version), telemetry.NewLabel("commit", commit)},
 	)
 }
 

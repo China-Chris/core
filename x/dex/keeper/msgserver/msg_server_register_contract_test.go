@@ -22,12 +22,12 @@ import (
 )
 
 const (
-	TestContractA = "sei14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sh9m79m"
-	TestContractB = "sei1nc5tatafv6eyq7llkr2gv50ff9e22mnf70qgjlv737ktmt4eswrqms7u8a"
-	TestContractC = "sei1xr3rq8yvd7qplsw5yx90ftsr2zdhg4e9z60h5duusgxpv72hud3shh3qfl"
-	TestContractD = "sei1up07dctjqud4fns75cnpejr4frmjtddzsmwgcktlyxd4zekhwecqghxqcp"
-	TestContractX = "sei1hw5n2l4v5vz8lk4sj69j7pwdaut0kkn90mw09snlkdd3f7ckld0smdtvee"
-	TestContractY = "sei12pwnhtv7yat2s30xuf4gdk9qm85v4j3e6p44let47pdffpklcxlqh8ag0z"
+	TestContractA = "fb14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sh9m79m"
+	TestContractB = "fb1nc5tatafv6eyq7llkr2gv50ff9e22mnf70qgjlv737ktmt4eswrqms7u8a"
+	TestContractC = "fb1xr3rq8yvd7qplsw5yx90ftsr2zdhg4e9z60h5duusgxpv72hud3shh3qfl"
+	TestContractD = "fb1up07dctjqud4fns75cnpejr4frmjtddzsmwgcktlyxd4zekhwecqghxqcp"
+	TestContractX = "fb1hw5n2l4v5vz8lk4sj69j7pwdaut0kkn90mw09snlkdd3f7ckld0smdtvee"
+	TestContractY = "fb12pwnhtv7yat2s30xuf4gdk9qm85v4j3e6p44let47pdffpklcxlqh8ag0z"
 )
 
 func TestRegisterContract(t *testing.T) {
@@ -38,8 +38,8 @@ func TestRegisterContract(t *testing.T) {
 	wctx := sdk.WrapSDKContext(ctx)
 	keeper := testApp.DexKeeper
 
-	testAccount, _ := sdk.AccAddressFromBech32("sei1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
-	amounts := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000000)), sdk.NewCoin("uusdc", sdk.NewInt(100000000)))
+	testAccount, _ := sdk.AccAddressFromBech32("fb1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
+	amounts := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000000)), sdk.NewCoin("uusdc", sdk.NewInt(100000000)))
 	bankkeeper := testApp.BankKeeper
 	bankkeeper.MintCoins(ctx, minttypes.ModuleName, amounts)
 	bankkeeper.SendCoinsFromModuleToAccount(ctx, minttypes.ModuleName, testAccount, amounts)
@@ -55,7 +55,7 @@ func TestRegisterContract(t *testing.T) {
 		panic(err)
 	}
 	contractAddr, _, err := contractKeeper.Instantiate(ctx, codeId, testAccount, testAccount, []byte(GOOD_CONTRACT_INSTANTIATE), "test",
-		sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000))))
+		sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000))))
 	if err != nil {
 		panic(err)
 	}
@@ -82,8 +82,8 @@ func TestRegisterContractCircularDependency(t *testing.T) {
 	wctx := sdk.WrapSDKContext(ctx)
 	keeper := testApp.DexKeeper
 
-	testAccount, _ := sdk.AccAddressFromBech32("sei1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
-	amounts := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000000)), sdk.NewCoin("uusdc", sdk.NewInt(100000000)))
+	testAccount, _ := sdk.AccAddressFromBech32("fb1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
+	amounts := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000000)), sdk.NewCoin("uusdc", sdk.NewInt(100000000)))
 	bankkeeper := testApp.BankKeeper
 	bankkeeper.MintCoins(ctx, minttypes.ModuleName, amounts)
 	bankkeeper.SendCoinsFromModuleToAccount(ctx, minttypes.ModuleName, testAccount, amounts)
@@ -99,12 +99,12 @@ func TestRegisterContractCircularDependency(t *testing.T) {
 		panic(err)
 	}
 	contractAddrFirst, _, err := contractKeeper.Instantiate(ctx, codeId, testAccount, testAccount, []byte(GOOD_CONTRACT_INSTANTIATE), "test",
-		sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000))))
+		sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000))))
 	if err != nil {
 		panic(err)
 	}
 	contractAddrSecond, _, err := contractKeeper.Instantiate(ctx, codeId, testAccount, testAccount, []byte(GOOD_CONTRACT_INSTANTIATE), "test",
-		sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000))))
+		sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000))))
 	if err != nil {
 		panic(err)
 	}
@@ -132,8 +132,8 @@ func TestRegisterContractDuplicateDependency(t *testing.T) {
 	wctx := sdk.WrapSDKContext(ctx)
 	keeper := testApp.DexKeeper
 
-	testAccount, _ := sdk.AccAddressFromBech32("sei1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
-	amounts := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000000)), sdk.NewCoin("uusdc", sdk.NewInt(100000000)))
+	testAccount, _ := sdk.AccAddressFromBech32("fb1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
+	amounts := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000000)), sdk.NewCoin("uusdc", sdk.NewInt(100000000)))
 	bankkeeper := testApp.BankKeeper
 	bankkeeper.MintCoins(ctx, minttypes.ModuleName, amounts)
 	bankkeeper.SendCoinsFromModuleToAccount(ctx, minttypes.ModuleName, testAccount, amounts)
@@ -149,7 +149,7 @@ func TestRegisterContractDuplicateDependency(t *testing.T) {
 		panic(err)
 	}
 	contractAddr, _, err := contractKeeper.Instantiate(ctx, codeId, testAccount, testAccount, []byte(GOOD_CONTRACT_INSTANTIATE), "test",
-		sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000))))
+		sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000))))
 	if err != nil {
 		panic(err)
 	}
@@ -169,8 +169,8 @@ func TestRegisterContractNumIncomingPaths(t *testing.T) {
 	wctx := sdk.WrapSDKContext(ctx)
 	keeper := testApp.DexKeeper
 
-	testAccount, _ := sdk.AccAddressFromBech32("sei1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
-	amounts := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000000)), sdk.NewCoin("uusdc", sdk.NewInt(100000000)))
+	testAccount, _ := sdk.AccAddressFromBech32("fb1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
+	amounts := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000000)), sdk.NewCoin("uusdc", sdk.NewInt(100000000)))
 	bankkeeper := testApp.BankKeeper
 	bankkeeper.MintCoins(ctx, minttypes.ModuleName, amounts)
 	bankkeeper.SendCoinsFromModuleToAccount(ctx, minttypes.ModuleName, testAccount, amounts)
@@ -186,12 +186,12 @@ func TestRegisterContractNumIncomingPaths(t *testing.T) {
 		panic(err)
 	}
 	contractAddrFirst, _, err := contractKeeper.Instantiate(ctx, codeId, testAccount, testAccount, []byte(GOOD_CONTRACT_INSTANTIATE), "test",
-		sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000))))
+		sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000))))
 	if err != nil {
 		panic(err)
 	}
 	contractAddrSecond, _, err := contractKeeper.Instantiate(ctx, codeId, testAccount, testAccount, []byte(GOOD_CONTRACT_INSTANTIATE), "test",
-		sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000))))
+		sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000))))
 	if err != nil {
 		panic(err)
 	}
@@ -228,8 +228,8 @@ func TestRegisterContractSetSiblings(t *testing.T) {
 	wctx := sdk.WrapSDKContext(ctx)
 	keeper := testApp.DexKeeper
 
-	testAccount, _ := sdk.AccAddressFromBech32("sei1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
-	amounts := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000000)), sdk.NewCoin("uusdc", sdk.NewInt(100000000)))
+	testAccount, _ := sdk.AccAddressFromBech32("fb1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
+	amounts := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000000)), sdk.NewCoin("uusdc", sdk.NewInt(100000000)))
 	bankkeeper := testApp.BankKeeper
 	bankkeeper.MintCoins(ctx, minttypes.ModuleName, amounts)
 	bankkeeper.SendCoinsFromModuleToAccount(ctx, minttypes.ModuleName, testAccount, amounts)
@@ -246,32 +246,32 @@ func TestRegisterContractSetSiblings(t *testing.T) {
 	}
 
 	contractAddrA, _, err := contractKeeper.Instantiate(ctx, codeId, testAccount, testAccount, []byte(GOOD_CONTRACT_INSTANTIATE), "test",
-		sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000))))
+		sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000))))
 	if err != nil {
 		panic(err)
 	}
 	contractAddrB, _, err := contractKeeper.Instantiate(ctx, codeId, testAccount, testAccount, []byte(GOOD_CONTRACT_INSTANTIATE), "test",
-		sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000))))
+		sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000))))
 	if err != nil {
 		panic(err)
 	}
 	contractAddrC, _, err := contractKeeper.Instantiate(ctx, codeId, testAccount, testAccount, []byte(GOOD_CONTRACT_INSTANTIATE), "test",
-		sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000))))
+		sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000))))
 	if err != nil {
 		panic(err)
 	}
 	contractAddrD, _, err := contractKeeper.Instantiate(ctx, codeId, testAccount, testAccount, []byte(GOOD_CONTRACT_INSTANTIATE), "test",
-		sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000))))
+		sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000))))
 	if err != nil {
 		panic(err)
 	}
 	contractAddrX, _, err := contractKeeper.Instantiate(ctx, codeId, testAccount, testAccount, []byte(GOOD_CONTRACT_INSTANTIATE), "test",
-		sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000))))
+		sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000))))
 	if err != nil {
 		panic(err)
 	}
 	contractAddrY, _, err := contractKeeper.Instantiate(ctx, codeId, testAccount, testAccount, []byte(GOOD_CONTRACT_INSTANTIATE), "test",
-		sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000))))
+		sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000))))
 	if err != nil {
 		panic(err)
 	}
@@ -345,8 +345,8 @@ func TestRegisterContractWithInvalidRentBalance(t *testing.T) {
 	wctx := sdk.WrapSDKContext(ctx)
 	keeper := testApp.DexKeeper
 
-	testAccount, _ := sdk.AccAddressFromBech32("sei1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
-	amounts := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000000)), sdk.NewCoin("uusdc", sdk.NewInt(100000000)))
+	testAccount, _ := sdk.AccAddressFromBech32("fb1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
+	amounts := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000000)), sdk.NewCoin("uusdc", sdk.NewInt(100000000)))
 	bankkeeper := testApp.BankKeeper
 	bankkeeper.MintCoins(ctx, minttypes.ModuleName, amounts)
 	bankkeeper.SendCoinsFromModuleToAccount(ctx, minttypes.ModuleName, testAccount, amounts)
@@ -362,7 +362,7 @@ func TestRegisterContractWithInvalidRentBalance(t *testing.T) {
 		panic(err)
 	}
 	contractAddr, _, err := contractKeeper.Instantiate(ctx, codeId, testAccount, testAccount, []byte(GOOD_CONTRACT_INSTANTIATE), "test",
-		sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000))))
+		sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000))))
 	if err != nil {
 		panic(err)
 	}
@@ -388,8 +388,8 @@ func TestRegisterContractInvalidRentBalance(t *testing.T) {
 	wctx := sdk.WrapSDKContext(ctx)
 	keeper := testApp.DexKeeper
 
-	testAccount, _ := sdk.AccAddressFromBech32("sei1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
-	amounts := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000000)), sdk.NewCoin("uusdc", sdk.NewInt(100000000)))
+	testAccount, _ := sdk.AccAddressFromBech32("fb1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
+	amounts := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000000)), sdk.NewCoin("uusdc", sdk.NewInt(100000000)))
 	bankkeeper := testApp.BankKeeper
 	bankkeeper.MintCoins(ctx, minttypes.ModuleName, amounts)
 	bankkeeper.SendCoinsFromModuleToAccount(ctx, minttypes.ModuleName, testAccount, amounts)
@@ -406,7 +406,7 @@ func TestRegisterContractInvalidRentBalance(t *testing.T) {
 	}
 
 	contractAddrX, _, err := contractKeeper.Instantiate(ctx, codeId, testAccount, testAccount, []byte(GOOD_CONTRACT_INSTANTIATE), "test",
-		sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000))))
+		sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000))))
 	if err != nil {
 		panic(err)
 	}

@@ -115,11 +115,11 @@ func TestGetAllContractInfo(t *testing.T) {
 
 func TestGetContractGasLimit(t *testing.T) {
 	keeper, ctx := keepertest.DexKeeper(t)
-	contractAddr := sdk.MustAccAddressFromBech32("sei1suhgf5svhu4usrurvxzlgn54ksxmn8gljarjtxqnapv8kjnp4nrsgshtdj")
+	contractAddr := sdk.MustAccAddressFromBech32("fb1suhgf5svhu4usrurvxzlgn54ksxmn8gljarjtxqnapv8kjnp4nrsgshtdj")
 	keeper.SetParams(ctx, types.Params{SudoCallGasPrice: sdk.NewDecWithPrec(1, 1), PriceSnapshotRetention: 1})
 	keeper.SetContract(ctx, &types.ContractInfoV2{
 		Creator:      keepertest.TestAccount,
-		ContractAddr: "sei1suhgf5svhu4usrurvxzlgn54ksxmn8gljarjtxqnapv8kjnp4nrsgshtdj",
+		ContractAddr: "fb1suhgf5svhu4usrurvxzlgn54ksxmn8gljarjtxqnapv8kjnp4nrsgshtdj",
 		CodeId:       1,
 		RentBalance:  1000000,
 	})
@@ -130,7 +130,7 @@ func TestGetContractGasLimit(t *testing.T) {
 
 func TestGetRentsForContracts(t *testing.T) {
 	keeper, ctx := keepertest.DexKeeper(t)
-	addr := "sei1suhgf5svhu4usrurvxzlgn54ksxmn8gljarjtxqnapv8kjnp4nrsgshtdj"
+	addr := "fb1suhgf5svhu4usrurvxzlgn54ksxmn8gljarjtxqnapv8kjnp4nrsgshtdj"
 	require.Equal(t, 0, len(keeper.GetRentsForContracts(ctx, []string{addr})))
 
 	keeper.SetContract(ctx, &types.ContractInfoV2{
@@ -158,37 +158,37 @@ func TestClearDependenciesForContract(t *testing.T) {
 		NumIncomingDependencies: 2,
 	}
 	keptContract := types.ContractInfoV2{
-		ContractAddr:            "sei1yum4v0v5l92jkxn8xpn9mjg7wuldk784ctg424ue8gqvdp88qzlqt6zc4h",
+		ContractAddr:            "fb1yum4v0v5l92jkxn8xpn9mjg7wuldk784ctg424ue8gqvdp88qzlqt6zc4h",
 		NumIncomingDependencies: 2,
 	}
 	upA := types.ContractInfoV2{
-		ContractAddr: "sei105y5ssrsr8p8erkteagrguea6wcdgehlaamfup4lhrlm0y6eyhdsckcxdh",
+		ContractAddr: "fb105y5ssrsr8p8erkteagrguea6wcdgehlaamfup4lhrlm0y6eyhdsckcxdh",
 		Dependencies: []*types.ContractDependencyInfo{
 			{
 				Dependency:              keepertest.TestContract,
-				ImmediateYoungerSibling: "sei1y8ghk8q8d2rswrf3gv7hv2lfsewu8tvp6ysnlkzspu7k0aqkthdqwdqvk0",
+				ImmediateYoungerSibling: "fb1y8ghk8q8d2rswrf3gv7hv2lfsewu8tvp6ysnlkzspu7k0aqkthdqwdqvk0",
 			},
 			{
-				Dependency:              "sei1yum4v0v5l92jkxn8xpn9mjg7wuldk784ctg424ue8gqvdp88qzlqt6zc4h",
-				ImmediateYoungerSibling: "sei193dzcmy7lwuj4eda3zpwwt9ejal00xva0vawcvhgsyyp5cfh6jyqj2vsuv",
+				Dependency:              "fb1yum4v0v5l92jkxn8xpn9mjg7wuldk784ctg424ue8gqvdp88qzlqt6zc4h",
+				ImmediateYoungerSibling: "fb193dzcmy7lwuj4eda3zpwwt9ejal00xva0vawcvhgsyyp5cfh6jyqj2vsuv",
 			},
 		},
 	}
 	upB := types.ContractInfoV2{
-		ContractAddr: "sei1y8ghk8q8d2rswrf3gv7hv2lfsewu8tvp6ysnlkzspu7k0aqkthdqwdqvk0",
+		ContractAddr: "fb1y8ghk8q8d2rswrf3gv7hv2lfsewu8tvp6ysnlkzspu7k0aqkthdqwdqvk0",
 		Dependencies: []*types.ContractDependencyInfo{
 			{
 				Dependency:            keepertest.TestContract,
-				ImmediateElderSibling: "sei105y5ssrsr8p8erkteagrguea6wcdgehlaamfup4lhrlm0y6eyhdsckcxdh",
+				ImmediateElderSibling: "fb105y5ssrsr8p8erkteagrguea6wcdgehlaamfup4lhrlm0y6eyhdsckcxdh",
 			},
 		},
 	}
 	upC := types.ContractInfoV2{
-		ContractAddr: "sei193dzcmy7lwuj4eda3zpwwt9ejal00xva0vawcvhgsyyp5cfh6jyqj2vsuv",
+		ContractAddr: "fb193dzcmy7lwuj4eda3zpwwt9ejal00xva0vawcvhgsyyp5cfh6jyqj2vsuv",
 		Dependencies: []*types.ContractDependencyInfo{
 			{
-				Dependency:            "sei1yum4v0v5l92jkxn8xpn9mjg7wuldk784ctg424ue8gqvdp88qzlqt6zc4h",
-				ImmediateElderSibling: "sei105y5ssrsr8p8erkteagrguea6wcdgehlaamfup4lhrlm0y6eyhdsckcxdh",
+				Dependency:            "fb1yum4v0v5l92jkxn8xpn9mjg7wuldk784ctg424ue8gqvdp88qzlqt6zc4h",
+				ImmediateElderSibling: "fb105y5ssrsr8p8erkteagrguea6wcdgehlaamfup4lhrlm0y6eyhdsckcxdh",
 			},
 		},
 	}
@@ -213,38 +213,38 @@ func TestClearDependenciesForContract(t *testing.T) {
 		ContractAddr: keepertest.TestContract,
 		Dependencies: []*types.ContractDependencyInfo{
 			{
-				Dependency:              "sei1ehyucudueas79h0zwufcnxtv7s2sfmwc6rt0v0hzczdgvyr3p56qhprg6n",
-				ImmediateElderSibling:   "sei1uyprmp0lu8w8z8kwxp7mxanrtrgn4lp7j557pxe4v8sczzdzl7ysk832hh",
-				ImmediateYoungerSibling: "sei1yum4v0v5l92jkxn8xpn9mjg7wuldk784ctg424ue8gqvdp88qzlqt6zc4h",
+				Dependency:              "fb1ehyucudueas79h0zwufcnxtv7s2sfmwc6rt0v0hzczdgvyr3p56qhprg6n",
+				ImmediateElderSibling:   "fb1uyprmp0lu8w8z8kwxp7mxanrtrgn4lp7j557pxe4v8sczzdzl7ysk832hh",
+				ImmediateYoungerSibling: "fb1yum4v0v5l92jkxn8xpn9mjg7wuldk784ctg424ue8gqvdp88qzlqt6zc4h",
 			}, {
-				Dependency: "sei1n23ymwg2y7m55x5vwf2qk0als9cr592q4uc5de08c6qmaeryet4qye4w77",
+				Dependency: "fb1n23ymwg2y7m55x5vwf2qk0als9cr592q4uc5de08c6qmaeryet4qye4w77",
 			},
 		},
 	}
 	keptContractA := types.ContractInfoV2{
-		ContractAddr: "sei1yum4v0v5l92jkxn8xpn9mjg7wuldk784ctg424ue8gqvdp88qzlqt6zc4h",
+		ContractAddr: "fb1yum4v0v5l92jkxn8xpn9mjg7wuldk784ctg424ue8gqvdp88qzlqt6zc4h",
 		Dependencies: []*types.ContractDependencyInfo{
 			{
-				Dependency:            "sei1ehyucudueas79h0zwufcnxtv7s2sfmwc6rt0v0hzczdgvyr3p56qhprg6n",
+				Dependency:            "fb1ehyucudueas79h0zwufcnxtv7s2sfmwc6rt0v0hzczdgvyr3p56qhprg6n",
 				ImmediateElderSibling: keepertest.TestContract,
 			},
 		},
 	}
 	keptContractB := types.ContractInfoV2{
-		ContractAddr: "sei1uyprmp0lu8w8z8kwxp7mxanrtrgn4lp7j557pxe4v8sczzdzl7ysk832hh",
+		ContractAddr: "fb1uyprmp0lu8w8z8kwxp7mxanrtrgn4lp7j557pxe4v8sczzdzl7ysk832hh",
 		Dependencies: []*types.ContractDependencyInfo{
 			{
-				Dependency:              "sei1ehyucudueas79h0zwufcnxtv7s2sfmwc6rt0v0hzczdgvyr3p56qhprg6n",
+				Dependency:              "fb1ehyucudueas79h0zwufcnxtv7s2sfmwc6rt0v0hzczdgvyr3p56qhprg6n",
 				ImmediateYoungerSibling: keepertest.TestContract,
 			},
 		},
 	}
 	downA := types.ContractInfoV2{
-		ContractAddr:            "sei1ehyucudueas79h0zwufcnxtv7s2sfmwc6rt0v0hzczdgvyr3p56qhprg6n",
+		ContractAddr:            "fb1ehyucudueas79h0zwufcnxtv7s2sfmwc6rt0v0hzczdgvyr3p56qhprg6n",
 		NumIncomingDependencies: 3,
 	}
 	downB := types.ContractInfoV2{
-		ContractAddr:            "sei1n23ymwg2y7m55x5vwf2qk0als9cr592q4uc5de08c6qmaeryet4qye4w77",
+		ContractAddr:            "fb1n23ymwg2y7m55x5vwf2qk0als9cr592q4uc5de08c6qmaeryet4qye4w77",
 		NumIncomingDependencies: 1,
 	}
 	keeper.SetContract(ctx, &contract)
@@ -257,22 +257,22 @@ func TestClearDependenciesForContract(t *testing.T) {
 	keptContractA, err = keeper.GetContract(ctx, keptContractA.ContractAddr)
 	require.Nil(t, err)
 	require.Equal(t, types.ContractInfoV2{
-		ContractAddr: "sei1yum4v0v5l92jkxn8xpn9mjg7wuldk784ctg424ue8gqvdp88qzlqt6zc4h",
+		ContractAddr: "fb1yum4v0v5l92jkxn8xpn9mjg7wuldk784ctg424ue8gqvdp88qzlqt6zc4h",
 		Dependencies: []*types.ContractDependencyInfo{
 			{
-				Dependency:            "sei1ehyucudueas79h0zwufcnxtv7s2sfmwc6rt0v0hzczdgvyr3p56qhprg6n",
-				ImmediateElderSibling: "sei1uyprmp0lu8w8z8kwxp7mxanrtrgn4lp7j557pxe4v8sczzdzl7ysk832hh",
+				Dependency:            "fb1ehyucudueas79h0zwufcnxtv7s2sfmwc6rt0v0hzczdgvyr3p56qhprg6n",
+				ImmediateElderSibling: "fb1uyprmp0lu8w8z8kwxp7mxanrtrgn4lp7j557pxe4v8sczzdzl7ysk832hh",
 			},
 		},
 	}, keptContractA)
 	keptContractB, err = keeper.GetContract(ctx, keptContractB.ContractAddr)
 	require.Nil(t, err)
 	require.Equal(t, types.ContractInfoV2{
-		ContractAddr: "sei1uyprmp0lu8w8z8kwxp7mxanrtrgn4lp7j557pxe4v8sczzdzl7ysk832hh",
+		ContractAddr: "fb1uyprmp0lu8w8z8kwxp7mxanrtrgn4lp7j557pxe4v8sczzdzl7ysk832hh",
 		Dependencies: []*types.ContractDependencyInfo{
 			{
-				Dependency:              "sei1ehyucudueas79h0zwufcnxtv7s2sfmwc6rt0v0hzczdgvyr3p56qhprg6n",
-				ImmediateYoungerSibling: "sei1yum4v0v5l92jkxn8xpn9mjg7wuldk784ctg424ue8gqvdp88qzlqt6zc4h",
+				Dependency:              "fb1ehyucudueas79h0zwufcnxtv7s2sfmwc6rt0v0hzczdgvyr3p56qhprg6n",
+				ImmediateYoungerSibling: "fb1yum4v0v5l92jkxn8xpn9mjg7wuldk784ctg424ue8gqvdp88qzlqt6zc4h",
 			},
 		},
 	}, keptContractB)
@@ -322,23 +322,23 @@ func TestGetAllProcessableContractInfo(t *testing.T) {
 	require.Greater(t, keeper.GetMinProcessableRent(ctx), uint64(0))
 
 	goodContract := types.ContractInfoV2{
-		ContractAddr:      "sei1avny5w9rcj7lmqmse8kukg2edvq4adqk8vlf58",
+		ContractAddr:      "fb1avny5w9rcj7lmqmse8kukg2edvq4adqk8vlf58",
 		NeedOrderMatching: true,
 		RentBalance:       keeper.GetMinProcessableRent(ctx) + 1,
 	}
 	noMatchingContract := types.ContractInfoV2{
-		ContractAddr:      "sei1fww2a30qc4sh25crhugcclaq2supxkpxeyz9lr",
+		ContractAddr:      "fb1fww2a30qc4sh25crhugcclaq2supxkpxeyz9lr",
 		NeedOrderMatching: false,
 		RentBalance:       keeper.GetMinProcessableRent(ctx) + 1,
 	}
 	suspendedContract := types.ContractInfoV2{
-		ContractAddr:      "sei1hh95z3a5vk560khjnnkd3en8r0hu063mw64jzd",
+		ContractAddr:      "fb1hh95z3a5vk560khjnnkd3en8r0hu063mw64jzd",
 		NeedOrderMatching: true,
 		RentBalance:       keeper.GetMinProcessableRent(ctx) + 1,
 		Suspended:         true,
 	}
 	outOfRentContract := types.ContractInfoV2{
-		ContractAddr:      "sei1v2ye9tnmzwx5983emm00j0c7tyxqu855ktxw5l",
+		ContractAddr:      "fb1v2ye9tnmzwx5983emm00j0c7tyxqu855ktxw5l",
 		NeedOrderMatching: true,
 		RentBalance:       keeper.GetMinProcessableRent(ctx) - 1,
 	}
@@ -349,5 +349,5 @@ func TestGetAllProcessableContractInfo(t *testing.T) {
 
 	processableContracts := keeper.GetAllProcessableContractInfo(ctx)
 	require.Equal(t, 1, len(processableContracts))
-	require.Equal(t, "sei1avny5w9rcj7lmqmse8kukg2edvq4adqk8vlf58", processableContracts[0].ContractAddr)
+	require.Equal(t, "fb1avny5w9rcj7lmqmse8kukg2edvq4adqk8vlf58", processableContracts[0].ContractAddr)
 }

@@ -27,8 +27,8 @@ func TestUpdateQuantityTickSize(t *testing.T) {
 	wctx := sdk.WrapSDKContext(ctx)
 	keeper := testApp.DexKeeper
 
-	testAccount, _ := sdk.AccAddressFromBech32("sei1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
-	amounts := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000000)), sdk.NewCoin("uusdc", sdk.NewInt(100000000)))
+	testAccount, _ := sdk.AccAddressFromBech32("fb1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
+	amounts := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000000)), sdk.NewCoin("uusdc", sdk.NewInt(100000000)))
 	bankkeeper := testApp.BankKeeper
 	bankkeeper.MintCoins(ctx, minttypes.ModuleName, amounts)
 	bankkeeper.SendCoinsFromModuleToAccount(ctx, minttypes.ModuleName, testAccount, amounts)
@@ -44,7 +44,7 @@ func TestUpdateQuantityTickSize(t *testing.T) {
 		panic(err)
 	}
 	contractAddr, _, err := contractKeeper.Instantiate(ctx, codeId, testAccount, testAccount, []byte(GOOD_CONTRACT_INSTANTIATE), "test",
-		sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000))))
+		sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000))))
 	if err != nil {
 		panic(err)
 	}
@@ -90,8 +90,8 @@ func TestUpdateQuantityTickSizeInvalidMsg(t *testing.T) {
 	wctx := sdk.WrapSDKContext(ctx)
 	keeper := testApp.DexKeeper
 
-	testAccount, _ := sdk.AccAddressFromBech32("sei1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
-	amounts := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000000)), sdk.NewCoin("uusdc", sdk.NewInt(100000000)))
+	testAccount, _ := sdk.AccAddressFromBech32("fb1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
+	amounts := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000000)), sdk.NewCoin("uusdc", sdk.NewInt(100000000)))
 	bankkeeper := testApp.BankKeeper
 	bankkeeper.MintCoins(ctx, minttypes.ModuleName, amounts)
 	bankkeeper.SendCoinsFromModuleToAccount(ctx, minttypes.ModuleName, testAccount, amounts)
@@ -107,7 +107,7 @@ func TestUpdateQuantityTickSizeInvalidMsg(t *testing.T) {
 		panic(err)
 	}
 	contractAddr, _, err := contractKeeper.Instantiate(ctx, codeId, testAccount, testAccount, []byte(GOOD_CONTRACT_INSTANTIATE), "test",
-		sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000))))
+		sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000))))
 	if err != nil {
 		panic(err)
 	}
@@ -197,8 +197,8 @@ func TestInvalidUpdateQuantityTickSizeCreator(t *testing.T) {
 	wctx := sdk.WrapSDKContext(ctx)
 	keeper := testApp.DexKeeper
 
-	testAccount, _ := sdk.AccAddressFromBech32("sei1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
-	amounts := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000000)), sdk.NewCoin("uusdc", sdk.NewInt(100000000)))
+	testAccount, _ := sdk.AccAddressFromBech32("fb1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
+	amounts := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000000)), sdk.NewCoin("uusdc", sdk.NewInt(100000000)))
 	bankkeeper := testApp.BankKeeper
 	bankkeeper.MintCoins(ctx, minttypes.ModuleName, amounts)
 	bankkeeper.SendCoinsFromModuleToAccount(ctx, minttypes.ModuleName, testAccount, amounts)
@@ -214,7 +214,7 @@ func TestInvalidUpdateQuantityTickSizeCreator(t *testing.T) {
 		panic(err)
 	}
 	contractAddr, _, err := contractKeeper.Instantiate(ctx, codeId, testAccount, testAccount, []byte(GOOD_CONTRACT_INSTANTIATE), "test",
-		sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000))))
+		sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000))))
 	if err != nil {
 		panic(err)
 	}
@@ -243,7 +243,7 @@ func TestInvalidUpdateQuantityTickSizeCreator(t *testing.T) {
 		Ticksize:     sdk.MustNewDecFromStr("0.1"),
 	})
 	_, err = server.UpdateQuantityTickSize(wctx, &types.MsgUpdateQuantityTickSize{
-		Creator:      "sei18rrckuelmacz4fv4v2hl9t3kaw7mm4wpe8v36m",
+		Creator:      "fb18rrckuelmacz4fv4v2hl9t3kaw7mm4wpe8v36m",
 		TickSizeList: tickUpdates,
 	})
 	require.NotNil(t, err)

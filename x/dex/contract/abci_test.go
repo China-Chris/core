@@ -22,13 +22,13 @@ func TestTransferRentFromDexToCollector(t *testing.T) {
 	testApp := keepertest.TestApp()
 	ctx := testApp.BaseApp.NewContext(false, tmproto.Header{Time: time.Now()})
 	bankkeeper := testApp.BankKeeper
-	err := bankkeeper.MintCoins(ctx, minttypes.ModuleName, sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100))))
+	err := bankkeeper.MintCoins(ctx, minttypes.ModuleName, sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100))))
 	require.Nil(t, err)
-	err = bankkeeper.SendCoinsFromModuleToModule(ctx, minttypes.ModuleName, types.ModuleName, sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100))))
+	err = bankkeeper.SendCoinsFromModuleToModule(ctx, minttypes.ModuleName, types.ModuleName, sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100))))
 	require.Nil(t, err)
 	contract.TransferRentFromDexToCollector(ctx, bankkeeper, preRents, postRents)
-	dexBalance := bankkeeper.GetBalance(ctx, testApp.AccountKeeper.GetModuleAddress(types.ModuleName), "usei")
+	dexBalance := bankkeeper.GetBalance(ctx, testApp.AccountKeeper.GetModuleAddress(types.ModuleName), "ufibo")
 	require.Equal(t, int64(20), dexBalance.Amount.Int64())
-	collectorBalance := bankkeeper.GetBalance(ctx, testApp.AccountKeeper.GetModuleAddress(authtypes.FeeCollectorName), "usei")
+	collectorBalance := bankkeeper.GetBalance(ctx, testApp.AccountKeeper.GetModuleAddress(authtypes.FeeCollectorName), "ufibo")
 	require.Equal(t, int64(80), collectorBalance.Amount.Int64())
 }

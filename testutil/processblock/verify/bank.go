@@ -36,7 +36,7 @@ func Balance(t *testing.T, app *processblock.App, f BlockRunnable, txs []signing
 					updateMultipleExpectedBalanceChange(expectedChanges, m.Creator, m.Funds, false)
 					updateMultipleExpectedBalanceChange(expectedChanges, m.ContractAddr, m.Funds, true)
 				case *dextypes.MsgRegisterContract:
-					funds := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(int64(m.Contract.RentBalance))))
+					funds := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(int64(m.Contract.RentBalance))))
 					updateMultipleExpectedBalanceChange(expectedChanges, m.Creator, funds, false)
 				default:
 					// TODO: add coverage for other balance-affecting messages to enable testing for those message types

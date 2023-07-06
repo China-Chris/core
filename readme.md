@@ -1,37 +1,28 @@
-# Sei
+# Fibonacci Chain
 
-![Banner!](assets/SeiLogo.png)
+![FIBOLOGO.png](docs%2FFIBOLOGO.png)
 
-Sei Network is the first orderbook-specific L1 blockchain. The chain emphasizes reliability, security and high throughput above all else, enabling an entirely new echelon of ultra-high performance DeFi products built on top. Sei's on-chain CLOB and matching engine provides deep liquidity and price-time-priority matching for traders and apps. Apps built on Sei benefit from built-in orderbook infrastructure, deep liquidity, and a fully decentralized matching service. Users benefit from this exchange model with the ability to select price, size, and direction of their trades coupled with MEV protection.
+Fibonacci is a forward-looking, high-performance public blockchain with the ability to be composable and iterative, and it is fully compatible with both EVM and WASM.
 
-# seichain
-**seichain** is a blockchain built using Cosmos SDK and Tendermint. It is built using the Cosmos SDK and Tendermint core, and features a built-in central limit orderbook (CLOB) module. Decentralized applications building on Sei can build on top of the CLOB, and other Cosmos-based blockchains can leverage Sei's CLOB as a shared liquidity hub and create markets for any asset. Sei Shared Liquidity Model
+# fbchain
+**fbchain** is a blockchain built using Cosmos SDK and Tendermint. It is built using the Cosmos SDK and Tendermint core
 
-Designed with developers and users in mind, Sei serves as the infrastructure and shared liquidity hub for the next generation of DeFi. Apps can easily plug-and-play to trade on Sei orderbook infrastructure and access pooled liquidity from other apps. To prioritize developer experience, Sei Network has integrated the wasmd module to support CosmWasm smart contracts.
+Leveraging its highly scalable underlying framework, Fibonacci is dedicated to building a customized SocialFi ecosystem for the social sector and creator economy.
 
 # Documentation
-For the most up to date documentation please visit https://docs.seinetwork.io
+For the most up to date documentation please visit https://fibochain.org
 
-# Central Limit Orderbook
-Most financial applications in traditional finance make use of CLOBs to create markets. This works well if you have cheap transaction fees and large amounts of liquidity. In decentralized finance however, the automated market-maker (AMM) model is more popular because it doesn't require constantly updating orders and works with lower amounts of liquidity. 
+# Fibonacci Chain Ecosystem
+Fibonacci Chain Network is an L1 blockchain with a built-in on-chain orderbook that allows smart contracts easy access to shared liquidity. Fibonacci Chain architecture enables composable apps that maintain modularity.
 
-Sei offers cheap transaction fees and works with market makers to have large amounts of liquidity. As a result, it can offer the orderbook based trading experience in a decentralized, permissionless manner. This unlocks many use cases that previously didn't work with the AMM model. 
+Fibonacci Chain Network serves as the matching core of the ecosystem, offering superior reliability and ultra-high transaction speed to ecosystem partners, each with their own functionality and user experience. Anyone can create a DeFi application that leverages Fibonacci Chain's liquidity and the entire ecosystem benefits.
 
-# Sei Ecosystem
-Sei Network is an L1 blockchain with a built-in on-chain orderbook that allows smart contracts easy access to shared liquidity. Sei architecture enables composable apps that maintain modularity.
-
-Sei Network serves as the matching core of the ecosystem, offering superior reliability and ultra-high transaction speed to ecosystem partners, each with their own functionality and user experience. Anyone can create a DeFi application that leverages Sei's liquidity and the entire ecosystem benefits.
-
-Developers, traders, and users can all connect to Sei as ecosystem partners benefiting from shared liquidity and decentralized financial primitives.
+Developers, traders, and users can all connect to Fibonacci Chain as ecosystem partners benefiting from shared liquidity and decentralized financial primitives.
 
 # Testnet
 ## Get started
-**How to validate on the Sei Testnet**
-*This is the Sei Testnet-1 (sei-testnet-1)*
-
-> Genesis [Published](https://github.com/sei-protocol/testnet/blob/main/sei-testnet-1/genesis.json)
-
-> Peers [Published](https://github.com/sei-protocol/testnet/blob/main/sei-testnet-1/addrbook.json)
+**How to validate on the Fibonacci Chain Testnet**
+*This is the Fibonacci Chain Testnet-1 (fibonacci-testnet-1)*
 
 ## Hardware Requirements
 **Minimum**
@@ -56,49 +47,49 @@ Developers, traders, and users can all connect to Sei as ecosystem partners bene
 * Arch Linux: `pacman -S make`
 * Ubuntu: `sudo apt-get install make`
 
-## Seid Installation Steps
+## Fibonacci Chaind Installation Steps
 
 **Clone git repository**
 
 ```bash
 git clone https://github.com/fibonacci-chain/core
-cd sei-chain
+cd core
 git checkout origin/1.0.1beta-upgrade
 make install
-mv $HOME/go/bin/seid /usr/bin/
+mv $HOME/go/bin/fbchaind /usr/bin/
 ```
 **Generate keys**
 
-* `seid keys add [key_name]`
+* `fbchaind keys add [key_name]`
 
-* `seid keys add [key_name] --recover` to regenerate keys with your mnemonic
+* `fbchaind keys add [key_name] --recover` to regenerate keys with your mnemonic
 
-* `seid keys add [key_name] --ledger` to generate keys with ledger device
+* `fbchaind keys add [key_name] --ledger` to generate keys with ledger device
 
 ## Validator setup instructions
 
-* Install seid binary
+* Install fbchaind binary
 
-* Initialize node: `seid init <moniker> --chain-id sei-testnet-1`
+* Initialize node: `fbchaind init <moniker> --chain-id fbc-testnet-1`
 
-* Download the Genesis file: `wget https://github.com/sei-protocol/testnet/raw/main/sei-testnet-1/genesis.json -P $HOME/.sei/config/`
+* Download the Genesis file: `wget http://xxx -P $HOME/.fbchaind/config/`
  
-* Edit the minimum-gas-prices in ${HOME}/.sei/config/app.toml: `sed -i 's/minimum-gas-prices = ""/minimum-gas-prices = "0.01usei"/g' $HOME/.sei/config/app.toml`
+* Edit the minimum-gas-prices in ${HOME}/.fbchaind/config/app.toml: `sed -i 's/minimum-gas-prices = ""/minimum-gas-prices = "0.01ufibo"/g' $HOME/.fbchaind/config/app.toml`
 
-* Start seid by creating a systemd service to run the node in the background
-`nano /etc/systemd/system/seid.service`
+* Start fbchaind by creating a systemd service to run the node in the background
+`nano /etc/systemd/system/fbchaind.service`
 > Copy and paste the following text into your service file. Be sure to edit as you see fit.
 
 ```bash
 [Unit]
-Description=Sei-Network Node
+Description=Fibonacci Chain-Network Node
 After=network.target
 
 [Service]
 Type=simple
 User=root
 WorkingDirectory=/root/
-ExecStart=/root/go/bin/seid start
+ExecStart=/root/go/bin/fbchaind start
 Restart=on-failure
 StartLimitInterval=0
 RestartSec=3
@@ -110,11 +101,11 @@ WantedBy=multi-user.target
 ```
 ## Start the node
 
-**Start seid on Linux**
+**Start fbchaind on Linux**
 
 * Reload the service files: `sudo systemctl daemon-reload` 
-* Create the symlinlk: `sudo systemctl enable seid.service` 
-* Start the node sudo: `systemctl start seid && journalctl -u seid -f`
+* Create the symlinlk: `sudo systemctl enable fbchaind.service` 
+* Start the node sudo: `systemctl start fbchaind && journalctl -u fbchaind -f`
 
 **Start a chain on 4 node docker cluster**
 
@@ -124,7 +115,7 @@ WantedBy=multi-user.target
 
 ### Create Validator Transaction
 ```bash
-seid tx staking create-validator \
+fbchaind tx staking create-validator \
 --from {{KEY_NAME}} \
 --chain-id  \
 --moniker="<VALIDATOR_NAME>" \
@@ -134,12 +125,12 @@ seid tx staking create-validator \
 --details="<description>" \
 --security-contact="<contact_information>" \
 --website="<your_website>" \
---pubkey $(seid tendermint show-validator) \
+--pubkey $(fbchaind tendermint show-validator) \
 --min-self-delegation="1" \
---amount <token delegation>usei \
+--amount <token delegation>ufibo \
 --node localhost:26657
 ```
 # Build with Us!
-If you are interested in building with Sei Network: 
-Email us at team@seinetwork.io 
-DM us on Twitter https://twitter.com/SeiNetwork
+If you are interested in building with Fibonacci Chain Network: 
+Email us at fibonacci77777@gmail.com 
+DM us on Twitter https://twitter.com/FIBOGlobal ChainNetwork

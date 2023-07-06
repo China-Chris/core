@@ -1,6 +1,15 @@
 FROM ubuntu:latest
+ENV DEBIAN_FRONTEND=noninteractive
+ENV TZ=Asia/Shanghai
+RUN sed -i 's/archive.ubuntu.com/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list
 RUN apt-get update && \
-    apt-get install -y make git golang jq python3 curl vim
+    apt-get install -y make git vim && \
+    apt-get install -y jq python3 curl wget gcc && \
+    wget https://dl.google.com/go/go1.20.linux-amd64.tar.gz && \
+        tar -C /usr/local -xzf go1.20.linux-amd64.tar.gz && \
+        rm go1.20.linux-amd64.tar.gz
+SHELL ["/bin/bash", "-c"]
+
 
 VOLUME [ "/sei-protocol" ]
 VOLUME [ "/root/go/pkg/mod" ]

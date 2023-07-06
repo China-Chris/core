@@ -99,7 +99,7 @@ func IsDecimalMultipleOf(a, b sdk.Dec) bool {
 	return quotient.Mul(b).Equal(a)
 }
 
-const DexGasFeeUnit = "usei"
+const DexGasFeeUnit = "ufibo"
 
 type CheckDexGasDecorator struct {
 	dexKeeper       keeper.Keeper

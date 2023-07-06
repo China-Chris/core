@@ -97,5 +97,5 @@ func (m *Market) commonCancel(account sdk.AccAddress, price string, id uint64) *
 }
 
 func fundForOrder(o *dextypes.Order) sdk.Coins {
-	return sdk.NewCoins(sdk.NewCoin("usei", o.Price.Mul(o.Quantity).RoundInt()))
+	return sdk.NewCoins(sdk.NewCoin("ufibo", o.Price.Mul(o.Quantity).RoundInt()))
 }

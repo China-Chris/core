@@ -15,13 +15,13 @@ import (
 
 func TestMultiplierGasSetter(t *testing.T) {
 	testApp := app.Setup(false)
-	contractAddr, err := sdk.AccAddressFromBech32("sei1y3pxq5dp900czh0mkudhjdqjq5m8cpmmps8yjw")
+	contractAddr, err := sdk.AccAddressFromBech32("fb1y3pxq5dp900czh0mkudhjdqjq5m8cpmmps8yjw")
 	require.NoError(t, err)
-	otherContractAddr, err := sdk.AccAddressFromBech32("sei14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sh9m79m")
+	otherContractAddr, err := sdk.AccAddressFromBech32("fb14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sh9m79m")
 	require.NoError(t, err)
 	ctx := testApp.NewContext(false, types.Header{}).WithBlockHeight(2)
 	testMsg := wasmtypes.MsgExecuteContract{
-		Contract: "sei1y3pxq5dp900czh0mkudhjdqjq5m8cpmmps8yjw",
+		Contract: "fb1y3pxq5dp900czh0mkudhjdqjq5m8cpmmps8yjw",
 		Msg:      []byte("{\"xyz\":{}}"),
 	}
 	testTx := app.NewTestTx([]sdk.Msg{&testMsg})
@@ -64,7 +64,7 @@ func TestMultiplierGasSetter(t *testing.T) {
 	require.Equal(t, uint64(1), ctxWithGasMeter.GasMeter().GasConsumed())
 
 	otherTestMsg := wasmtypes.MsgExecuteContract{
-		Contract: "sei14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sh9m79m",
+		Contract: "fb14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sh9m79m",
 		Msg:      []byte("{\"xyz\":{}}"),
 	}
 	testTx2 := app.NewTestTx([]sdk.Msg{&testMsg, &otherTestMsg})
@@ -96,12 +96,12 @@ func TestMultiplierGasSetter(t *testing.T) {
 
 func TestMultiplierGasSetterWithWasmReference(t *testing.T) {
 	testApp := app.Setup(false)
-	contractAddr, err := sdk.AccAddressFromBech32("sei1y3pxq5dp900czh0mkudhjdqjq5m8cpmmps8yjw")
-	referredContractAddr, err := sdk.AccAddressFromBech32("sei14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sh9m79m")
+	contractAddr, err := sdk.AccAddressFromBech32("fb1y3pxq5dp900czh0mkudhjdqjq5m8cpmmps8yjw")
+	referredContractAddr, err := sdk.AccAddressFromBech32("fb14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sh9m79m")
 	require.NoError(t, err)
 	ctx := testApp.NewContext(false, types.Header{}).WithBlockHeight(2)
 	testMsg := wasmtypes.MsgExecuteContract{
-		Contract: "sei1y3pxq5dp900czh0mkudhjdqjq5m8cpmmps8yjw",
+		Contract: "fb1y3pxq5dp900czh0mkudhjdqjq5m8cpmmps8yjw",
 		Msg:      []byte("{\"xyz\":{}}"),
 	}
 	testTx := app.NewTestTx([]sdk.Msg{&testMsg})
@@ -184,12 +184,12 @@ func TestMultiplierGasSetterWithWasmReference(t *testing.T) {
 
 func TestMultiplierGasSetterWithWasmReferenceCycle(t *testing.T) {
 	testApp := app.Setup(false)
-	contractAddr, err := sdk.AccAddressFromBech32("sei1y3pxq5dp900czh0mkudhjdqjq5m8cpmmps8yjw")
-	referredContractAddr, err := sdk.AccAddressFromBech32("sei14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sh9m79m")
+	contractAddr, err := sdk.AccAddressFromBech32("fb1y3pxq5dp900czh0mkudhjdqjq5m8cpmmps8yjw")
+	referredContractAddr, err := sdk.AccAddressFromBech32("fb14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sh9m79m")
 	require.NoError(t, err)
 	ctx := testApp.NewContext(false, types.Header{}).WithBlockHeight(2)
 	testMsg := wasmtypes.MsgExecuteContract{
-		Contract: "sei1y3pxq5dp900czh0mkudhjdqjq5m8cpmmps8yjw",
+		Contract: "fb1y3pxq5dp900czh0mkudhjdqjq5m8cpmmps8yjw",
 		Msg:      []byte("{\"xyz\":{}}"),
 	}
 	testTx := app.NewTestTx([]sdk.Msg{&testMsg})

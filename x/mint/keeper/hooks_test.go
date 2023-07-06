@@ -67,7 +67,7 @@ func TestEndOfEpochMintedCoinDistribution(t *testing.T) {
 			},
 		}
 		mintParams := minttypes.NewParams(
-			"usei",
+			"ufibo",
 			tokenReleaseSchedle,
 		)
 		seiApp.MintKeeper.SetParams(ctx, mintParams)
@@ -114,7 +114,7 @@ func TestEndOfEpochMintedCoinDistribution(t *testing.T) {
 			},
 		}
 		mintParams := minttypes.NewParams(
-			"usei",
+			"ufibo",
 			tokenReleaseSchedle,
 		)
 		seiApp.MintKeeper.SetParams(ctx, mintParams)
@@ -176,7 +176,7 @@ func TestEndOfEpochMintedCoinDistribution(t *testing.T) {
 			},
 		}
 		mintParams := minttypes.NewParams(
-			"usei",
+			"ufibo",
 			tokenReleaseSchedle,
 		)
 		seiApp.MintKeeper.SetParams(ctx, mintParams)
@@ -220,7 +220,7 @@ func TestEndOfEpochMintedCoinDistribution(t *testing.T) {
 			},
 		}
 		mintParams := minttypes.NewParams(
-			"usei",
+			"ufibo",
 			tokenReleaseSchedle,
 		)
 		seiApp.MintKeeper.SetParams(ctx, mintParams)

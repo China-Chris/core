@@ -12,7 +12,7 @@ import (
 func TestPriceTickSizeGet(t *testing.T) {
 	keeper, ctx := keepertest.DexKeeper(t)
 	// TEST_PAIR = atom/usdc pair
-	contractAddr := "sei14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sh9m79m"
+	contractAddr := "fb14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sh9m79m"
 	ticksize, found := keeper.GetPriceTickSizeForPair(ctx, contractAddr, keepertest.TestPair)
 	assert.Equal(t, ticksize, sdk.ZeroDec())
 	assert.False(t, found)
@@ -28,7 +28,7 @@ func TestPriceTickSizeGet(t *testing.T) {
 func TestQuantityTickSizeGet(t *testing.T) {
 	keeper, ctx := keepertest.DexKeeper(t)
 	// TEST_PAIR = atom/usdc pair
-	contractAddr := "sei14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sh9m79m"
+	contractAddr := "fb14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sh9m79m"
 	ticksize, found := keeper.GetQuantityTickSizeForPair(ctx, contractAddr, keepertest.TestPair)
 	assert.Equal(t, ticksize, sdk.ZeroDec())
 	assert.False(t, found)

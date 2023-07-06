@@ -51,11 +51,11 @@ func (suite *KeeperTestSuite) SetupTest() {
 
 // Explicitly only run once during setup
 func (suite *KeeperTestSuite) PrepareTest() {
-	suite.defaultDenom = "usei"
-	suite.defaultExchangeRate = fmt.Sprintf("%dusei", sdk.NewDec(1700))
+	suite.defaultDenom = "ufibo"
+	suite.defaultExchangeRate = fmt.Sprintf("%dufibo", sdk.NewDec(1700))
 
 	suite.initialBalance = sdk.Coins{sdk.NewInt64Coin(suite.defaultDenom, 100000000000)}
-	suite.initialBalance = sdk.Coins{sdk.NewInt64Coin("usei", 100000000000)}
+	suite.initialBalance = sdk.Coins{sdk.NewInt64Coin("ufibo", 100000000000)}
 	suite.FundAcc(suite.TestAccs[0], suite.initialBalance)
 
 	suite.queryClient = dextypes.NewQueryClient(suite.QueryHelper)
@@ -68,7 +68,7 @@ func (suite *KeeperTestSuite) PrepareTest() {
 	suite.Ctx = suite.Ctx.WithBlockTime(time.Unix(333, 0))
 
 	suite.creator = suite.TestAccs[0].String()
-	suite.contract = "sei14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sh9m79m"
+	suite.contract = "fb14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sh9m79m"
 
 	suite.App.DexKeeper.AddRegisteredPair(suite.Ctx, suite.contract, keepertest.TestPair)
 	suite.App.DexKeeper.SetPriceTickSizeForPair(suite.Ctx, suite.contract, keepertest.TestPair, *keepertest.TestPair.PriceTicksize)
@@ -244,7 +244,7 @@ func TestGeneratorInvalidMessageTypes(t *testing.T) {
 	testWrapper := app.NewTestWrapper(t, tm, valPub)
 
 	oracleVote := oracletypes.MsgAggregateExchangeRateVote{
-		ExchangeRates: "1usei",
+		ExchangeRates: "1ufibo",
 		Feeder:        "test",
 		Validator:     "validator",
 	}

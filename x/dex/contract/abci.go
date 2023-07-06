@@ -307,7 +307,7 @@ func TransferRentFromDexToCollector(ctx sdk.Context, bankKeeper bankkeeper.Keepe
 			total += preRent
 		}
 	}
-	if err := bankKeeper.SendCoinsFromModuleToModule(ctx, types.ModuleName, authtypes.FeeCollectorName, sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(int64(total))))); err != nil {
+	if err := bankKeeper.SendCoinsFromModuleToModule(ctx, types.ModuleName, authtypes.FeeCollectorName, sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(int64(total))))); err != nil {
 		ctx.Logger().Error("sending coints from dex to fee collector failed due to %s", err)
 	}
 }

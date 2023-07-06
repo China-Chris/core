@@ -24,7 +24,7 @@ func SendTx(
 ) func() {
 	(*txBuilder).SetGasLimit(gas)
 	(*txBuilder).SetFeeAmount([]sdk.Coin{
-		sdk.NewCoin("usei", sdk.NewInt(fee)),
+		sdk.NewCoin("ufibo", sdk.NewInt(fee)),
 	})
 	loadtestClient.SignerClient.SignTx(loadtestClient.ChainID, txBuilder, key, seqDelta)
 	txBytes, _ := TestConfig.TxConfig.TxEncoder()((*txBuilder).GetTx())

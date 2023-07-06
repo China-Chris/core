@@ -1,1 +1,1 @@
-/home/ubuntu/sei-chain/build/loadtest
+/home/ubuntu/fibonacci-chain/core/build/loadtest

@@ -145,14 +145,14 @@ func (c *LoadTestClient) generateMessage(config Config, key cryptotypes.PrivKey,
 		// TODO: Potentially just hard code the Funds amount here
 		price := config.PriceDistr.Sample()
 		quantity := config.QuantityDistr.Sample()
-		amount, err := sdk.ParseCoinsNormalized(fmt.Sprintf("%d%s", price.Mul(quantity).Ceil().RoundInt64(), "usei"))
+		amount, err := sdk.ParseCoinsNormalized(fmt.Sprintf("%d%s", price.Mul(quantity).Ceil().RoundInt64(), "ufibo"))
 		if err != nil {
 			panic(err)
 		}
 		msgs = []sdk.Msg{&wasmtypes.MsgExecuteContract{
 			Sender:   sdk.AccAddress(key.PubKey().Address()).String(),
 			Contract: contract,
-			Msg:      wasmtypes.RawContractMessage([]byte("{\"mint\":{\"owner\": \"sei1a27kj2j27c6uz58rn9zmhcjee9s3h3nhyhtvjj\"}}")),
+			Msg:      wasmtypes.RawContractMessage([]byte("{\"mint\":{\"owner\": \"fb1a27kj2j27c6uz58rn9zmhcjee9s3h3nhyhtvjj\"}}")),
 			Funds:    amount,
 		}}
 	case WasmInstantiate:
@@ -162,7 +162,7 @@ func (c *LoadTestClient) generateMessage(config Config, key cryptotypes.PrivKey,
 			Label:  "test",
 			Msg:    wasmtypes.RawContractMessage([]byte(config.WasmMsgTypes.Instantiate.Payload)),
 			Funds: sdk.NewCoins(sdk.Coin{
-				Denom:  "usei",
+				Denom:  "ufibo",
 				Amount: sdk.NewInt(1),
 			}), // maybe make this configurable as well in the future
 		}}
@@ -171,7 +171,7 @@ func (c *LoadTestClient) generateMessage(config Config, key cryptotypes.PrivKey,
 			FromAddress: sdk.AccAddress(key.PubKey().Address()).String(),
 			ToAddress:   sdk.AccAddress(key.PubKey().Address()).String(),
 			Amount: sdk.NewCoins(sdk.Coin{
-				Denom:  "usei",
+				Denom:  "ufibo",
 				Amount: sdk.NewInt(1),
 			}),
 		}}
@@ -181,7 +181,7 @@ func (c *LoadTestClient) generateMessage(config Config, key cryptotypes.PrivKey,
 			FromAddress: sdk.AccAddress(adminKey.PubKey().Address()).String(),
 			ToAddress:   sdk.AccAddress(key.PubKey().Address()).String(),
 			Amount: sdk.NewCoins(sdk.Coin{
-				Denom:  "usei",
+				Denom:  "ufibo",
 				Amount: sdk.NewInt(10000000),
 			}),
 		}}
@@ -210,7 +210,7 @@ func (c *LoadTestClient) generateMessage(config Config, key cryptotypes.PrivKey,
 		quantity := config.QuantityDistr.Sample()
 		contract := config.ContractDistr.Sample()
 		orderPlacements := generateDexOrderPlacements(config, key, msgPerTx, price, quantity)
-		amount, err := sdk.ParseCoinsNormalized(fmt.Sprintf("%d%s", price.Mul(quantity).Ceil().RoundInt64(), "usei"))
+		amount, err := sdk.ParseCoinsNormalized(fmt.Sprintf("%d%s", price.Mul(quantity).Ceil().RoundInt64(), "ufibo"))
 		if err != nil {
 			panic(err)
 		}
@@ -280,7 +280,7 @@ func (c *LoadTestClient) generateMessage(config Config, key cryptotypes.PrivKey,
 			FromAddress: sdk.AccAddress(key.PubKey().Address()).String(),
 			ToAddress:   sdk.AccAddress(key.PubKey().Address()).String(),
 			Amount: sdk.NewCoins(sdk.Coin{
-				Denom:  "usei",
+				Denom:  "ufibo",
 				Amount: sdk.NewInt(amountUsei),
 			}),
 		}}
@@ -289,7 +289,7 @@ func (c *LoadTestClient) generateMessage(config Config, key cryptotypes.PrivKey,
 		quantity := config.QuantityDistr.InvalidSample()
 		contract := config.ContractDistr.Sample()
 		orderPlacements := generateDexOrderPlacements(config, key, msgPerTx, price, quantity)
-		amount, err := sdk.ParseCoinsNormalized(fmt.Sprintf("%d%s", price.Mul(quantity).Ceil().RoundInt64(), "usei"))
+		amount, err := sdk.ParseCoinsNormalized(fmt.Sprintf("%d%s", price.Mul(quantity).Ceil().RoundInt64(), "ufibo"))
 		if err != nil {
 			panic(err)
 		}
@@ -310,7 +310,7 @@ func (c *LoadTestClient) generateMessage(config Config, key cryptotypes.PrivKey,
 		} else {
 			amountUsei = 0
 		}
-		amount, err := sdk.ParseCoinsNormalized(fmt.Sprintf("%d%s", amountUsei, "usei"))
+		amount, err := sdk.ParseCoinsNormalized(fmt.Sprintf("%d%s", amountUsei, "ufibo"))
 		if err != nil {
 			panic(err)
 		}
@@ -379,7 +379,7 @@ func generateOracleMessage(key cryptotypes.PrivKey) sdk.Msg {
 	valAddr := sdk.ValAddress(key.PubKey().Address()).String()
 	addr := sdk.AccAddress(key.PubKey().Address()).String()
 	msg := &oracletypes.MsgAggregateExchangeRateVote{
-		ExchangeRates: "1usei,2uatom",
+		ExchangeRates: "1ufibo,2uatom",
 		Feeder:        addr,
 		Validator:     valAddr,
 	}
@@ -395,7 +395,7 @@ func (c *LoadTestClient) generateStakingMsg(delegatorAddr string, chosenValidato
 		msg = &stakingtypes.MsgDelegate{
 			DelegatorAddress: delegatorAddr,
 			ValidatorAddress: chosenValidator,
-			Amount:           sdk.Coin{Denom: "usei", Amount: sdk.NewInt(1)},
+			Amount:           sdk.Coin{Denom: "ufibo", Amount: sdk.NewInt(1)},
 		}
 		c.DelegationMap[delegatorAddr] = map[string]int{}
 		c.DelegationMap[delegatorAddr][chosenValidator] = 1
@@ -405,14 +405,14 @@ func (c *LoadTestClient) generateStakingMsg(delegatorAddr string, chosenValidato
 				DelegatorAddress:    delegatorAddr,
 				ValidatorSrcAddress: srcAddr,
 				ValidatorDstAddress: chosenValidator,
-				Amount:              sdk.Coin{Denom: "usei", Amount: sdk.NewInt(1)},
+				Amount:              sdk.Coin{Denom: "ufibo", Amount: sdk.NewInt(1)},
 			}
 			c.DelegationMap[delegatorAddr][chosenValidator]++
 		} else {
 			msg = &stakingtypes.MsgUndelegate{
 				DelegatorAddress: delegatorAddr,
 				ValidatorAddress: srcAddr,
-				Amount:           sdk.Coin{Denom: "usei", Amount: sdk.NewInt(1)},
+				Amount:           sdk.Coin{Denom: "ufibo", Amount: sdk.NewInt(1)},
 			}
 		}
 		// Update delegation map
@@ -442,7 +442,7 @@ func (c *LoadTestClient) generateVortexOrder(config Config, key cryptotypes.Priv
 	// If placing short order on vortex, first deposit for buying power
 	if direction == dextypes.PositionDirection_SHORT {
 		// TODO: Considering depositing more up front when numOrders > 1
-		amountDeposit, err := sdk.ParseCoinsNormalized(fmt.Sprintf("%d%s", price.Mul(quantity).Ceil().RoundInt64(), "usei"))
+		amountDeposit, err := sdk.ParseCoinsNormalized(fmt.Sprintf("%d%s", price.Mul(quantity).Ceil().RoundInt64(), "ufibo"))
 		if err != nil {
 			panic(err)
 		}
@@ -472,7 +472,7 @@ func (c *LoadTestClient) generateVortexOrder(config Config, key cryptotypes.Priv
 		orderPlacements = append(orderPlacements, vortexOrder)
 	}
 
-	amount, err := sdk.ParseCoinsNormalized(fmt.Sprintf("%d%s", price.Mul(quantity).Ceil().RoundInt64(), "usei"))
+	amount, err := sdk.ParseCoinsNormalized(fmt.Sprintf("%d%s", price.Mul(quantity).Ceil().RoundInt64(), "ufibo"))
 	if err != nil {
 		panic(err)
 	}

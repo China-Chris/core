@@ -162,7 +162,7 @@ is performed. Note, when enabled, gRPC will also be automatically enabled.
 			flagChainID, _ := cmd.Flags().GetString(FlagChainID)
 			if flagChainID != "" {
 				if flagChainID != chainID {
-					panic(fmt.Sprintf("chain-id mismatch: %s vs %s. The chain-id passed in is different from the value in ~/.sei/config/client.toml \n", flagChainID, chainID))
+					panic(fmt.Sprintf("chain-id mismatch: %s vs %s. The chain-id passed in is different from the value in ~/.fbchaind/config/client.toml \n", flagChainID, chainID))
 				}
 				chainID = flagChainID
 			}

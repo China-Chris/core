@@ -73,7 +73,7 @@ func TestCheckDexGasDecorator(t *testing.T) {
 			types.NewMsgPlaceOrders("someone", []*types.Order{{}, {}}, keepertest.TestContract, sdk.NewCoins()),
 			types.NewMsgCancelOrders("someone", []*types.Cancellation{{}, {}, {}}, keepertest.TestContract),
 		},
-		fee: sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(27500))),
+		fee: sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(27500))),
 	}
 	_, err := decorator.AnteHandle(ctx, tx, false, terminator)
 	require.Nil(t, err)
@@ -82,7 +82,7 @@ func TestCheckDexGasDecorator(t *testing.T) {
 			types.NewMsgPlaceOrders("someone", []*types.Order{{}, {}}, keepertest.TestContract, sdk.NewCoins()),
 			types.NewMsgCancelOrders("someone", []*types.Cancellation{{}, {}, {}}, keepertest.TestContract),
 		},
-		fee: sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(25499))),
+		fee: sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(25499))),
 	}
 	_, err = decorator.AnteHandle(ctx, tx, false, terminator)
 	require.NotNil(t, err)
@@ -109,7 +109,7 @@ func TestCheckDexGasDecorator(t *testing.T) {
 		msgs: []sdk.Msg{
 			types.NewMsgPlaceOrders("someone", []*types.Order{{Data: "data"}, {}}, keepertest.TestContract, sdk.NewCoins()),
 		},
-		fee: sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(11011))),
+		fee: sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(11011))),
 	}
 	_, err = decorator.AnteHandle(ctx, tx, false, terminator)
 	require.NotNil(t, err)
@@ -119,7 +119,7 @@ func TestCheckDexGasDecorator(t *testing.T) {
 		msgs: []sdk.Msg{
 			types.NewMsgPlaceOrders("someone", []*types.Order{{Data: "data"}, {}}, keepertest.TestContract, sdk.NewCoins()),
 		},
-		fee: sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(11012))),
+		fee: sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(11012))),
 	}
 	_, err = decorator.AnteHandle(ctx, tx, false, terminator)
 	require.Nil(t, err)
@@ -150,7 +150,7 @@ func TestTickSizeMultipleDecorator(t *testing.T) {
 				Quantity:     quantity,
 				OrderType:    types.OrderType_MARKET,
 			}}, "contract", sdk.NewCoins())},
-		fee: sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(27500))),
+		fee: sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(27500))),
 	}
 	_, err := decorator.AnteHandle(ctx, tx, false, terminator)
 	require.Nil(t, err)
@@ -165,7 +165,7 @@ func TestTickSizeMultipleDecorator(t *testing.T) {
 				Quantity:     quantity,
 				OrderType:    types.OrderType_FOKMARKET,
 			}}, "contract", sdk.NewCoins())},
-		fee: sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(27500))),
+		fee: sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(27500))),
 	}
 	_, err = decorator.AnteHandle(ctx, tx, false, terminator)
 	require.Nil(t, err)
@@ -180,7 +180,7 @@ func TestTickSizeMultipleDecorator(t *testing.T) {
 				Quantity:     quantity,
 				OrderType:    types.OrderType_FOKMARKETBYVALUE,
 			}}, "contract", sdk.NewCoins())},
-		fee: sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(27500))),
+		fee: sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(27500))),
 	}
 	_, err = decorator.AnteHandle(ctx, tx, false, terminator)
 	require.Nil(t, err)
@@ -196,7 +196,7 @@ func TestTickSizeMultipleDecorator(t *testing.T) {
 				Quantity:     quantity,
 				OrderType:    types.OrderType_LIMIT,
 			}}, "contract", sdk.NewCoins())},
-		fee: sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(27500))),
+		fee: sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(27500))),
 	}
 	_, err = decorator.AnteHandle(ctx, tx, false, terminator)
 	require.NotNil(t, err)
@@ -212,7 +212,7 @@ func TestTickSizeMultipleDecorator(t *testing.T) {
 				Quantity:     quantity,
 				OrderType:    types.OrderType_MARKET,
 			}}, "contract", sdk.NewCoins())},
-		fee: sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(27500))),
+		fee: sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(27500))),
 	}
 	_, err = decorator.AnteHandle(ctx, tx, false, terminator)
 	require.Nil(t, err)
@@ -228,7 +228,7 @@ func TestTickSizeMultipleDecorator(t *testing.T) {
 				Quantity:     quantity,
 				OrderType:    types.OrderType_MARKET,
 			}}, "contract", sdk.NewCoins())},
-		fee: sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(27500))),
+		fee: sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(27500))),
 	}
 	_, err = decorator.AnteHandle(ctx, tx, false, terminator)
 	require.NotNil(t, err)
@@ -244,7 +244,7 @@ func TestTickSizeMultipleDecorator(t *testing.T) {
 				Quantity:     quantity,
 				OrderType:    types.OrderType_LIMIT,
 			}}, "contract", sdk.NewCoins())},
-		fee: sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(27500))),
+		fee: sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(27500))),
 	}
 	_, err = decorator.AnteHandle(ctx, tx, false, terminator)
 	require.Nil(t, err)
@@ -260,7 +260,7 @@ func TestTickSizeMultipleDecorator(t *testing.T) {
 				Quantity:     quantity,
 				OrderType:    types.OrderType_LIMIT,
 			}}, "contract", sdk.NewCoins())},
-		fee: sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(27500))),
+		fee: sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(27500))),
 	}
 	_, err = decorator.AnteHandle(ctx, tx, false, terminator)
 	require.NotNil(t, err)
@@ -276,7 +276,7 @@ func TestTickSizeMultipleDecorator(t *testing.T) {
 				Quantity:     smallerVal,
 				OrderType:    types.OrderType_LIMIT,
 			}}, "contract", sdk.NewCoins())},
-		fee: sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(27500))),
+		fee: sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(27500))),
 	}
 	_, err = decorator.AnteHandle(ctx, tx, false, terminator)
 	require.NotNil(t, err)

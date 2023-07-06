@@ -10,16 +10,16 @@ import (
 const BaselinePrice = 1234.56
 
 var ValidAccountCorpus = []string{
-	"sei1h9yjz89tl0dl6zu65dpxcqnxfhq60wxx8s5kag",
-	"sei1c2q6xm0x684rshrnlg898zm3vpwz92pcfhgmws",
-	"sei1ewxvf5a9wq9zk5nurtl6m9yfxpnhyp7s7uk5sl",
-	"sei1lllgxa294pshcsrsrteh7sj6ey0zqgty30sl8a",
-	"sei1vhn2p3xavts9swus27zz3n56tz98g3f6unavs2",
-	"sei1jpkqjfydghgrc23chmnj52xln0muz09j5huhkt",
-	"sei1k98zjg7scsmk6d4ye8hhrv3an6ppykvt660736",
-	"sei1wxpqjzdmtjm6gwg6555n0a0aqglrvnp3pqh9hs",
-	"sei1yuyyr3xg7jhk7pjkrp4j6h88t7gv35e29pfvmf",
-	"sei1vjgdad5v2euf98nj3pwg5d8agflr384k0eks43",
+	"fb1h9yjz89tl0dl6zu65dpxcqnxfhq60wxx8s5kag",
+	"fb1c2q6xm0x684rshrnlg898zm3vpwz92pcfhgmws",
+	"fb1ewxvf5a9wq9zk5nurtl6m9yfxpnhyp7s7uk5sl",
+	"fb1lllgxa294pshcsrsrteh7sj6ey0zqgty30sl8a",
+	"fb1vhn2p3xavts9swus27zz3n56tz98g3f6unavs2",
+	"fb1jpkqjfydghgrc23chmnj52xln0muz09j5huhkt",
+	"fb1k98zjg7scsmk6d4ye8hhrv3an6ppykvt660736",
+	"fb1wxpqjzdmtjm6gwg6555n0a0aqglrvnp3pqh9hs",
+	"fb1yuyyr3xg7jhk7pjkrp4j6h88t7gv35e29pfvmf",
+	"fb1vjgdad5v2euf98nj3pwg5d8agflr384k0eks43",
 }
 
 var AccountCorpus = append([]string{
@@ -28,8 +28,8 @@ var AccountCorpus = append([]string{
 
 var ContractCorpus = []string{
 	"invalid",
-	"sei14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sh9m79m",
-	"sei1nc5tatafv6eyq7llkr2gv50ff9e22mnf70qgjlv737ktmt4eswrqms7u8a",
+	"fb14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sh9m79m",
+	"fb1nc5tatafv6eyq7llkr2gv50ff9e22mnf70qgjlv737ktmt4eswrqms7u8a",
 }
 
 var (

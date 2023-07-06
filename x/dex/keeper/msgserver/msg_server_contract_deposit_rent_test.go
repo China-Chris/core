@@ -22,8 +22,8 @@ import (
 )
 
 const (
-	GOOD_CONTRACT_INSTANTIATE = `{"whitelist": ["sei1h9yjz89tl0dl6zu65dpxcqnxfhq60wxx8s5kag"],
-    "use_whitelist":false,"admin":"sei1h9yjz89tl0dl6zu65dpxcqnxfhq60wxx8s5kag",
+	GOOD_CONTRACT_INSTANTIATE = `{"whitelist": ["fb1h9yjz89tl0dl6zu65dpxcqnxfhq60wxx8s5kag"],
+    "use_whitelist":false,"admin":"fb1h9yjz89tl0dl6zu65dpxcqnxfhq60wxx8s5kag",
 	"limit_order_fee":{"decimal":"0.0001","negative":false},
 	"market_order_fee":{"decimal":"0.0001","negative":false},
 	"liquidation_order_fee":{"decimal":"0.0001","negative":false},
@@ -31,12 +31,12 @@ const (
 	"max_leverage":{"decimal":"4","negative":false},
 	"default_base":"USDC",
 	"native_token":"USDC","denoms": ["SEI","ATOM","USDC","SOL","ETH","OSMO","AVAX","BTC"],
-	"full_denom_mapping": [["usei","SEI","0.000001"],["uatom","ATOM","0.000001"],["uusdc","USDC","0.000001"]],
-	"funding_payment_lookback":3600,"spot_market_contract":"sei1h9yjz89tl0dl6zu65dpxcqnxfhq60wxx8s5kag",
+	"full_denom_mapping": [["ufibo","SEI","0.000001"],["uatom","ATOM","0.000001"],["uusdc","USDC","0.000001"]],
+	"funding_payment_lookback":3600,"spot_market_contract":"fb1h9yjz89tl0dl6zu65dpxcqnxfhq60wxx8s5kag",
 	"supported_collateral_denoms": ["USDC"],
 	"supported_multicollateral_denoms": ["ATOM"],
-	"oracle_denom_mapping": [["usei","SEI","1"],["uatom","ATOM","1"],["uusdc","USDC","1"],["ueth","ETH","1"]],
-	"multicollateral_whitelist": ["sei1h9yjz89tl0dl6zu65dpxcqnxfhq60wxx8s5kag"],
+	"oracle_denom_mapping": [["ufibo","SEI","1"],["uatom","ATOM","1"],["uusdc","USDC","1"],["ueth","ETH","1"]],
+	"multicollateral_whitelist": ["fb1h9yjz89tl0dl6zu65dpxcqnxfhq60wxx8s5kag"],
 	"multicollateral_whitelist_enable": true,
 	"funding_payment_pairs": [["USDC","ETH"]],
 	"default_margin_ratios":{
@@ -53,9 +53,9 @@ func TestDepositRent(t *testing.T) {
 	wctx := sdk.WrapSDKContext(ctx)
 	dexkeeper := testApp.DexKeeper
 
-	testAccount, _ := sdk.AccAddressFromBech32("sei1h9yjz89tl0dl6zu65dpxcqnxfhq60wxx8s5kag")
-	depositAccount, _ := sdk.AccAddressFromBech32("sei1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
-	amounts := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000000)), sdk.NewCoin("uusdc", sdk.NewInt(100000000)))
+	testAccount, _ := sdk.AccAddressFromBech32("fb1h9yjz89tl0dl6zu65dpxcqnxfhq60wxx8s5kag")
+	depositAccount, _ := sdk.AccAddressFromBech32("fb1yezq49upxhunjjhudql2fnj5dgvcwjj87pn2wx")
+	amounts := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000000)), sdk.NewCoin("uusdc", sdk.NewInt(100000000)))
 	bankkeeper := testApp.BankKeeper
 	bankkeeper.MintCoins(ctx, minttypes.ModuleName, amounts)
 	bankkeeper.SendCoinsFromModuleToAccount(ctx, minttypes.ModuleName, testAccount, amounts)
@@ -73,7 +73,7 @@ func TestDepositRent(t *testing.T) {
 		panic(err)
 	}
 	contractAddr, _, err := contractKeeper.Instantiate(ctx, codeId, testAccount, testAccount, []byte(GOOD_CONTRACT_INSTANTIATE), "test",
-		sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(100000))))
+		sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(100000))))
 	if err != nil {
 		panic(err)
 	}
@@ -92,7 +92,7 @@ func TestDepositRent(t *testing.T) {
 	require.NoError(t, err)
 	_, err = dexkeeper.GetContract(ctx, TestContractA)
 	require.NoError(t, err)
-	balance := dexkeeper.BankKeeper.GetBalance(ctx, testAccount, "usei")
+	balance := dexkeeper.BankKeeper.GetBalance(ctx, testAccount, "ufibo")
 	require.Equal(t, int64(89900000), balance.Amount.Int64())
 
 	handler := dex.NewHandler(dexkeeper)
@@ -104,9 +104,9 @@ func TestDepositRent(t *testing.T) {
 	require.NoError(t, err)
 	_, err = dexkeeper.GetContract(ctx, TestContractA)
 	require.NoError(t, err)
-	balance = dexkeeper.BankKeeper.GetBalance(ctx, testAccount, "usei")
+	balance = dexkeeper.BankKeeper.GetBalance(ctx, testAccount, "ufibo")
 	require.Equal(t, int64(89900000), balance.Amount.Int64())
-	balance = dexkeeper.BankKeeper.GetBalance(ctx, depositAccount, "usei")
+	balance = dexkeeper.BankKeeper.GetBalance(ctx, depositAccount, "ufibo")
 	require.Equal(t, int64(90000000), balance.Amount.Int64())
 
 	// deposit exceeds limit

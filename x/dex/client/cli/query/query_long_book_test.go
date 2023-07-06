@@ -42,7 +42,7 @@ func networkWithLongBookObjects(t *testing.T, n int) (*network.Network, []types.
 
 	contractInfo := types.ContractInfoV2{
 		CodeId:       uint64(1),
-		ContractAddr: "sei1ghd753shjuwexxywmgs4xz7x2q732vcnkm6h2pyv9s6ah3hylvrqladqwc",
+		ContractAddr: "fb1ghd753shjuwexxywmgs4xz7x2q732vcnkm6h2pyv9s6ah3hylvrqladqwc",
 	}
 	contractState := []types.ContractState{
 		{
@@ -87,7 +87,7 @@ func TestShowLongBook(t *testing.T) {
 		tc := tc
 		t.Run(tc.desc, func(t *testing.T) {
 			// the longbook orders are from genesis contract as created from networkWithLongBookObjects
-			args := []string{"sei1ghd753shjuwexxywmgs4xz7x2q732vcnkm6h2pyv9s6ah3hylvrqladqwc", tc.price, TEST_PAIR().PriceDenom, TEST_PAIR().AssetDenom}
+			args := []string{"fb1ghd753shjuwexxywmgs4xz7x2q732vcnkm6h2pyv9s6ah3hylvrqladqwc", tc.price, TEST_PAIR().PriceDenom, TEST_PAIR().AssetDenom}
 			args = append(args, tc.args...)
 			out, err := clitestutil.ExecTestCLICmd(ctx, query.CmdShowLongBook(), args)
 			if tc.err != nil {
@@ -114,7 +114,7 @@ func TestListLongBook(t *testing.T) {
 	ctx := net.Validators[0].ClientCtx
 	request := func(next []byte, offset, limit uint64, total bool) []string {
 		args := []string{
-			"sei1ghd753shjuwexxywmgs4xz7x2q732vcnkm6h2pyv9s6ah3hylvrqladqwc", TEST_PAIR().PriceDenom, TEST_PAIR().AssetDenom,
+			"fb1ghd753shjuwexxywmgs4xz7x2q732vcnkm6h2pyv9s6ah3hylvrqladqwc", TEST_PAIR().PriceDenom, TEST_PAIR().AssetDenom,
 			fmt.Sprintf("--%s=json", tmcli.OutputFlag),
 		}
 		if next == nil {

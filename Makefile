@@ -1,11 +1,10 @@
 #!/usr/bin/make -f
 
-SUPPORT_VERSION=v3.0.4
 VERSION := $(shell echo $(shell git describe --tags) | sed 's/^v//')
 COMMIT := $(shell git log -1 --format='%H')
 
 BUILDDIR ?= $(CURDIR)/build
-INVARIANT_CHECK_INTERVAL ?= $(INVARIANT_CHECK_INTERVAL)
+INVARIANT_CHECK_INTERVAL?=${INVARIANT_CHECK_INTERVAL:-0}
 export PROJECT_HOME=$(shell git rev-parse --show-toplevel)
 export GO_PKG_PATH=$(HOME)/go/pkg
 export GO111MODULE = on
@@ -48,7 +47,7 @@ build_tags_comma_sep := $(subst $(whitespace),$(comma),$(build_tags))
 # process linker flags
 
 ldflags = -X github.com/cosmos/cosmos-sdk/version.Name=sei \
-			-X github.com/cosmos/cosmos-sdk/version.ServerName=seid \
+			-X github.com/cosmos/cosmos-sdk/version.ServerName=fbchaind \
 			-X github.com/cosmos/cosmos-sdk/version.Version=$(VERSION) \
 			-X github.com/cosmos/cosmos-sdk/version.Commit=$(COMMIT) \
 			-X "github.com/cosmos/cosmos-sdk/version.BuildTags=$(build_tags_comma_sep)"
@@ -67,7 +66,7 @@ BUILD_FLAGS := -tags "$(build_tags)" -ldflags '$(ldflags)'
 all: lint install
 
 install: go.sum
-		go install $(BUILD_FLAGS) ./cmd/seid
+		go install $(BUILD_FLAGS) ./cmd/fbchaind
 
 install-price-feeder: go.sum
 		go install $(BUILD_FLAGS) ./oracle/price-feeder
@@ -88,13 +87,15 @@ lint:
 	go mod verify
 
 build:
-	go build $(BUILD_FLAGS) -o ./build/seid ./cmd/seid
+	go build $(BUILD_FLAGS) -o ./build/fbchaind ./cmd/fbchaind
 
 build-price-feeder:
 	go build $(BUILD_FLAGS) -o ./build/price-feeder ./oracle/price-feeder
 
 clean:
 	rm -rf ./build
+
+
 
 
 
@@ -167,7 +168,7 @@ docker-cluster-start: docker-cluster-stop build-docker-node
 
 .PHONY: localnet-start
 
-# Use this to skip the seid build process
+# Use this to skip the fbchaind build process
 docker-cluster-start-skipbuild: docker-cluster-stop build-docker-node
 	@rm -rf $(PROJECT_HOME)/build/generated
 	@cd docker && NUM_ACCOUNTS=10 SKIP_BUILD=true docker-compose up

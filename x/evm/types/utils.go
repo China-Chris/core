@@ -46,7 +46,7 @@ func DecodeTxResponse(in []byte) (*MsgEthereumTxResponse, error) {
 	if len(txMsgData.Data) == 0 {
 		return &MsgEthereumTxResponse{}, nil
 	}
-
+	
 	var res MsgEthereumTxResponse
 	if err := proto.Unmarshal(txMsgData.Data[0].Data, &res); err != nil {
 		return nil, errorsmod.Wrap(err, "failed to unmarshal tx response message data")

@@ -16,8 +16,8 @@ import (
 )
 
 const (
-	TestCreator  = "sei1ewxvf5a9wq9zk5nurtl6m9yfxpnhyp7s7uk5sl"
-	TestContract = "sei14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sh9m79m"
+	TestCreator  = "fb1ewxvf5a9wq9zk5nurtl6m9yfxpnhyp7s7uk5sl"
+	TestContract = "fb14hj2tavq8fpesdwxxcu44rty3hh90vhujrvcmstl4zr3txmfvw9sh9m79m"
 )
 
 func TestPlaceOrder(t *testing.T) {
@@ -78,7 +78,7 @@ func TestPlaceOrderWithDeposit(t *testing.T) {
 		},
 		Funds: []sdk.Coin{
 			{
-				Denom:  "usei",
+				Denom:  "ufibo",
 				Amount: sdk.NewInt(10),
 			},
 		},
@@ -88,7 +88,7 @@ func TestPlaceOrderWithDeposit(t *testing.T) {
 	ctx = ctx.WithContext(context.WithValue(ctx.Context(), dexutils.DexMemStateContextKey, dexcache.NewMemState(testApp.GetMemKey(types.MemStoreKey))))
 	bankkeeper := testApp.BankKeeper
 	testAccount, _ := sdk.AccAddressFromBech32(TestCreator)
-	amounts := sdk.NewCoins(sdk.NewCoin("usei", sdk.NewInt(10)))
+	amounts := sdk.NewCoins(sdk.NewCoin("ufibo", sdk.NewInt(10)))
 	bankkeeper.MintCoins(ctx, minttypes.ModuleName, amounts)
 	bankkeeper.SendCoinsFromModuleToAccount(ctx, minttypes.ModuleName, testAccount, amounts)
 	keeper := testApp.DexKeeper
@@ -102,13 +102,13 @@ func TestPlaceOrderWithDeposit(t *testing.T) {
 	require.Nil(t, err)
 	require.Equal(t, 1, len(res.OrderIds))
 	require.Equal(t, uint64(0), res.OrderIds[0])
-	senderBalance := bankkeeper.GetBalance(ctx, testAccount, "usei")
+	senderBalance := bankkeeper.GetBalance(ctx, testAccount, "ufibo")
 	require.Equal(t, sdk.ZeroInt(), senderBalance.Amount)
 
 	// insufficient fund
 	res, err = server.PlaceOrders(wctx, msg)
 	require.NotNil(t, err)
-	senderBalance = bankkeeper.GetBalance(ctx, testAccount, "usei")
+	senderBalance = bankkeeper.GetBalance(ctx, testAccount, "ufibo")
 	require.Equal(t, sdk.ZeroInt(), senderBalance.Amount)
 }
 

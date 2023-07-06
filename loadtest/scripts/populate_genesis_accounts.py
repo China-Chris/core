@@ -33,9 +33,9 @@ def add_key(account_name, local=False):
 
 def add_account(account_name, address, mnemonic, local=False):
     if local:
-        add_account_cmd = f"~/go/bin/seid add-genesis-account {address} 1000000000usei --keyring-backend test"
+        add_account_cmd = f"~/go/bin/seid add-genesis-account {address} 1000000000ufibo --keyring-backend test"
     else:
-        add_account_cmd = f"printf '12345678\n' | ~/go/bin/seid add-genesis-account {address} 1000000000usei"
+        add_account_cmd = f"printf '12345678\n' | ~/go/bin/seid add-genesis-account {address} 1000000000ufibo"
 
     filename = f"{home_path}/test_accounts/{account_name}.json"
     os.makedirs(os.path.dirname(filename), exist_ok=True)
@@ -79,7 +79,7 @@ def create_genesis_account(account_index, account_name, local=False):
             "address": address,
             "coins": [
                 {
-                    "denom": "usei",
+                    "denom": "ufibo",
                     "amount": "1000000000000000000000000"
                 }
             ]
@@ -118,7 +118,7 @@ def main():
     if len(args) > 1 and args[1] == "loc":
         is_local = True
 
-    genesis_json_file_path = f"{home_path}/.sei/config/genesis.json"
+    genesis_json_file_path = f"{home_path}/.fbchaind/config/genesis.json"
     genesis_file = read_genesis_file(genesis_json_file_path)
 
     num_threads = max(1, number_of_accounts // PARALLEISM)
