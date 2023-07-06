@@ -4,10 +4,10 @@ import (
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	keepertest "github.com/sei-protocol/sei-chain/testutil/keeper"
-	"github.com/sei-protocol/sei-chain/testutil/nullify"
-	"github.com/sei-protocol/sei-chain/utils"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
+	keepertest "github.com/fibonacci-chain/core/testutil/keeper"
+	"github.com/fibonacci-chain/core/testutil/nullify"
+	"github.com/fibonacci-chain/core/utils"
+	"github.com/fibonacci-chain/core/x/dex/types"
 	"github.com/stretchr/testify/require"
 )
 

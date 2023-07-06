@@ -20,7 +20,7 @@ import (
 	"fmt"
 
 	"github.com/cosmos/cosmos-sdk/client"
-	ethermint "github.com/sei-protocol/sei-chain/x/evm/types"
+	ethermint "github.com/fibonacci-chain/core/x/evm/types"
 	rpcclient "github.com/tendermint/tendermint/rpc/client"
 )
 

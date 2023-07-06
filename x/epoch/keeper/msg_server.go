@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"github.com/sei-protocol/sei-chain/x/epoch/types"
+	"github.com/fibonacci-chain/core/x/epoch/types"
 )
 
 type msgServer struct {

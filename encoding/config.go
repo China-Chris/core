@@ -20,9 +20,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/codec/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
 	"github.com/cosmos/cosmos-sdk/x/auth/tx"
-	"github.com/sei-protocol/sei-chain/app/params"
+	"github.com/fibonacci-chain/core/app/params"
 
-	enccodec "github.com/sei-protocol/sei-chain/encoding/codec"
+	enccodec "github.com/fibonacci-chain/core/encoding/codec"
 )
 
 // MakeConfig creates an EncodingConfig for testing

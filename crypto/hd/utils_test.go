@@ -12,7 +12,7 @@ import (
 	"github.com/ethereum/go-ethereum/crypto"
 
 	"github.com/btcsuite/btcd/chaincfg"
-	"github.com/sei-protocol/sei-chain/crypto/hdkeychain"
+	"github.com/fibonacci-chain/core/crypto/hdkeychain"
 	bip39 "github.com/tyler-smith/go-bip39"
 )
 

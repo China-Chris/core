@@ -4,11 +4,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/sei-protocol/sei-chain/app"
-	"github.com/sei-protocol/sei-chain/testutil/nullify"
+	"github.com/fibonacci-chain/core/app"
+	"github.com/fibonacci-chain/core/testutil/nullify"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 
-	"github.com/sei-protocol/sei-chain/x/mint/types"
+	"github.com/fibonacci-chain/core/x/mint/types"
 	"github.com/stretchr/testify/require"
 )
 

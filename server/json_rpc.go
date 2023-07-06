@@ -26,10 +26,10 @@ import (
 	"github.com/cosmos/cosmos-sdk/server/types"
 	ethlog "github.com/ethereum/go-ethereum/log"
 	ethrpc "github.com/ethereum/go-ethereum/rpc"
-	"github.com/sei-protocol/sei-chain/rpc"
+	"github.com/fibonacci-chain/core/rpc"
 
-	"github.com/sei-protocol/sei-chain/server/config"
-	ethermint "github.com/sei-protocol/sei-chain/types"
+	"github.com/fibonacci-chain/core/server/config"
+	ethermint "github.com/fibonacci-chain/core/types"
 
 	servercosmos "github.com/cosmos/cosmos-sdk/server"
 )

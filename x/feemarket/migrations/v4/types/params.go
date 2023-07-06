@@ -3,7 +3,7 @@ package types
 import (
 	"fmt"
 
-	"github.com/sei-protocol/sei-chain/x/feemarket/types"
+	"github.com/fibonacci-chain/core/x/feemarket/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	paramtypes "github.com/cosmos/cosmos-sdk/x/params/types"

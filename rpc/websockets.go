@@ -41,11 +41,11 @@ import (
 	rpcclient "github.com/tendermint/tendermint/rpc/jsonrpc/client"
 	tmtypes "github.com/tendermint/tendermint/types"
 
-	"github.com/sei-protocol/sei-chain/rpc/ethereum/pubsub"
-	rpcfilters "github.com/sei-protocol/sei-chain/rpc/namespaces/ethereum/eth/filters"
-	"github.com/sei-protocol/sei-chain/rpc/types"
-	"github.com/sei-protocol/sei-chain/server/config"
-	evmtypes "github.com/sei-protocol/sei-chain/x/evm/types"
+	"github.com/fibonacci-chain/core/rpc/ethereum/pubsub"
+	rpcfilters "github.com/fibonacci-chain/core/rpc/namespaces/ethereum/eth/filters"
+	"github.com/fibonacci-chain/core/rpc/types"
+	"github.com/fibonacci-chain/core/server/config"
+	evmtypes "github.com/fibonacci-chain/core/x/evm/types"
 )
 
 type WebsocketsServer interface {

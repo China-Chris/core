@@ -2,8 +2,8 @@ package dex
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/sei-protocol/sei-chain/utils/datastructures"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
+	"github.com/fibonacci-chain/core/utils/datastructures"
+	"github.com/fibonacci-chain/core/x/dex/types"
 )
 
 type CtxKeyType string

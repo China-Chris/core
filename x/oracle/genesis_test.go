@@ -5,9 +5,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/sei-protocol/sei-chain/x/oracle"
-	"github.com/sei-protocol/sei-chain/x/oracle/keeper"
-	"github.com/sei-protocol/sei-chain/x/oracle/types"
+	"github.com/fibonacci-chain/core/x/oracle"
+	"github.com/fibonacci-chain/core/x/oracle/keeper"
+	"github.com/fibonacci-chain/core/x/oracle/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

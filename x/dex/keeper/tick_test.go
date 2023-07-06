@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	keepertest "github.com/sei-protocol/sei-chain/testutil/keeper"
+	keepertest "github.com/fibonacci-chain/core/testutil/keeper"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

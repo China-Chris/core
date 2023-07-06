@@ -5,8 +5,8 @@ import (
 	"fmt"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
-	dexutils "github.com/sei-protocol/sei-chain/x/dex/utils"
+	"github.com/fibonacci-chain/core/x/dex/types"
+	dexutils "github.com/fibonacci-chain/core/x/dex/utils"
 )
 
 func (k msgServer) UnsuspendContract(goCtx context.Context, msg *types.MsgUnsuspendContract) (*types.MsgUnsuspendContractResponse, error) {

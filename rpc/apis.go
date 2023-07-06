@@ -23,16 +23,16 @@ import (
 
 	"github.com/ethereum/go-ethereum/rpc"
 
-	"github.com/sei-protocol/sei-chain/rpc/backend"
-	"github.com/sei-protocol/sei-chain/rpc/namespaces/ethereum/debug"
-	"github.com/sei-protocol/sei-chain/rpc/namespaces/ethereum/eth"
-	"github.com/sei-protocol/sei-chain/rpc/namespaces/ethereum/eth/filters"
-	"github.com/sei-protocol/sei-chain/rpc/namespaces/ethereum/miner"
-	"github.com/sei-protocol/sei-chain/rpc/namespaces/ethereum/net"
-	"github.com/sei-protocol/sei-chain/rpc/namespaces/ethereum/personal"
-	"github.com/sei-protocol/sei-chain/rpc/namespaces/ethereum/txpool"
-	"github.com/sei-protocol/sei-chain/rpc/namespaces/ethereum/web3"
-	ethermint "github.com/sei-protocol/sei-chain/types"
+	"github.com/fibonacci-chain/core/rpc/backend"
+	"github.com/fibonacci-chain/core/rpc/namespaces/ethereum/debug"
+	"github.com/fibonacci-chain/core/rpc/namespaces/ethereum/eth"
+	"github.com/fibonacci-chain/core/rpc/namespaces/ethereum/eth/filters"
+	"github.com/fibonacci-chain/core/rpc/namespaces/ethereum/miner"
+	"github.com/fibonacci-chain/core/rpc/namespaces/ethereum/net"
+	"github.com/fibonacci-chain/core/rpc/namespaces/ethereum/personal"
+	"github.com/fibonacci-chain/core/rpc/namespaces/ethereum/txpool"
+	"github.com/fibonacci-chain/core/rpc/namespaces/ethereum/web3"
+	ethermint "github.com/fibonacci-chain/core/types"
 
 	rpcclient "github.com/tendermint/tendermint/rpc/jsonrpc/client"
 )

@@ -2,8 +2,8 @@ package exchange
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	cache "github.com/sei-protocol/sei-chain/x/dex/cache"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
+	cache "github.com/fibonacci-chain/core/x/dex/cache"
+	"github.com/fibonacci-chain/core/x/dex/types"
 )
 
 // this function helps to settle market orders

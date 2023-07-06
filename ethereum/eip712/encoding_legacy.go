@@ -19,7 +19,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/sei-protocol/sei-chain/x/evm/types"
+	"github.com/fibonacci-chain/core/x/evm/types"
 
 	"github.com/cosmos/cosmos-sdk/x/auth/legacy/legacytx"
 

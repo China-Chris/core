@@ -8,8 +8,8 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/simapp"
 	"github.com/cosmos/cosmos-sdk/types/kv"
-	"github.com/sei-protocol/sei-chain/x/mint/simulation"
-	"github.com/sei-protocol/sei-chain/x/mint/types"
+	"github.com/fibonacci-chain/core/x/mint/simulation"
+	"github.com/fibonacci-chain/core/x/mint/types"
 )
 
 func TestDecodeStore(t *testing.T) {

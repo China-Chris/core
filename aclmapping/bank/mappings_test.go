@@ -13,9 +13,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/bank"
 	"github.com/cosmos/cosmos-sdk/x/bank/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
-	aclutils "github.com/sei-protocol/sei-chain/aclmapping/utils"
-	utils "github.com/sei-protocol/sei-chain/aclmapping/utils"
-	oracletypes "github.com/sei-protocol/sei-chain/x/oracle/types"
+	aclutils "github.com/fibonacci-chain/core/aclmapping/utils"
+	utils "github.com/fibonacci-chain/core/aclmapping/utils"
+	oracletypes "github.com/fibonacci-chain/core/x/oracle/types"
 	"github.com/stretchr/testify/require"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 )

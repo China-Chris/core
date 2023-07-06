@@ -23,13 +23,13 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/auth/ante"
 	authsigning "github.com/cosmos/cosmos-sdk/x/auth/signing"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	"github.com/sei-protocol/sei-chain/app/antedecorators/depdecorators"
+	"github.com/fibonacci-chain/core/app/antedecorators/depdecorators"
 
 	authante "github.com/cosmos/cosmos-sdk/x/auth/ante"
 	paramskeeper "github.com/cosmos/cosmos-sdk/x/params/keeper"
 	ibckeeper "github.com/cosmos/ibc-go/v3/modules/core/keeper"
 
-	evmtypes "github.com/sei-protocol/sei-chain/x/evm/types"
+	evmtypes "github.com/fibonacci-chain/core/x/evm/types"
 )
 
 // HandlerOptions2 extend the SDK's AnteHandler options by requiring the IBC

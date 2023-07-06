@@ -12,10 +12,10 @@ import (
 	"google.golang.org/grpc/status"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/sei-protocol/sei-chain/testutil/network"
-	"github.com/sei-protocol/sei-chain/testutil/nullify"
-	"github.com/sei-protocol/sei-chain/x/dex/client/cli/query"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
+	"github.com/fibonacci-chain/core/testutil/network"
+	"github.com/fibonacci-chain/core/testutil/nullify"
+	"github.com/fibonacci-chain/core/x/dex/client/cli/query"
+	"github.com/fibonacci-chain/core/x/dex/types"
 )
 
 func networkWithLongBookObjects(t *testing.T, n int) (*network.Network, []types.LongBook) {

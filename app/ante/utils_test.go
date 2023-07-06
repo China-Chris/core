@@ -1,7 +1,7 @@
 package ante_test
 
 import (
-	"github.com/sei-protocol/sei-chain/app/ante"
+	"github.com/fibonacci-chain/core/app/ante"
 	"math"
 	"math/big"
 	"time"
@@ -10,9 +10,9 @@ import (
 
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
-	"github.com/sei-protocol/sei-chain/ethereum/eip712"
-	"github.com/sei-protocol/sei-chain/testutil"
-	utiltx "github.com/sei-protocol/sei-chain/testutil/tx"
+	"github.com/fibonacci-chain/core/ethereum/eip712"
+	"github.com/fibonacci-chain/core/testutil"
+	utiltx "github.com/fibonacci-chain/core/testutil/tx"
 
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
@@ -31,7 +31,7 @@ import (
 	authtx "github.com/cosmos/cosmos-sdk/x/auth/tx"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	authz "github.com/cosmos/cosmos-sdk/x/authz"
-	"github.com/sei-protocol/sei-chain/crypto/ethsecp256k1"
+	"github.com/fibonacci-chain/core/crypto/ethsecp256k1"
 
 	"github.com/cosmos/cosmos-sdk/crypto/keys/ed25519"
 	vestingtypes "github.com/cosmos/cosmos-sdk/x/auth/vesting/types"
@@ -39,11 +39,11 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/feegrant"
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
 	govtypesv1 "github.com/cosmos/cosmos-sdk/x/gov/types"
-	"github.com/sei-protocol/sei-chain/app"
-	"github.com/sei-protocol/sei-chain/encoding"
-	"github.com/sei-protocol/sei-chain/tests"
-	"github.com/sei-protocol/sei-chain/x/evm/statedb"
-	evmtypes "github.com/sei-protocol/sei-chain/x/evm/types"
+	"github.com/fibonacci-chain/core/app"
+	"github.com/fibonacci-chain/core/encoding"
+	"github.com/fibonacci-chain/core/tests"
+	"github.com/fibonacci-chain/core/x/evm/statedb"
+	evmtypes "github.com/fibonacci-chain/core/x/evm/types"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 )
 

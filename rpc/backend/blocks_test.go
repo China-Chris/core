@@ -14,10 +14,10 @@ import (
 	tmtypes "github.com/tendermint/tendermint/types"
 	"google.golang.org/grpc/metadata"
 
-	"github.com/sei-protocol/sei-chain/rpc/backend/mocks"
-	ethrpc "github.com/sei-protocol/sei-chain/rpc/types"
-	"github.com/sei-protocol/sei-chain/tests"
-	evmtypes "github.com/sei-protocol/sei-chain/x/evm/types"
+	"github.com/fibonacci-chain/core/rpc/backend/mocks"
+	ethrpc "github.com/fibonacci-chain/core/rpc/types"
+	"github.com/fibonacci-chain/core/tests"
+	evmtypes "github.com/fibonacci-chain/core/x/evm/types"
 )
 
 func (suite *BackendTestSuite) TestBlockNumber() {

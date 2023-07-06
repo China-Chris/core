@@ -11,8 +11,8 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	ethermint "github.com/sei-protocol/sei-chain/types"
-	"github.com/sei-protocol/sei-chain/x/evm/types"
+	ethermint "github.com/fibonacci-chain/core/types"
+	"github.com/fibonacci-chain/core/x/evm/types"
 )
 
 func SetupContract(b *testing.B) (*KeeperTestSuite, common.Address) {

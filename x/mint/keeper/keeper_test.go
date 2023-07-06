@@ -6,13 +6,13 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	epochTypes "github.com/sei-protocol/sei-chain/x/epoch/types"
-	"github.com/sei-protocol/sei-chain/x/mint/keeper"
-	mintKeeper "github.com/sei-protocol/sei-chain/x/mint/keeper"
-	"github.com/sei-protocol/sei-chain/x/mint/types"
-	mintTypes "github.com/sei-protocol/sei-chain/x/mint/types"
+	epochTypes "github.com/fibonacci-chain/core/x/epoch/types"
+	"github.com/fibonacci-chain/core/x/mint/keeper"
+	mintKeeper "github.com/fibonacci-chain/core/x/mint/keeper"
+	"github.com/fibonacci-chain/core/x/mint/types"
+	mintTypes "github.com/fibonacci-chain/core/x/mint/types"
 
-	minttypes "github.com/sei-protocol/sei-chain/x/mint/types"
+	minttypes "github.com/fibonacci-chain/core/x/mint/types"
 	"github.com/stretchr/testify/require"
 )
 

@@ -7,10 +7,10 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/x/auth/signing"
-	"github.com/sei-protocol/sei-chain/testutil/processblock"
-	"github.com/sei-protocol/sei-chain/utils"
-	dexkeeper "github.com/sei-protocol/sei-chain/x/dex/keeper"
-	dextypes "github.com/sei-protocol/sei-chain/x/dex/types"
+	"github.com/fibonacci-chain/core/testutil/processblock"
+	"github.com/fibonacci-chain/core/utils"
+	dexkeeper "github.com/fibonacci-chain/core/x/dex/keeper"
+	dextypes "github.com/fibonacci-chain/core/x/dex/types"
 	"github.com/stretchr/testify/require"
 )
 

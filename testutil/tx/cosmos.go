@@ -24,8 +24,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/tx/signing"
 	authsigning "github.com/cosmos/cosmos-sdk/x/auth/signing"
-	"github.com/sei-protocol/sei-chain/app"
-	evmtypes "github.com/sei-protocol/sei-chain/x/evm/types"
+	"github.com/fibonacci-chain/core/app"
+	evmtypes "github.com/fibonacci-chain/core/x/evm/types"
 )
 
 var (

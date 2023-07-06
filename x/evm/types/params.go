@@ -17,7 +17,7 @@ package types
 
 import (
 	"fmt"
-	"github.com/sei-protocol/sei-chain/types"
+	"github.com/fibonacci-chain/core/types"
 	"math/big"
 
 	"github.com/ethereum/go-ethereum/params"

@@ -8,12 +8,12 @@ import (
 	"github.com/cosmos/cosmos-sdk/client"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authtx "github.com/cosmos/cosmos-sdk/x/auth/tx"
+	"github.com/fibonacci-chain/core/app"
+	"github.com/fibonacci-chain/core/encoding"
+	evmtypes "github.com/fibonacci-chain/core/x/evm/types"
 	proto "github.com/gogo/protobuf/proto"
-	"github.com/sei-protocol/sei-chain/app"
-	"github.com/sei-protocol/sei-chain/encoding"
-	evmtypes "github.com/sei-protocol/sei-chain/x/evm/types"
 
-	"github.com/sei-protocol/sei-chain/tests"
+	"github.com/fibonacci-chain/core/tests"
 
 	"github.com/stretchr/testify/require"
 

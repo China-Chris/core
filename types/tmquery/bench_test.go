@@ -3,7 +3,7 @@ package tmquery_test
 import (
 	"testing"
 
-	query "github.com/sei-protocol/sei-chain/types/tmquery"
+	query "github.com/fibonacci-chain/core/types/tmquery"
 	"github.com/tendermint/tendermint/abci/types"
 )
 

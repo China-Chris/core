@@ -11,11 +11,11 @@ import (
 	feegranttypes "github.com/cosmos/cosmos-sdk/x/feegrant"
 	slashingtypes "github.com/cosmos/cosmos-sdk/x/slashing/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
-	dexkeeper "github.com/sei-protocol/sei-chain/x/dex/keeper"
-	dextypes "github.com/sei-protocol/sei-chain/x/dex/types"
-	epochtypes "github.com/sei-protocol/sei-chain/x/epoch/types"
-	oracletypes "github.com/sei-protocol/sei-chain/x/oracle/types"
-	tokenfactorytypes "github.com/sei-protocol/sei-chain/x/tokenfactory/types"
+	dexkeeper "github.com/fibonacci-chain/core/x/dex/keeper"
+	dextypes "github.com/fibonacci-chain/core/x/dex/types"
+	epochtypes "github.com/fibonacci-chain/core/x/epoch/types"
+	oracletypes "github.com/fibonacci-chain/core/x/oracle/types"
+	tokenfactorytypes "github.com/fibonacci-chain/core/x/tokenfactory/types"
 )
 
 const (

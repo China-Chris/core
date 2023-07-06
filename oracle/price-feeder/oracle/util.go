@@ -5,7 +5,7 @@ import (
 	"sort"
 	"time"
 
-	"github.com/sei-protocol/sei-chain/oracle/price-feeder/oracle/provider"
+	"github.com/fibonacci-chain/core/oracle/price-feeder/oracle/provider"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

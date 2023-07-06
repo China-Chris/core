@@ -7,7 +7,7 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/sei-protocol/sei-chain/x/oracle/types"
+	"github.com/fibonacci-chain/core/x/oracle/types"
 
 	"github.com/cosmos/cosmos-sdk/client"
 	sdk "github.com/cosmos/cosmos-sdk/types"

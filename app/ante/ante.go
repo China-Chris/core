@@ -18,7 +18,7 @@ package ante
 import (
 	"fmt"
 	sdkacltypes "github.com/cosmos/cosmos-sdk/types/accesscontrol"
-	"github.com/sei-protocol/sei-chain/app/ante2"
+	"github.com/fibonacci-chain/core/app/ante2"
 	"runtime/debug"
 
 	tmlog "github.com/tendermint/tendermint/libs/log"
@@ -31,7 +31,7 @@ import (
 	authante "github.com/cosmos/cosmos-sdk/x/auth/ante"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 
-	"github.com/sei-protocol/sei-chain/crypto/ethsecp256k1"
+	"github.com/fibonacci-chain/core/crypto/ethsecp256k1"
 )
 
 const (

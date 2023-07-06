@@ -6,9 +6,9 @@ import (
 	"math"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/sei-protocol/sei-chain/app/antedecorators"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
-	oracletypes "github.com/sei-protocol/sei-chain/x/oracle/types"
+	"github.com/fibonacci-chain/core/app/antedecorators"
+	"github.com/fibonacci-chain/core/x/dex/types"
+	oracletypes "github.com/fibonacci-chain/core/x/oracle/types"
 	"github.com/stretchr/testify/require"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 )

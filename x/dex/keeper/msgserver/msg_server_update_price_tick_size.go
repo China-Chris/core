@@ -5,7 +5,7 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
+	"github.com/fibonacci-chain/core/x/dex/types"
 )
 
 func (k msgServer) UpdatePriceTickSize(goCtx context.Context, msg *types.MsgUpdatePriceTickSize) (*types.MsgUpdateTickSizeResponse, error) {

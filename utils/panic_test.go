@@ -4,7 +4,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/sei-protocol/sei-chain/utils"
+	"github.com/fibonacci-chain/core/utils"
 	"github.com/stretchr/testify/require"
 )
 

@@ -2,7 +2,7 @@ package bindings
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
+	"github.com/fibonacci-chain/core/x/dex/types"
 )
 
 // / CreateDenom creates a new factory denom, of denomination:

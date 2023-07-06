@@ -20,7 +20,7 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/sei-protocol/sei-chain/x/feemarket/types"
+	"github.com/fibonacci-chain/core/x/feemarket/types"
 )
 
 var _ types.QueryServer = Keeper{}

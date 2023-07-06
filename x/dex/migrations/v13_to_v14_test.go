@@ -5,10 +5,10 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/store/prefix"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	keepertest "github.com/sei-protocol/sei-chain/testutil/keeper"
-	"github.com/sei-protocol/sei-chain/x/dex/migrations"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
-	"github.com/sei-protocol/sei-chain/x/dex/utils"
+	keepertest "github.com/fibonacci-chain/core/testutil/keeper"
+	"github.com/fibonacci-chain/core/x/dex/migrations"
+	"github.com/fibonacci-chain/core/x/dex/types"
+	"github.com/fibonacci-chain/core/x/dex/utils"
 	"github.com/stretchr/testify/require"
 )
 

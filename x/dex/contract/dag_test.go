@@ -3,8 +3,8 @@ package contract_test
 import (
 	"testing"
 
-	"github.com/sei-protocol/sei-chain/x/dex/contract"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
+	"github.com/fibonacci-chain/core/x/dex/contract"
+	"github.com/fibonacci-chain/core/x/dex/types"
 	"github.com/stretchr/testify/require"
 )
 

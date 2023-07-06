@@ -9,10 +9,10 @@ import (
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	distrtypes "github.com/cosmos/cosmos-sdk/x/distribution/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
-	"github.com/sei-protocol/sei-chain/testutil/processblock/msgs"
-	"github.com/sei-protocol/sei-chain/utils"
-	dextypes "github.com/sei-protocol/sei-chain/x/dex/types"
-	minttypes "github.com/sei-protocol/sei-chain/x/mint/types"
+	"github.com/fibonacci-chain/core/testutil/processblock/msgs"
+	"github.com/fibonacci-chain/core/utils"
+	dextypes "github.com/fibonacci-chain/core/x/dex/types"
+	minttypes "github.com/fibonacci-chain/core/x/mint/types"
 )
 
 type Preset struct {

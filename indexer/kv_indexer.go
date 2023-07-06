@@ -24,14 +24,14 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authante "github.com/cosmos/cosmos-sdk/x/auth/ante"
 	"github.com/ethereum/go-ethereum/common"
-	rpctypes "github.com/sei-protocol/sei-chain/rpc/types"
+	rpctypes "github.com/fibonacci-chain/core/rpc/types"
 	abci "github.com/tendermint/tendermint/abci/types"
 	"github.com/tendermint/tendermint/libs/log"
 	tmtypes "github.com/tendermint/tendermint/types"
 	dbm "github.com/tendermint/tm-db"
 
-	ethermint "github.com/sei-protocol/sei-chain/types"
-	evmtypes "github.com/sei-protocol/sei-chain/x/evm/types"
+	ethermint "github.com/fibonacci-chain/core/types"
+	evmtypes "github.com/fibonacci-chain/core/x/evm/types"
 )
 
 const (

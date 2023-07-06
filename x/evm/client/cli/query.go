@@ -16,13 +16,13 @@
 package cli
 
 import (
-	rpctypes "github.com/sei-protocol/sei-chain/rpc/types"
+	rpctypes "github.com/fibonacci-chain/core/rpc/types"
 	"github.com/spf13/cobra"
 
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/client/flags"
 
-	"github.com/sei-protocol/sei-chain/x/evm/types"
+	"github.com/fibonacci-chain/core/x/evm/types"
 )
 
 // GetQueryCmd returns the parent command for all x/bank CLi query commands.

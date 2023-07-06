@@ -4,10 +4,10 @@ import (
 	"testing"
 	"time"
 
-	keepertest "github.com/sei-protocol/sei-chain/testutil/keeper"
-	"github.com/sei-protocol/sei-chain/testutil/nullify"
-	"github.com/sei-protocol/sei-chain/x/epoch"
-	"github.com/sei-protocol/sei-chain/x/epoch/types"
+	keepertest "github.com/fibonacci-chain/core/testutil/keeper"
+	"github.com/fibonacci-chain/core/testutil/nullify"
+	"github.com/fibonacci-chain/core/x/epoch"
+	"github.com/fibonacci-chain/core/x/epoch/types"
 	"github.com/stretchr/testify/require"
 )
 

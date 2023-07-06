@@ -9,7 +9,7 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/sei-protocol/sei-chain/crypto/hdkeychain/base58"
+	"github.com/fibonacci-chain/core/crypto/hdkeychain/base58"
 )
 
 var stringTests = []struct {

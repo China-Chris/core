@@ -3,7 +3,7 @@ package migrations
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	paramtypes "github.com/cosmos/cosmos-sdk/x/params/types"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
+	"github.com/fibonacci-chain/core/x/dex/types"
 )
 
 func PriceSnapshotUpdate(ctx sdk.Context, paramStore paramtypes.Subspace) error {

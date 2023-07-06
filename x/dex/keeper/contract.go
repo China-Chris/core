@@ -7,9 +7,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/store/prefix"
 	"github.com/cosmos/cosmos-sdk/telemetry"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	appparams "github.com/sei-protocol/sei-chain/app/params"
-	"github.com/sei-protocol/sei-chain/utils"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
+	appparams "github.com/fibonacci-chain/core/app/params"
+	"github.com/fibonacci-chain/core/utils"
+	"github.com/fibonacci-chain/core/x/dex/types"
 )
 
 const ContractPrefixKey = "x-wasm-contract"

@@ -24,9 +24,9 @@ import (
 	"github.com/spf13/cobra"
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	"github.com/sei-protocol/sei-chain/x/tokenfactory/client/cli"
-	"github.com/sei-protocol/sei-chain/x/tokenfactory/keeper"
-	"github.com/sei-protocol/sei-chain/x/tokenfactory/types"
+	"github.com/fibonacci-chain/core/x/tokenfactory/client/cli"
+	"github.com/fibonacci-chain/core/x/tokenfactory/keeper"
+	"github.com/fibonacci-chain/core/x/tokenfactory/types"
 
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 )

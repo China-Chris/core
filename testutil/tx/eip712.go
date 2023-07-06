@@ -18,7 +18,7 @@ package tx
 import (
 	"errors"
 	"fmt"
-	types2 "github.com/sei-protocol/sei-chain/x/evm/types"
+	types2 "github.com/fibonacci-chain/core/x/evm/types"
 
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/codec"
@@ -27,18 +27,18 @@ import (
 	cryptotypes "github.com/cosmos/cosmos-sdk/crypto/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/crypto"
-	cryptocodec "github.com/sei-protocol/sei-chain/crypto/codec"
+	cryptocodec "github.com/fibonacci-chain/core/crypto/codec"
 
 	"github.com/cosmos/cosmos-sdk/x/auth/legacy/legacytx"
 	authtx "github.com/cosmos/cosmos-sdk/x/auth/tx"
-	"github.com/sei-protocol/sei-chain/ethereum/eip712"
+	"github.com/fibonacci-chain/core/ethereum/eip712"
 
 	"github.com/cosmos/cosmos-sdk/types/tx/signing"
 	"github.com/ethereum/go-ethereum/signer/core/apitypes"
 
-	"github.com/sei-protocol/sei-chain/types"
+	"github.com/fibonacci-chain/core/types"
 
-	"github.com/sei-protocol/sei-chain/app"
+	"github.com/fibonacci-chain/core/app"
 )
 
 type EIP712TxArgs struct {

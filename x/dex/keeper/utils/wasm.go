@@ -7,11 +7,11 @@ import (
 	"time"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/sei-protocol/sei-chain/utils"
-	"github.com/sei-protocol/sei-chain/utils/logging"
-	"github.com/sei-protocol/sei-chain/utils/metrics"
-	"github.com/sei-protocol/sei-chain/x/dex/keeper"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
+	"github.com/fibonacci-chain/core/utils"
+	"github.com/fibonacci-chain/core/utils/logging"
+	"github.com/fibonacci-chain/core/utils/metrics"
+	"github.com/fibonacci-chain/core/x/dex/keeper"
+	"github.com/fibonacci-chain/core/x/dex/types"
 )
 
 const ErrWasmModuleInstCPUFeatureLiteral = "Error instantiating module: CpuFeature"

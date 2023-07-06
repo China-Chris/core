@@ -29,10 +29,10 @@ import (
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/core/vm"
+	rpctypes "github.com/fibonacci-chain/core/rpc/types"
+	ethermint "github.com/fibonacci-chain/core/x/evm/types"
+	evmtypes "github.com/fibonacci-chain/core/x/evm/types"
 	"github.com/pkg/errors"
-	rpctypes "github.com/sei-protocol/sei-chain/rpc/types"
-	ethermint "github.com/sei-protocol/sei-chain/x/evm/types"
-	evmtypes "github.com/sei-protocol/sei-chain/x/evm/types"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

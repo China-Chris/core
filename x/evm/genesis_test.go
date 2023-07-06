@@ -6,11 +6,11 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	"github.com/sei-protocol/sei-chain/crypto/ethsecp256k1"
-	etherminttypes "github.com/sei-protocol/sei-chain/types"
-	"github.com/sei-protocol/sei-chain/x/evm"
-	"github.com/sei-protocol/sei-chain/x/evm/statedb"
-	"github.com/sei-protocol/sei-chain/x/evm/types"
+	"github.com/fibonacci-chain/core/crypto/ethsecp256k1"
+	etherminttypes "github.com/fibonacci-chain/core/types"
+	"github.com/fibonacci-chain/core/x/evm"
+	"github.com/fibonacci-chain/core/x/evm/statedb"
+	"github.com/fibonacci-chain/core/x/evm/types"
 )
 
 func (suite *EvmTestSuite) TestInitGenesis() {

@@ -6,10 +6,10 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkacltypes "github.com/cosmos/cosmos-sdk/types/accesscontrol"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	dexcache "github.com/sei-protocol/sei-chain/x/dex/cache"
-	"github.com/sei-protocol/sei-chain/x/dex/keeper"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
-	"github.com/sei-protocol/sei-chain/x/dex/utils"
+	dexcache "github.com/fibonacci-chain/core/x/dex/cache"
+	"github.com/fibonacci-chain/core/x/dex/keeper"
+	"github.com/fibonacci-chain/core/x/dex/types"
+	"github.com/fibonacci-chain/core/x/dex/utils"
 )
 
 // TickSizeMultipleDecorator check if the place order tx's price is multiple of

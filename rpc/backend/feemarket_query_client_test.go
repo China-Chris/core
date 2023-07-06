@@ -2,9 +2,9 @@ package backend
 
 import (
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/sei-protocol/sei-chain/rpc/backend/mocks"
-	rpc "github.com/sei-protocol/sei-chain/rpc/types"
-	feemarkettypes "github.com/sei-protocol/sei-chain/x/feemarket/types"
+	"github.com/fibonacci-chain/core/rpc/backend/mocks"
+	rpc "github.com/fibonacci-chain/core/rpc/types"
+	feemarkettypes "github.com/fibonacci-chain/core/x/feemarket/types"
 )
 
 var _ feemarkettypes.QueryClient = &mocks.FeeMarketQueryClient{}

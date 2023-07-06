@@ -7,8 +7,8 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	ethparams "github.com/ethereum/go-ethereum/params"
-	"github.com/sei-protocol/sei-chain/x/evm/keeper"
-	evmtypes "github.com/sei-protocol/sei-chain/x/evm/types"
+	"github.com/fibonacci-chain/core/x/evm/keeper"
+	evmtypes "github.com/fibonacci-chain/core/x/evm/types"
 )
 
 func (suite *KeeperTestSuite) TestCheckSenderBalance() {

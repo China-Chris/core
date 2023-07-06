@@ -5,12 +5,12 @@ import (
 	"time"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/sei-protocol/sei-chain/x/dex/exchange"
-	keeperutil "github.com/sei-protocol/sei-chain/x/dex/keeper/utils"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
+	"github.com/fibonacci-chain/core/x/dex/exchange"
+	keeperutil "github.com/fibonacci-chain/core/x/dex/keeper/utils"
+	"github.com/fibonacci-chain/core/x/dex/types"
 	"github.com/stretchr/testify/assert"
 
-	keepertest "github.com/sei-protocol/sei-chain/testutil/keeper"
+	keepertest "github.com/fibonacci-chain/core/testutil/keeper"
 )
 
 func TEST_PAIR() types.Pair {

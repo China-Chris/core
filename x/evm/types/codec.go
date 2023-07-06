@@ -22,8 +22,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	errortypes "github.com/cosmos/cosmos-sdk/types/errors"
 	"github.com/cosmos/cosmos-sdk/types/msgservice"
+	"github.com/fibonacci-chain/core/types/tx"
 	proto "github.com/gogo/protobuf/proto"
-	"github.com/sei-protocol/sei-chain/types/tx"
 )
 
 var (

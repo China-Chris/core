@@ -5,12 +5,12 @@ import (
 	"testing"
 	"time"
 
-	keepertest "github.com/sei-protocol/sei-chain/testutil/keeper"
-	dexcache "github.com/sei-protocol/sei-chain/x/dex/cache"
-	dextypes "github.com/sei-protocol/sei-chain/x/dex/types"
-	dexutils "github.com/sei-protocol/sei-chain/x/dex/utils"
-	"github.com/sei-protocol/sei-chain/x/epoch/types"
-	minttypes "github.com/sei-protocol/sei-chain/x/mint/types"
+	keepertest "github.com/fibonacci-chain/core/testutil/keeper"
+	dexcache "github.com/fibonacci-chain/core/x/dex/cache"
+	dextypes "github.com/fibonacci-chain/core/x/dex/types"
+	dexutils "github.com/fibonacci-chain/core/x/dex/utils"
+	"github.com/fibonacci-chain/core/x/epoch/types"
+	minttypes "github.com/fibonacci-chain/core/x/mint/types"
 	"github.com/stretchr/testify/require"
 	abci "github.com/tendermint/tendermint/abci/types"
 

@@ -6,7 +6,7 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/store/prefix"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
+	"github.com/fibonacci-chain/core/x/dex/types"
 )
 
 func (k Keeper) SetOrderCount(ctx sdk.Context, contractAddr string, priceDenom string, assetDenom string, direction types.PositionDirection, price sdk.Dec, count uint64) error {

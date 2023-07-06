@@ -18,7 +18,7 @@ package types
 import (
 	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	"github.com/sei-protocol/sei-chain/types/tx"
+	"github.com/fibonacci-chain/core/types/tx"
 )
 
 // RegisterInterfaces registers the tendermint concrete client-related

@@ -25,10 +25,10 @@ import (
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/params"
 	"github.com/ethereum/go-ethereum/rpc"
-	rpctypes "github.com/sei-protocol/sei-chain/rpc/types"
-	ethermint "github.com/sei-protocol/sei-chain/x/evm/types"
-	evmtypes "github.com/sei-protocol/sei-chain/x/evm/types"
-	feemarkettypes "github.com/sei-protocol/sei-chain/x/feemarket/types"
+	rpctypes "github.com/fibonacci-chain/core/rpc/types"
+	ethermint "github.com/fibonacci-chain/core/x/evm/types"
+	evmtypes "github.com/fibonacci-chain/core/x/evm/types"
+	feemarkettypes "github.com/fibonacci-chain/core/x/feemarket/types"
 	tmrpctypes "github.com/tendermint/tendermint/rpc/coretypes"
 )
 

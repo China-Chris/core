@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/sei-protocol/sei-chain/x/dex/contract"
+	"github.com/fibonacci-chain/core/x/dex/contract"
 	"github.com/stretchr/testify/require"
 )
 

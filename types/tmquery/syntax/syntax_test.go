@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/sei-protocol/sei-chain/types/tmquery/syntax"
+	"github.com/fibonacci-chain/core/types/tmquery/syntax"
 )
 
 func TestScanner(t *testing.T) {

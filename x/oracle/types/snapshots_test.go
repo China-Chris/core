@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/sei-protocol/sei-chain/x/oracle/utils"
+	"github.com/fibonacci-chain/core/x/oracle/utils"
 	"github.com/stretchr/testify/require"
 )
 

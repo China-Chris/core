@@ -6,9 +6,9 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
-	"github.com/sei-protocol/sei-chain/app/ante"
-	"github.com/sei-protocol/sei-chain/tests"
-	evmtypes "github.com/sei-protocol/sei-chain/x/evm/types"
+	"github.com/fibonacci-chain/core/app/ante"
+	"github.com/fibonacci-chain/core/tests"
+	evmtypes "github.com/fibonacci-chain/core/x/evm/types"
 )
 
 func (suite AnteTestSuite) TestGasWantedDecorator() {

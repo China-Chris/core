@@ -12,16 +12,16 @@ import (
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/crypto/keyring"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/sei-protocol/sei-chain/crypto/ethsecp256k1"
-	"github.com/sei-protocol/sei-chain/tests"
+	"github.com/fibonacci-chain/core/crypto/ethsecp256k1"
+	"github.com/fibonacci-chain/core/tests"
 
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/crypto"
 
-	"github.com/sei-protocol/sei-chain/app"
-	"github.com/sei-protocol/sei-chain/encoding"
-	"github.com/sei-protocol/sei-chain/x/evm/types"
+	"github.com/fibonacci-chain/core/app"
+	"github.com/fibonacci-chain/core/encoding"
+	"github.com/fibonacci-chain/core/x/evm/types"
 )
 
 const invalidFromAddress = "0x0000"

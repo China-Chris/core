@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	query "github.com/sei-protocol/sei-chain/types/tmquery"
-	"github.com/sei-protocol/sei-chain/types/tmquery/syntax"
+	query "github.com/fibonacci-chain/core/types/tmquery"
+	"github.com/fibonacci-chain/core/types/tmquery/syntax"
 	"github.com/tendermint/tendermint/abci/types"
 )
 

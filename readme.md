@@ -61,7 +61,7 @@ Developers, traders, and users can all connect to Sei as ecosystem partners bene
 **Clone git repository**
 
 ```bash
-git clone https://github.com/sei-protocol/sei-chain
+git clone https://github.com/fibonacci-chain/core
 cd sei-chain
 git checkout origin/1.0.1beta-upgrade
 make install

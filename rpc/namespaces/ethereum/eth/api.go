@@ -28,11 +28,11 @@ import (
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 
-	"github.com/sei-protocol/sei-chain/rpc/backend"
+	"github.com/fibonacci-chain/core/rpc/backend"
 
-	rpctypes "github.com/sei-protocol/sei-chain/rpc/types"
-	sdk "github.com/sei-protocol/sei-chain/types"
-	evmtypes "github.com/sei-protocol/sei-chain/x/evm/types"
+	rpctypes "github.com/fibonacci-chain/core/rpc/types"
+	sdk "github.com/fibonacci-chain/core/types"
+	evmtypes "github.com/fibonacci-chain/core/x/evm/types"
 )
 
 // The Ethereum API allows applications to connect to an Evmos node that is

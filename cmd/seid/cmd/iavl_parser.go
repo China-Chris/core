@@ -8,10 +8,10 @@ import (
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
-	"github.com/sei-protocol/sei-chain/app/params"
-	dexkeeper "github.com/sei-protocol/sei-chain/x/dex/keeper"
-	dextypes "github.com/sei-protocol/sei-chain/x/dex/types"
-	minttypes "github.com/sei-protocol/sei-chain/x/mint/types"
+	"github.com/fibonacci-chain/core/app/params"
+	dexkeeper "github.com/fibonacci-chain/core/x/dex/keeper"
+	dextypes "github.com/fibonacci-chain/core/x/dex/types"
+	minttypes "github.com/fibonacci-chain/core/x/mint/types"
 )
 
 type ModuleParser func([]byte) ([]string, error)
@@ -105,7 +105,7 @@ func DexParser(key []byte) ([]string, error) {
 func MatchAndExtractDexAddressPrefixKeys(key []byte) (bool, []string, []byte, error) {
 	keyItems := []string{}
 	keysToMatch := []string{
-		// Source of truth: github.com/sei-protocol/sei-chain/x/dex/types/keys.go - contains key constants represented here
+		// Source of truth: github.com/fibonacci-chain/core/x/dex/types/keys.go - contains key constants represented here
 		dextypes.LongBookKey,
 		dextypes.ShortBookKey,
 		dextypes.TriggerBookKey,

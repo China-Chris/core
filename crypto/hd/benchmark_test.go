@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/cosmos/cosmos-sdk/crypto/keyring"
-	ethermint "github.com/sei-protocol/sei-chain/types"
+	ethermint "github.com/fibonacci-chain/core/types"
 )
 
 func BenchmarkEthSecp256k1Algo_Derive(b *testing.B) {

@@ -4,11 +4,11 @@ import (
 	"context"
 	"testing"
 
-	keepertest "github.com/sei-protocol/sei-chain/testutil/keeper"
-	"github.com/sei-protocol/sei-chain/utils/datastructures"
-	dex "github.com/sei-protocol/sei-chain/x/dex/cache"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
-	"github.com/sei-protocol/sei-chain/x/store"
+	keepertest "github.com/fibonacci-chain/core/testutil/keeper"
+	"github.com/fibonacci-chain/core/utils/datastructures"
+	dex "github.com/fibonacci-chain/core/x/dex/cache"
+	"github.com/fibonacci-chain/core/x/dex/types"
+	"github.com/fibonacci-chain/core/x/store"
 	"github.com/stretchr/testify/require"
 )
 

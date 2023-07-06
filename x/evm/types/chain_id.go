@@ -22,7 +22,7 @@ import (
 	"strings"
 
 	errorsmod "cosmossdk.io/errors"
-	"github.com/sei-protocol/sei-chain/types"
+	"github.com/fibonacci-chain/core/types"
 )
 
 var (

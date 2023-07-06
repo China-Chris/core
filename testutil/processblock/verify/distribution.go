@@ -9,8 +9,8 @@ import (
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	"github.com/cosmos/cosmos-sdk/x/distribution/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
-	"github.com/sei-protocol/sei-chain/testutil/processblock"
-	"github.com/sei-protocol/sei-chain/utils"
+	"github.com/fibonacci-chain/core/testutil/processblock"
+	"github.com/fibonacci-chain/core/utils"
 	"github.com/stretchr/testify/require"
 )
 

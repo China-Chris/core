@@ -12,13 +12,13 @@ import (
 	stakingkeeper "github.com/cosmos/cosmos-sdk/x/staking/keeper"
 	"github.com/cosmos/cosmos-sdk/x/staking/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
-	stakingacl "github.com/sei-protocol/sei-chain/aclmapping/staking"
-	aclutils "github.com/sei-protocol/sei-chain/aclmapping/utils"
-	"github.com/sei-protocol/sei-chain/app/apptesting"
-	oracletypes "github.com/sei-protocol/sei-chain/x/oracle/types"
+	stakingacl "github.com/fibonacci-chain/core/aclmapping/staking"
+	aclutils "github.com/fibonacci-chain/core/aclmapping/utils"
+	"github.com/fibonacci-chain/core/app/apptesting"
+	oracletypes "github.com/fibonacci-chain/core/x/oracle/types"
 
 	acltypes "github.com/cosmos/cosmos-sdk/x/accesscontrol/types"
-	"github.com/sei-protocol/sei-chain/app"
+	"github.com/fibonacci-chain/core/app"
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 )

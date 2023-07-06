@@ -13,8 +13,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/codec/legacy"
 	cryptotypes "github.com/cosmos/cosmos-sdk/crypto/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/sei-protocol/sei-chain/client/crypto/keys/bcrypt"
-	"github.com/sei-protocol/sei-chain/client/crypto/xsalsa20symmetric"
+	"github.com/fibonacci-chain/core/client/crypto/keys/bcrypt"
+	"github.com/fibonacci-chain/core/client/crypto/xsalsa20symmetric"
 )
 
 const (

@@ -16,7 +16,7 @@
 package web3
 
 import (
-	"github.com/sei-protocol/sei-chain/types/version"
+	"github.com/fibonacci-chain/core/types/version"
 
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/crypto"

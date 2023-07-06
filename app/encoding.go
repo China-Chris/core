@@ -1,8 +1,8 @@
 package app
 
 import (
-	"github.com/sei-protocol/sei-chain/app/params"
-	enccodec "github.com/sei-protocol/sei-chain/encoding/codec"
+	"github.com/fibonacci-chain/core/app/params"
+	enccodec "github.com/fibonacci-chain/core/encoding/codec"
 )
 
 // MakeEncodingConfig creates an EncodingConfig for testing.

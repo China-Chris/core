@@ -6,10 +6,10 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
-	keepertest "github.com/sei-protocol/sei-chain/testutil/keeper"
-	"github.com/sei-protocol/sei-chain/x/dex/contract"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
-	minttypes "github.com/sei-protocol/sei-chain/x/mint/types"
+	keepertest "github.com/fibonacci-chain/core/testutil/keeper"
+	"github.com/fibonacci-chain/core/x/dex/contract"
+	"github.com/fibonacci-chain/core/x/dex/types"
+	minttypes "github.com/fibonacci-chain/core/x/mint/types"
 	"github.com/stretchr/testify/require"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 )

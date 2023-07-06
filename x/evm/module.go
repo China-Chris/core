@@ -34,9 +34,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 
-	"github.com/sei-protocol/sei-chain/x/evm/client/cli"
-	"github.com/sei-protocol/sei-chain/x/evm/keeper"
-	"github.com/sei-protocol/sei-chain/x/evm/types"
+	"github.com/fibonacci-chain/core/x/evm/client/cli"
+	"github.com/fibonacci-chain/core/x/evm/keeper"
+	"github.com/fibonacci-chain/core/x/evm/types"
 )
 
 var (

@@ -9,9 +9,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 	"github.com/cosmos/cosmos-sdk/x/simulation"
-	"github.com/sei-protocol/sei-chain/testutil/sample"
-	dexsimulation "github.com/sei-protocol/sei-chain/x/dex/simulation"
-	"github.com/sei-protocol/sei-chain/x/dex/types"
+	"github.com/fibonacci-chain/core/testutil/sample"
+	dexsimulation "github.com/fibonacci-chain/core/x/dex/simulation"
+	"github.com/fibonacci-chain/core/x/dex/types"
 )
 
 // avoid unused import issue

@@ -17,7 +17,7 @@ package ante
 
 import (
 	"fmt"
-	"github.com/sei-protocol/sei-chain/app/antedecorators/depdecorators"
+	"github.com/fibonacci-chain/core/app/antedecorators/depdecorators"
 
 	errorsmod "cosmossdk.io/errors"
 	"github.com/cosmos/cosmos-sdk/codec"
@@ -32,11 +32,11 @@ import (
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/crypto/secp256k1"
 	"github.com/ethereum/go-ethereum/signer/core/apitypes"
-	"github.com/sei-protocol/sei-chain/crypto/ethsecp256k1"
-	"github.com/sei-protocol/sei-chain/ethereum/eip712"
-	ethermint "github.com/sei-protocol/sei-chain/types"
+	"github.com/fibonacci-chain/core/crypto/ethsecp256k1"
+	"github.com/fibonacci-chain/core/ethereum/eip712"
+	ethermint "github.com/fibonacci-chain/core/types"
 
-	evmtypes "github.com/sei-protocol/sei-chain/x/evm/types"
+	evmtypes "github.com/fibonacci-chain/core/x/evm/types"
 )
 
 var ethermintCodec codec.ProtoCodecMarshaler
